@@ -2,6 +2,14 @@
 
 Markdown Skills for AI agents - A collection of genomics-focused coding skills compatible with OpenCode.
 
+> "Programming is dead"
+
+> "Nothing we do as we know it will be the same in three months"
+
+> "Code is over"
+
+> "The number of copilot requests we have today is irrelevant. We should be burning through a data centres worth of credits"
+
 ## Overview
 
 This repository provides three levels of skills designed specifically for genomics research labs, emphasizing scientific accuracy, reproducibility, and coding best practices. All skills are structured to be directly compatible with OpenCode.
@@ -228,7 +236,19 @@ For issues or questions:
 - Consult the OpenCode documentation
 - Review the skill README files in each directory
 
+## Contact
+
+### [Neurogenomics Lab](https://www.neurogenomics.co.uk)
+
+UK Dementia Research Institute  
+Department of Brain Sciences  
+Faculty of Medicine  
+Imperial College London  
+[GitHub](https://github.com/neurogenomics)
+
 ## Acknowledgments
+
+Title credit: @jaymoore-research.
 
 These skills are designed to promote best practices in genomics research, incorporating standards from:
 - Bioconductor project
