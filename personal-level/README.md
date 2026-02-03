@@ -11,6 +11,13 @@ cp -r personal-level/* ~/.opencode/skills/
 
 ## Skills Included
 
+### Code Quality & Standards
+- **code-style-conventions.md** - Personal coding style and conventions (Python, R, Shell)
+- **error-handling.md** - Exception handling patterns and best practices
+- **logging-practices.md** - Structured logging and debugging
+- **testing-standards.md** - Testing strategies, coverage, and TDD
+- **security-practices.md** - Input validation, sandboxing, and security
+
+### Genomics & Science
 - **genomics-best-practices.md** - General genomics analysis best practices
 - **scientific-reproducibility.md** - Guidelines for reproducible research
-- **code-style-conventions.md** - Personal coding style and conventions

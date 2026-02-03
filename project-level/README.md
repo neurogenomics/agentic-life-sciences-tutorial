@@ -18,6 +18,10 @@ ln -s $(pwd)/project-level/* .opencode/skills/
 
 ## Skills Included
 
+### Project Structure & Workflow
 - **project-structure.md** - Standard genomics project organization
-- **data-validation.md** - Project-specific data validation rules
 - **analysis-workflow.md** - Standard analysis pipeline steps
+- **development-tools.md** - Development environment setup and quality tools
+
+### Data & Validation
+- **data-validation.md** - Project-specific data validation rules

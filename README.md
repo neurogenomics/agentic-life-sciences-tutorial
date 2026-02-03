@@ -24,9 +24,17 @@ cp -r personal-level/* ~/.opencode/skills/
 ```
 
 **Included Skills**:
-- `genomics-best-practices.md` - Data quality control, file formats, version control, and documentation standards
-- `scientific-reproducibility.md` - Random seeds, environment management, workflow documentation, and data provenance
-- `code-style-conventions.md` - Language-specific style guides for Python, R, and shell scripts
+
+*Code Quality & Standards:*
+- `code-style-conventions.md` - Language-specific style guides, function design, naming conventions
+- `error-handling.md` - Exception handling patterns, custom exceptions, recovery strategies
+- `logging-practices.md` - Structured logging, log levels, performance tracking
+- `testing-standards.md` - Unit/integration testing, fixtures, mocking, coverage (≥80%)
+- `security-practices.md` - Input validation, path sanitization, command safety, resource limits
+
+*Genomics & Science:*
+- `genomics-best-practices.md` - Data quality control, file formats, version control, documentation
+- `scientific-reproducibility.md` - Random seeds, environment management, data provenance
 
 ### 2. Project Level Skills (`project-level/`)
 
@@ -52,9 +60,14 @@ ln -s /path/to/dead-coders-society/project-level/* .opencode/skills/
 ```
 
 **Included Skills**:
+
+*Project Structure & Workflow:*
 - `project-structure.md` - Standard genomics project directory organization
-- `data-validation.md` - Input validation, QC thresholds, and data type checks
 - `analysis-workflow.md` - Standard genomics analysis pipeline phases
+- `development-tools.md` - Modern Python setup (pyproject.toml), pre-commit, black, ruff, mypy, pytest
+
+*Data & Validation:*
+- `data-validation.md` - Input validation, QC thresholds, and data type checks
 
 ### 3. Plugin Level Skills (`plugin-level/`)
 
