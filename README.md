@@ -248,6 +248,8 @@ Imperial College London
 
 ## Acknowledgments
 
+Title credit: @jaymoore-research.
+
 These skills are designed to promote best practices in genomics research, incorporating standards from:
 - Bioconductor project
 - ENCODE consortium guidelines
