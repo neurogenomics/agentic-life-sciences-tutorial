@@ -18,6 +18,9 @@ Create PowerPoint presentations from scientific papers for your journal club.
 ### [Rules & Guidelines](./tutorials/rules)
 Learn how to create and use rules files to customize AI behavior for your projects.
 
+### [Making Custom Agents](./tutorials/making-agents)
+Create specialized AI agents like code-reviewers and research advisors with custom personalities and behaviors.
+
 ---
 
 **View the project on [GitHub](https://github.com/neurogenomics/skills-cookbook)**
