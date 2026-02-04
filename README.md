@@ -55,7 +55,7 @@ Here is my output from this interaction [iris_pairwise_scatter_plots.xlsx](https
 
 This is one of the figures it made: 
 
-<img width="500" height="500" alt="image" src="https://github.com/user-attachments/assets/2872ea3d-6b51-4ff2-8cf4-afa5d353f971" />
+![Iris dataset scatter plot](assets/images/iris_scatter_plot.png)
 
 ## Example making slides for Journal Club
 
@@ -75,7 +75,7 @@ Here's what it made:
 
 Example slide:
 
-<img width="1029" height="581" alt="Screenshot 2026-02-04 at 17 37 21" src="https://github.com/user-attachments/assets/da9504a6-659d-4eb1-aa9e-39823e88cc49" />
+![Journal club presentation slide](assets/images/journal_club_slide.png)
 
 The formatting is a bit funky and it is not too in-depth. What changes in the prompt or in `Plan` mode would you add to make a better output?
 
