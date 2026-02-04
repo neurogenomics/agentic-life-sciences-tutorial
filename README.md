@@ -57,6 +57,28 @@ This is one of the figures it made:
 
 <img width="500" height="500" alt="image" src="https://github.com/user-attachments/assets/2872ea3d-6b51-4ff2-8cf4-afa5d353f971" />
 
+## Example making slides for Journal Club
+
+You can run this in `Plan` mode to optimise the output, but here is a prompt for paper [Integration of variant annotations using deep set networks boosts rare variant association testing](https://www.nature.com/articles/s41588-024-01919-z):
+
+```
+Make me 5-10 slide presentation for Journal club for this paper: https://www.nature.com/articles/s41588-024-01919-z
+* Keep word usage low
+* Include main figures
+* summarise key take aways from paper
+* output it as a powerpoint
+```
+
+Here's what it made:
+
+[DeepRVAT_JournalClub.pptx](https://github.com/user-attachments/files/25078447/DeepRVAT_JournalClub.pptx)
+
+Example slide:
+
+<img width="1029" height="581" alt="Screenshot 2026-02-04 at 17 37 21" src="https://github.com/user-attachments/assets/da9504a6-659d-4eb1-aa9e-39823e88cc49" />
+
+The formatting is a bit funky and it is not too in-depth. What changes in the prompt or in `Plan` mode would you add to make a better output?
+
 # Extra information
 
 Kimi K2.5 is available as a chatbot: https://openrouter.ai/chat
