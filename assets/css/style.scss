@@ -4,141 +4,91 @@
 @import "{{ site.theme }}";
 
 /* ========================================
-   BAUHAUS-INSPIRED VIBRANT DESIGN SYSTEM
-   Primary Colors | Geometric | Bold
+   BRUTALIST DESIGN SYSTEM
+   Raw | Industrial | High Contrast
    ======================================== */
 
 :root {
-  /* Bauhaus Primary Palette */
-  --bauhaus-red: #FF6B6B;
-  --bauhaus-blue: #4ECDC4;
-  --bauhaus-yellow: #FFE66D;
-  --bauhaus-black: #2C3E50;
-  --bauhaus-white: #FFFFFF;
-  --bauhaus-gray: #95A5A6;
-  
-  /* Extended Vibrant Palette */
-  --vibrant-coral: #FF6B6B;
-  --vibrant-teal: #4ECDC4;
-  --vibrant-yellow: #FFE66D;
-  --vibrant-purple: #A8E6CF;
-  --vibrant-pink: #FF8B94;
-  --vibrant-orange: #FFD93D;
-  
-  /* Functional Colors */
-  --text-dark: #2C3E50;
-  --text-light: #FFFFFF;
-  --bg-primary: #FFFFFF;
-  --bg-secondary: #F8F9FA;
-  
-  /* Geometric Borders */
-  --border-thick: 4px;
-  --border-thin: 2px;
-  
-  /* Shadows */
-  --shadow-hard: 8px 8px 0 rgba(0,0,0,0.2);
-  --shadow-soft: 0 4px 20px rgba(0,0,0,0.1);
+  /* Brutalist Palette - Harsh & Raw */
+  --brutal-black: #000000;
+  --brutal-white: #FFFFFF;
+  --brutal-grey: #666666;
+  --brutal-light-grey: #CCCCCC;
+  --brutal-dark-grey: #333333;
+  --brutal-accent: #FF0000; /* Harsh red for warnings/highlights */
+  --brutal-border: 2px solid var(--brutal-black);
+  --brutal-border-thick: 4px solid var(--brutal-black);
 }
 
 /* ========================================
    TYPOGRAPHY
-   Clean Sans-Serif | Bold | Geometric
+   Monospace | System Fonts | Raw
    ======================================== */
 
 body {
-  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
-  line-height: 1.7;
-  color: var(--text-dark);
-  background: var(--bg-primary);
-  font-size: 16px;
+  font-family: 'Courier New', Courier, monospace;
+  line-height: 1.5;
+  color: var(--brutal-black);
+  background: var(--brutal-white);
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
-  font-weight: 800;
-  color: var(--text-dark);
-  margin-top: 2.5rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 700;
+  color: var(--brutal-black);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: var(--brutal-border-thick);
+  padding-bottom: 0.5rem;
+  margin-top: 2rem;
   margin-bottom: 1rem;
-  letter-spacing: -0.02em;
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   border-bottom: none;
-  position: relative;
-  display: inline-block;
-}
-
-h1::after {
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  width: 100%;
-  height: 8px;
-  background: linear-gradient(90deg, var(--bauhaus-red) 0%, var(--bauhaus-yellow) 50%, var(--bauhaus-blue) 100%);
+  background: var(--brutal-black);
+  color: var(--brutal-white);
+  padding: 1rem;
+  margin: 0;
 }
 
 h2 {
-  font-size: 2rem;
-  border-left: 6px solid var(--bauhaus-red);
+  font-size: 1.8rem;
+  border-left: 8px solid var(--brutal-black);
   padding-left: 1rem;
-  border-bottom: none;
 }
 
 h3 {
-  font-size: 1.5rem;
-  color: var(--text-dark);
+  font-size: 1.3rem;
+  border-bottom: var(--brutal-border);
 }
 
 /* ========================================
-   HERO SECTION
-   Geometric | Asymmetric | Color Blocks
+   HERO / HEADER
+   Raw | Black Block | System Text
    ======================================== */
 
 .page-header {
-  background: var(--bauhaus-black);
-  padding: 4rem 2rem;
-  text-align: left;
-  color: white;
-  margin-bottom: 3rem;
-  position: relative;
-  overflow: hidden;
-}
-
-.page-header::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  right: -10%;
-  width: 60%;
-  height: 200%;
-  background: var(--bauhaus-red);
-  transform: rotate(-15deg);
-  z-index: 1;
-}
-
-.page-header::after {
-  content: '';
-  position: absolute;
-  bottom: -20%;
-  left: 5%;
-  width: 30%;
-  height: 60%;
-  background: var(--bauhaus-yellow);
-  transform: rotate(10deg);
-  z-index: 1;
+  background: var(--brutal-black);
+  color: var(--brutal-white);
+  padding: 3rem 2rem;
+  margin: 0;
+  border-bottom: 8px solid var(--brutal-accent);
 }
 
 .page-header h1 {
-  position: relative;
-  z-index: 2;
-  color: white;
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 900;
   text-transform: uppercase;
-  letter-spacing: -0.03em;
+  letter-spacing: 0.1em;
   margin: 0;
+  background: transparent;
+  color: var(--brutal-white);
+  padding: 0;
 }
 
 .page-header h1::after {
@@ -146,185 +96,192 @@ h3 {
 }
 
 .page-header .project-tagline {
-  position: relative;
-  z-index: 2;
-  color: rgba(255,255,255,0.9);
-  font-size: 1.4rem;
-  font-weight: 400;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1rem;
   margin-top: 1rem;
-  max-width: 600px;
+  color: var(--brutal-light-grey);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 
 /* ========================================
    MAIN CONTENT
-   Clean | Centered | Breathing Room
+   Raw | Exposed | Grid Lines
    ======================================== */
 
 .main-content {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 3rem 2rem;
-  background: var(--bg-primary);
+  max-width: 100%;
+  margin: 0;
+  padding: 2rem;
+  border-left: 2px solid var(--brutal-black);
+  border-right: 2px solid var(--brutal-black);
 }
 
 /* ========================================
    TUTORIAL CARDS
-   Color-Coded | Geometric | Interactive
+   Exposed Grid | Harsh Borders | Raw
    ======================================== */
 
 .tutorial-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin: 3rem 0;
+  grid-template-columns: 1fr;
+  gap: 0;
+  margin: 2rem 0;
+  border: var(--brutal-border-thick);
 }
 
 .tutorial-card {
-  background: var(--bg-primary);
-  border: var(--border-thick) solid var(--bauhaus-black);
-  padding: 2rem;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-  box-shadow: var(--shadow-hard);
+  background: var(--brutal-white);
+  border-bottom: var(--brutal-border);
+  padding: 1.5rem;
+  margin: 0;
+  transition: none;
+  box-shadow: none;
+}
+
+.tutorial-card:last-child {
+  border-bottom: none;
 }
 
 .tutorial-card:hover {
-  transform: translate(-4px, -4px);
-  box-shadow: 12px 12px 0 rgba(0,0,0,0.25);
+  transform: none;
+  box-shadow: none;
+  background: var(--brutal-light-grey);
 }
 
 .tutorial-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 8px;
+  display: none;
 }
-
-.tutorial-card:nth-child(1)::before { background: var(--bauhaus-red); }
-.tutorial-card:nth-child(2)::before { background: var(--bauhaus-blue); }
-.tutorial-card:nth-child(3)::before { background: var(--bauhaus-yellow); }
-.tutorial-card:nth-child(4)::before { background: var(--vibrant-purple); }
-.tutorial-card:nth-child(5)::before { background: var(--vibrant-pink); }
 
 .tutorial-card h3 {
   margin-top: 0;
-  font-size: 1.4rem;
-  font-weight: 800;
-  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-bottom: none;
+  text-transform: uppercase;
 }
 
 .tutorial-card h3 a {
-  color: var(--bauhaus-black);
+  color: var(--brutal-black);
   text-decoration: none;
-  border-bottom: 3px solid transparent;
-  transition: border-color 0.2s;
+  border-bottom: 2px solid var(--brutal-accent);
 }
 
 .tutorial-card h3 a:hover {
-  border-bottom-color: var(--bauhaus-red);
-  text-decoration: none;
+  background: var(--brutal-black);
+  color: var(--brutal-white);
+  border-bottom-color: var(--brutal-black);
 }
 
 .tutorial-card strong {
   display: block;
-  color: var(--bauhaus-red);
-  font-size: 0.85rem;
+  font-family: 'Courier New', Courier, monospace;
+  color: var(--brutal-accent);
+  font-size: 0.8rem;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.15em;
   margin-bottom: 0.5rem;
 }
 
 .tutorial-card p {
-  color: var(--bauhaus-gray);
+  color: var(--brutal-grey);
   margin-bottom: 0;
-  line-height: 1.5;
+}
+
+/* Responsive grid for larger screens */
+@media (min-width: 768px) {
+  .tutorial-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .tutorial-card:nth-child(odd) {
+    border-right: var(--brutal-border);
+  }
 }
 
 /* ========================================
    LINKS
-   Bold | Colorful | Underlined
+   Underlined | Harsh | Functional
    ======================================== */
 
 a {
-  color: var(--bauhaus-red);
+  color: var(--brutal-black);
   text-decoration: none;
-  border-bottom: 2px solid var(--bauhaus-red);
-  transition: all 0.2s;
-  font-weight: 600;
+  border-bottom: 2px solid var(--brutal-black);
+  font-weight: 700;
 }
 
 a:hover {
-  background: var(--bauhaus-yellow);
-  border-bottom-width: 4px;
-  text-decoration: none;
+  background: var(--brutal-black);
+  color: var(--brutal-white);
+  border-bottom-color: var(--brutal-black);
 }
 
 /* ========================================
    MOTIVATION SECTION
-   Diagonal | Color Block | Quote
+   Raw Quote Block | Industrial
    ======================================== */
 
 .motivation-section {
-  background: var(--bauhaus-black);
-  color: white;
-  padding: 3rem;
-  margin: 3rem 0;
-  position: relative;
-  clip-path: polygon(0 0, 100% 3%, 100% 100%, 0 97%);
+  background: var(--brutal-dark-grey);
+  color: var(--brutal-white);
+  padding: 2rem;
+  margin: 2rem 0;
+  border: var(--brutal-border-thick);
 }
 
 .motivation-section h2 {
-  color: var(--bauhaus-yellow);
-  border-left: 6px solid var(--bauhaus-red);
+  color: var(--brutal-white);
+  border-left-color: var(--brutal-accent);
+  border-bottom-color: var(--brutal-white);
 }
 
 .motivation-section blockquote {
-  font-size: 1.4rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.1rem;
   font-weight: 700;
-  font-style: italic;
-  color: white;
-  margin: 1.5rem 0;
-  padding: 1rem 1.5rem;
-  border-left: 6px solid var(--bauhaus-blue);
-  background: rgba(255,255,255,0.1);
+  color: var(--brutal-white);
+  margin: 1rem 0;
+  padding: 1rem;
+  border-left: 6px solid var(--brutal-accent);
+  background: var(--brutal-black);
 }
 
 .motivation-section em {
   display: block;
-  margin-top: 2rem;
-  color: var(--bauhaus-yellow);
-  font-weight: 600;
+  margin-top: 1.5rem;
+  color: var(--brutal-light-grey);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 
 /* ========================================
    EXTRA INFO SECTION
-   Geometric Background
+   Grey Block | Industrial
    ======================================== */
 
 .extra-info {
-  background: linear-gradient(135deg, var(--bauhaus-blue) 0%, var(--vibrant-purple) 100%);
+  background: var(--brutal-light-grey);
   padding: 2rem;
-  margin: 3rem 0;
-  color: var(--text-dark);
-  border: var(--border-thick) solid var(--bauhaus-black);
-  box-shadow: var(--shadow-hard);
+  margin: 2rem 0;
+  border: var(--brutal-border-thick);
 }
 
 .extra-info h2 {
-  color: var(--bauhaus-black);
-  border-left-color: var(--bauhaus-red);
+  color: var(--brutal-black);
+  border-left-color: var(--brutal-accent);
 }
 
 .extra-info ul {
   list-style-type: none;
   padding-left: 0;
+  margin: 0;
 }
 
 .extra-info li {
   padding: 0.75rem 0;
-  border-bottom: 2px solid rgba(0,0,0,0.1);
+  border-bottom: var(--brutal-border);
 }
 
 .extra-info li:last-child {
@@ -332,227 +289,264 @@ a:hover {
 }
 
 .extra-info a {
-  color: var(--bauhaus-black);
-  border-bottom-color: var(--bauhaus-black);
-}
-
-.extra-info a:hover {
-  background: var(--bauhaus-yellow);
+  color: var(--brutal-black);
+  border-bottom-color: var(--brutal-accent);
 }
 
 /* ========================================
    GITHUB LINK
-   Button Style | Prominent
+   Warning Block Style
    ======================================== */
 
 .github-link {
   text-align: center;
-  margin: 3rem 0;
-  padding: 2rem;
-  background: var(--bauhaus-yellow);
-  border: var(--border-thick) solid var(--bauhaus-black);
-  box-shadow: var(--shadow-hard);
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: var(--brutal-accent);
+  color: var(--brutal-white);
+  border: var(--brutal-border-thick);
 }
 
 .github-link strong {
-  font-size: 1.2rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 
 .github-link a {
-  color: var(--bauhaus-black);
-  border-bottom-width: 3px;
-  font-weight: 800;
+  color: var(--brutal-white);
+  border-bottom-color: var(--brutal-white);
+}
+
+.github-link a:hover {
+  background: var(--brutal-white);
+  color: var(--brutal-accent);
+  border-bottom-color: var(--brutal-white);
 }
 
 /* ========================================
    CODE BLOCKS
-   High Contrast | Color Accents
+   Monospace | High Contrast | Raw
    ======================================== */
 
 pre {
-  background: var(--bauhaus-black);
-  border: none;
+  background: var(--brutal-black);
+  color: var(--brutal-white);
+  border: var(--brutal-border-thick);
   border-radius: 0;
   padding: 1.5rem;
   overflow-x: auto;
   margin: 1.5rem 0;
-  border-left: 8px solid var(--bauhaus-red);
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.9rem;
 }
 
 code {
-  background: var(--bauhaus-yellow);
-  color: var(--bauhaus-black);
-  padding: 0.2rem 0.5rem;
+  background: var(--brutal-light-grey);
+  color: var(--brutal-black);
+  padding: 0.2rem 0.4rem;
   border-radius: 0;
-  font-family: 'SFMono-Regular', Consolas, monospace;
-  font-weight: 600;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 700;
+  border: 1px solid var(--brutal-black);
 }
 
 pre code {
   background: transparent;
-  color: white;
+  color: var(--brutal-white);
+  border: none;
   font-weight: 400;
 }
 
 /* ========================================
    HORIZONTAL RULE
-   Geometric | Colorful
+   Harsh Industrial Line
    ======================================== */
 
 hr {
   border: none;
-  height: 6px;
-  background: linear-gradient(90deg, 
-    var(--bauhaus-red) 0%, 
-    var(--bauhaus-red) 20%,
-    var(--bauhaus-yellow) 20%,
-    var(--bauhaus-yellow) 40%,
-    var(--bauhaus-blue) 40%,
-    var(--bauhaus-blue) 60%,
-    var(--vibrant-purple) 60%,
-    var(--vibrant-purple) 80%,
-    var(--vibrant-pink) 80%,
-    var(--vibrant-pink) 100%
-  );
-  margin: 3rem 0;
+  height: 4px;
+  background: var(--brutal-black);
+  margin: 2rem 0;
 }
 
 /* ========================================
    LISTS
-   Bold Markers
+   Raw Bullets | Monospace
    ======================================== */
 
 ul {
-  list-style: none;
-  padding-left: 1.5rem;
+  list-style: square;
+  padding-left: 2rem;
+  margin: 1rem 0;
 }
 
 ul li {
-  position: relative;
-  padding-left: 1.5rem;
+  margin: 0.5rem 0;
+  padding-left: 0;
+}
+
+ul li::marker {
+  color: var(--brutal-accent);
+}
+
+ol {
+  padding-left: 2rem;
+  margin: 1rem 0;
+}
+
+ol li {
   margin: 0.5rem 0;
 }
 
-ul li::before {
-  content: '▪';
-  position: absolute;
-  left: 0;
-  color: var(--bauhaus-red);
-  font-weight: bold;
-  font-size: 1.2rem;
-}
-
 /* ========================================
-   RESPONSIVE
+   PARAGRAPHS & TEXT
+   Raw | Unpolished
    ======================================== */
 
-@media (max-width: 768px) {
-  .page-header h1 {
-    font-size: 2.5rem;
-  }
-  
-  .page-header::before,
-  .page-header::after {
-    display: none;
-  }
-  
-  .main-content {
-    padding: 1.5rem;
-  }
-  
-  .tutorial-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-  
-  .tutorial-card {
-    box-shadow: 4px 4px 0 rgba(0,0,0,0.2);
-  }
-  
-  h1 {
-    font-size: 2rem;
-  }
-  
-  h2 {
-    font-size: 1.5rem;
-  }
-  
-  .motivation-section {
-    clip-path: none;
-    padding: 2rem;
-  }
-  
-  .motivation-section blockquote {
-    font-size: 1.1rem;
-  }
+p {
+  margin: 1rem 0;
+  max-width: 70ch;
+}
+
+strong {
+  color: var(--brutal-black);
+  font-weight: 700;
+}
+
+em {
+  font-style: normal;
+  text-decoration: underline;
+  text-decoration-color: var(--brutal-accent);
+  text-decoration-thickness: 2px;
 }
 
 /* ========================================
    TABLES
-   Geometric | Color Coded
+   Exposed Grid | Harsh
    ======================================== */
 
 table {
   width: 100%;
-  border-collapse: separate;
-  border-spacing: 0;
+  border-collapse: collapse;
   margin: 1.5rem 0;
-  border: var(--border-thick) solid var(--bauhaus-black);
-  box-shadow: var(--shadow-hard);
+  border: var(--brutal-border-thick);
+  font-family: 'Courier New', Courier, monospace;
 }
 
 th {
-  background: var(--bauhaus-black);
-  color: white;
-  font-weight: 800;
+  background: var(--brutal-black);
+  color: var(--brutal-white);
+  font-weight: 700;
   padding: 1rem;
   text-align: left;
-  border-bottom: var(--border-thick) solid var(--bauhaus-black);
+  border: var(--brutal-border);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 td {
   padding: 1rem;
-  border-bottom: var(--border-thin) solid var(--border-color);
+  border: var(--brutal-border);
 }
 
-tr:hover {
-  background: var(--bauhaus-yellow);
+tr:nth-child(even) {
+  background: var(--brutal-light-grey);
 }
 
 /* ========================================
    CALLOUT BOXES
-   Color Coded | Geometric
+   Warning Style | Industrial
    ======================================== */
 
 .callout {
-  background: var(--bauhaus-yellow);
-  border: var(--border-thick) solid var(--bauhaus-black);
-  border-left: 12px solid var(--bauhaus-red);
+  background: var(--brutal-white);
+  border: var(--brutal-border-thick);
+  border-left: 12px solid var(--brutal-accent);
   padding: 1.5rem;
   margin: 1.5rem 0;
-  box-shadow: var(--shadow-hard);
 }
 
 .callout-info {
-  background: var(--bauhaus-blue);
-  border-left-color: var(--bauhaus-black);
+  border-left-color: var(--brutal-black);
 }
 
 .callout-success {
-  background: var(--vibrant-purple);
-  border-left-color: var(--vibrant-teal);
+  border-left-color: var(--brutal-grey);
 }
 
 /* ========================================
-   EMPHASIS & STRONG
+   RESPONSIVE
+   Raw Mobile Experience
    ======================================== */
 
-strong {
-  color: var(--bauhaus-red);
-  font-weight: 800;
+@media (max-width: 768px) {
+  .page-header {
+    padding: 2rem 1rem;
+  }
+  
+  .page-header h1 {
+    font-size: 2rem;
+  }
+  
+  .main-content {
+    padding: 1rem;
+    border-left: none;
+    border-right: none;
+  }
+  
+  .tutorial-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .tutorial-card {
+    border-right: none;
+  }
+  
+  .tutorial-card:nth-child(odd) {
+    border-right: none;
+  }
+  
+  h1 {
+    font-size: 1.8rem;
+  }
+  
+  h2 {
+    font-size: 1.4rem;
+  }
+  
+  pre {
+    padding: 1rem;
+    font-size: 0.8rem;
+  }
 }
 
-em {
-  color: var(--bauhaus-blue);
-  font-style: italic;
+/* ========================================
+   SCROLLBAR
+   Raw Industrial Style
+   ======================================== */
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--brutal-light-grey);
+  border: 1px solid var(--brutal-black);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--brutal-black);
+  border: 1px solid var(--brutal-black);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--brutal-accent);
+}
+
+/* Selection */
+::selection {
+  background: var(--brutal-accent);
+  color: var(--brutal-white);
 }
