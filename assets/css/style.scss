@@ -4,91 +4,102 @@
 @import "{{ site.theme }}";
 
 /* ========================================
-   BRUTALIST DESIGN SYSTEM
-   Raw | Industrial | High Contrast
+   SCANDINAVIAN MINIMALIST DESIGN
+   Sleek | Warm Greys | Clean | Refined
    ======================================== */
 
 :root {
-  /* Brutalist Palette - Harsh & Raw */
-  --brutal-black: #000000;
-  --brutal-white: #FFFFFF;
-  --brutal-grey: #666666;
-  --brutal-light-grey: #CCCCCC;
-  --brutal-dark-grey: #333333;
-  --brutal-accent: #FF0000; /* Harsh red for warnings/highlights */
-  --brutal-border: 2px solid var(--brutal-black);
-  --brutal-border-thick: 4px solid var(--brutal-black);
+  /* Scandinavian Palette - Warm & Soft */
+  --scand-white: #FAFAFA;
+  --scand-cream: #F5F5F0;
+  --scand-warm-grey: #E8E6E1;
+  --scand-light-grey: #D4D0C8;
+  --scand-grey: #9A958C;
+  --scand-dark-grey: #4A4742;
+  --scand-charcoal: #2C2A26;
+  --scand-accent: #7A9E9F; /* Muted teal - Scandinavian signature */
+  --scand-accent-light: #B8D4D5;
+  --scand-accent-warm: #C4A77D; /* Warm terracotta alternative */
+  
+  /* Functional */
+  --shadow-soft: 0 2px 8px rgba(44, 42, 38, 0.06);
+  --shadow-medium: 0 4px 16px rgba(44, 42, 38, 0.08);
+  --radius: 6px;
+  --radius-large: 12px;
 }
 
 /* ========================================
    TYPOGRAPHY
-   Monospace | System Fonts | Raw
+   Clean Sans-Serif | Light | Refined
    ======================================== */
 
 body {
-  font-family: 'Courier New', Courier, monospace;
-  line-height: 1.5;
-  color: var(--brutal-black);
-  background: var(--brutal-white);
-  font-size: 14px;
-  margin: 0;
-  padding: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.7;
+  color: var(--scand-charcoal);
+  background: var(--scand-white);
+  font-size: 16px;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Courier New', Courier, monospace;
-  font-weight: 700;
-  color: var(--brutal-black);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  border-bottom: var(--brutal-border-thick);
-  padding-bottom: 0.5rem;
-  margin-top: 2rem;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 600;
+  color: var(--scand-charcoal);
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+  margin-top: 2.5rem;
   margin-bottom: 1rem;
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
+  font-weight: 700;
   border-bottom: none;
-  background: var(--brutal-black);
-  color: var(--brutal-white);
-  padding: 1rem;
+  background: transparent;
+  color: var(--scand-charcoal);
+  padding: 0;
   margin: 0;
 }
 
 h2 {
-  font-size: 1.8rem;
-  border-left: 8px solid var(--brutal-black);
-  padding-left: 1rem;
+  font-size: 2rem;
+  font-weight: 600;
+  border-left: none;
+  padding-left: 0;
+  border-bottom: 2px solid var(--scand-warm-grey);
+  padding-bottom: 0.5rem;
 }
 
 h3 {
-  font-size: 1.3rem;
-  border-bottom: var(--brutal-border);
+  font-size: 1.4rem;
+  font-weight: 600;
+  border-bottom: none;
+  color: var(--scand-dark-grey);
 }
 
 /* ========================================
    HERO / HEADER
-   Raw | Black Block | System Text
+   Clean | Subtle | Elegant
    ======================================== */
 
 .page-header {
-  background: var(--brutal-black);
-  color: var(--brutal-white);
-  padding: 3rem 2rem;
+  background: linear-gradient(135deg, var(--scand-cream) 0%, var(--scand-white) 100%);
+  color: var(--scand-charcoal);
+  padding: 5rem 2rem;
   margin: 0;
-  border-bottom: 8px solid var(--brutal-accent);
+  border-bottom: none;
+  text-align: center;
 }
 
 .page-header h1 {
-  font-size: 3rem;
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  margin: 0;
-  background: transparent;
-  color: var(--brutal-white);
-  padding: 0;
+  font-size: 3.2rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin: 0 0 1rem 0;
+  color: var(--scand-charcoal);
 }
 
 .page-header h1::after {
@@ -96,57 +107,63 @@ h3 {
 }
 
 .page-header .project-tagline {
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 1rem;
-  margin-top: 1rem;
-  color: var(--brutal-light-grey);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 1.25rem;
+  margin-top: 0.5rem;
+  color: var(--scand-grey);
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
 }
 
 /* ========================================
    MAIN CONTENT
-   Raw | Exposed | Grid Lines
+   Clean | Centered | Generous Whitespace
    ======================================== */
 
 .main-content {
-  max-width: 100%;
-  margin: 0;
-  padding: 2rem;
-  border-left: 2px solid var(--brutal-black);
-  border-right: 2px solid var(--brutal-black);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  background: var(--scand-white);
+  border-left: none;
+  border-right: none;
 }
 
 /* ========================================
    TUTORIAL CARDS
-   Exposed Grid | Harsh Borders | Raw
+   Soft | Subtle | Elevated
    ======================================== */
 
 .tutorial-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 0;
-  margin: 2rem 0;
-  border: var(--brutal-border-thick);
+  gap: 1.5rem;
+  margin: 3rem 0;
+  border: none;
+}
+
+@media (min-width: 768px) {
+  .tutorial-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
 }
 
 .tutorial-card {
-  background: var(--brutal-white);
-  border-bottom: var(--brutal-border);
-  padding: 1.5rem;
+  background: var(--scand-white);
+  border: 1px solid var(--scand-warm-grey);
+  border-radius: var(--radius);
+  padding: 2rem;
   margin: 0;
-  transition: none;
-  box-shadow: none;
-}
-
-.tutorial-card:last-child {
-  border-bottom: none;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-soft);
 }
 
 .tutorial-card:hover {
-  transform: none;
-  box-shadow: none;
-  background: var(--brutal-light-grey);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-medium);
+  border-color: var(--scand-light-grey);
 }
 
 .tutorial-card::before {
@@ -155,122 +172,124 @@ h3 {
 
 .tutorial-card h3 {
   margin-top: 0;
-  font-size: 1.2rem;
-  font-weight: 700;
+  font-size: 1.25rem;
+  font-weight: 600;
   border-bottom: none;
-  text-transform: uppercase;
+  margin-bottom: 0.75rem;
 }
 
 .tutorial-card h3 a {
-  color: var(--brutal-black);
+  color: var(--scand-charcoal);
   text-decoration: none;
-  border-bottom: 2px solid var(--brutal-accent);
+  border-bottom: 2px solid var(--scand-accent-light);
+  transition: border-color 0.2s;
 }
 
 .tutorial-card h3 a:hover {
-  background: var(--brutal-black);
-  color: var(--brutal-white);
-  border-bottom-color: var(--brutal-black);
+  background: transparent;
+  color: var(--scand-accent);
+  border-bottom-color: var(--scand-accent);
 }
 
 .tutorial-card strong {
   display: block;
-  font-family: 'Courier New', Courier, monospace;
-  color: var(--brutal-accent);
-  font-size: 0.8rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: var(--scand-accent);
+  font-size: 0.75rem;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.08em;
   margin-bottom: 0.5rem;
 }
 
 .tutorial-card p {
-  color: var(--brutal-grey);
+  color: var(--scand-grey);
   margin-bottom: 0;
-}
-
-/* Responsive grid for larger screens */
-@media (min-width: 768px) {
-  .tutorial-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-  
-  .tutorial-card:nth-child(odd) {
-    border-right: var(--brutal-border);
-  }
+  font-size: 0.95rem;
+  line-height: 1.6;
 }
 
 /* ========================================
    LINKS
-   Underlined | Harsh | Functional
+   Subtle | Refined | Understated
    ======================================== */
 
 a {
-  color: var(--brutal-black);
+  color: var(--scand-charcoal);
   text-decoration: none;
-  border-bottom: 2px solid var(--brutal-black);
-  font-weight: 700;
+  border-bottom: 1px solid var(--scand-grey);
+  font-weight: 500;
+  transition: all 0.2s ease;
 }
 
 a:hover {
-  background: var(--brutal-black);
-  color: var(--brutal-white);
-  border-bottom-color: var(--brutal-black);
+  background: transparent;
+  color: var(--scand-accent);
+  border-bottom-color: var(--scand-accent);
 }
 
 /* ========================================
    MOTIVATION SECTION
-   Raw Quote Block | Industrial
+   Soft Block | Muted Elegance
    ======================================== */
 
 .motivation-section {
-  background: var(--brutal-dark-grey);
-  color: var(--brutal-white);
-  padding: 2rem;
-  margin: 2rem 0;
-  border: var(--brutal-border-thick);
+  background: var(--scand-cream);
+  color: var(--scand-charcoal);
+  padding: 3rem;
+  margin: 3rem 0;
+  border: 1px solid var(--scand-warm-grey);
+  border-radius: var(--radius-large);
+  border-left: 4px solid var(--scand-accent);
 }
 
 .motivation-section h2 {
-  color: var(--brutal-white);
-  border-left-color: var(--brutal-accent);
-  border-bottom-color: var(--brutal-white);
+  color: var(--scand-charcoal);
+  border-left: none;
+  border-bottom-color: var(--scand-warm-grey);
+  margin-top: 0;
 }
 
 .motivation-section blockquote {
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--brutal-white);
-  margin: 1rem 0;
-  padding: 1rem;
-  border-left: 6px solid var(--brutal-accent);
-  background: var(--brutal-black);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 1.3rem;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--scand-dark-grey);
+  margin: 1.5rem 0;
+  padding: 1.5rem;
+  border-left: 3px solid var(--scand-accent);
+  background: var(--scand-white);
+  border-radius: var(--radius);
 }
 
 .motivation-section em {
   display: block;
-  margin-top: 1.5rem;
-  color: var(--brutal-light-grey);
+  margin-top: 2rem;
+  color: var(--scand-grey);
   font-size: 0.9rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
+  font-style: normal;
 }
 
 /* ========================================
    EXTRA INFO SECTION
-   Grey Block | Industrial
+   Soft Grey Block
    ======================================== */
 
 .extra-info {
-  background: var(--brutal-light-grey);
+  background: var(--scand-cream);
   padding: 2rem;
   margin: 2rem 0;
-  border: var(--brutal-border-thick);
+  border: 1px solid var(--scand-warm-grey);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
 }
 
 .extra-info h2 {
-  color: var(--brutal-black);
-  border-left-color: var(--brutal-accent);
+  color: var(--scand-charcoal);
+  border-left: none;
+  border-bottom-color: var(--scand-warm-grey);
+  margin-top: 0;
 }
 
 .extra-info ul {
@@ -281,7 +300,7 @@ a:hover {
 
 .extra-info li {
   padding: 0.75rem 0;
-  border-bottom: var(--brutal-border);
+  border-bottom: 1px solid var(--scand-warm-grey);
 }
 
 .extra-info li:last-child {
@@ -289,95 +308,102 @@ a:hover {
 }
 
 .extra-info a {
-  color: var(--brutal-black);
-  border-bottom-color: var(--brutal-accent);
+  color: var(--scand-charcoal);
+  border-bottom-color: var(--scand-light-grey);
+}
+
+.extra-info a:hover {
+  border-bottom-color: var(--scand-accent);
 }
 
 /* ========================================
    GITHUB LINK
-   Warning Block Style
+   Muted Accent Style
    ======================================== */
 
 .github-link {
   text-align: center;
-  margin: 2rem 0;
-  padding: 1.5rem;
-  background: var(--brutal-accent);
-  color: var(--brutal-white);
-  border: var(--brutal-border-thick);
+  margin: 3rem 0;
+  padding: 2rem;
+  background: var(--scand-white);
+  color: var(--scand-charcoal);
+  border: 1px solid var(--scand-warm-grey);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
 }
 
 .github-link strong {
   font-size: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
+  font-weight: 600;
 }
 
 .github-link a {
-  color: var(--brutal-white);
-  border-bottom-color: var(--brutal-white);
+  color: var(--scand-charcoal);
+  border-bottom-color: var(--scand-accent);
 }
 
 .github-link a:hover {
-  background: var(--brutal-white);
-  color: var(--brutal-accent);
-  border-bottom-color: var(--brutal-white);
+  background: var(--scand-accent-light);
+  color: var(--scand-charcoal);
+  border-bottom-color: var(--scand-accent);
 }
 
 /* ========================================
    CODE BLOCKS
-   Monospace | High Contrast | Raw
+   Soft | Clean | Refined
    ======================================== */
 
 pre {
-  background: var(--brutal-black);
-  color: var(--brutal-white);
-  border: var(--brutal-border-thick);
-  border-radius: 0;
+  background: var(--scand-cream);
+  color: var(--scand-charcoal);
+  border: 1px solid var(--scand-warm-grey);
+  border-radius: var(--radius);
   padding: 1.5rem;
   overflow-x: auto;
   margin: 1.5rem 0;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, monospace;
   font-size: 0.9rem;
+  box-shadow: var(--shadow-soft);
 }
 
 code {
-  background: var(--brutal-light-grey);
-  color: var(--brutal-black);
+  background: var(--scand-warm-grey);
+  color: var(--scand-charcoal);
   padding: 0.2rem 0.4rem;
-  border-radius: 0;
-  font-family: 'Courier New', Courier, monospace;
-  font-weight: 700;
-  border: 1px solid var(--brutal-black);
+  border-radius: 3px;
+  font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, monospace;
+  font-weight: 500;
+  border: none;
+  font-size: 0.9em;
 }
 
 pre code {
   background: transparent;
-  color: var(--brutal-white);
+  color: var(--scand-charcoal);
   border: none;
   font-weight: 400;
 }
 
 /* ========================================
    HORIZONTAL RULE
-   Harsh Industrial Line
+   Subtle Division
    ======================================== */
 
 hr {
   border: none;
-  height: 4px;
-  background: var(--brutal-black);
-  margin: 2rem 0;
+  height: 1px;
+  background: var(--scand-warm-grey);
+  margin: 3rem 0;
 }
 
 /* ========================================
    LISTS
-   Raw Bullets | Monospace
+   Clean | Minimal
    ======================================== */
 
 ul {
-  list-style: square;
-  padding-left: 2rem;
+  list-style: disc;
+  padding-left: 1.5rem;
   margin: 1rem 0;
 }
 
@@ -387,11 +413,11 @@ ul li {
 }
 
 ul li::marker {
-  color: var(--brutal-accent);
+  color: var(--scand-grey);
 }
 
 ol {
-  padding-left: 2rem;
+  padding-left: 1.5rem;
   margin: 1rem 0;
 }
 
@@ -401,88 +427,97 @@ ol li {
 
 /* ========================================
    PARAGRAPHS & TEXT
-   Raw | Unpolished
+   Refined | Optimal Line Length
    ======================================== */
 
 p {
-  margin: 1rem 0;
-  max-width: 70ch;
+  margin: 1.25rem 0;
+  max-width: 65ch;
+  color: var(--scand-dark-grey);
 }
 
 strong {
-  color: var(--brutal-black);
-  font-weight: 700;
+  color: var(--scand-charcoal);
+  font-weight: 600;
 }
 
 em {
-  font-style: normal;
-  text-decoration: underline;
-  text-decoration-color: var(--brutal-accent);
-  text-decoration-thickness: 2px;
+  font-style: italic;
+  color: var(--scand-grey);
 }
 
 /* ========================================
    TABLES
-   Exposed Grid | Harsh
+   Clean | Soft | Refined
    ======================================== */
 
 table {
   width: 100%;
   border-collapse: collapse;
   margin: 1.5rem 0;
-  border: var(--brutal-border-thick);
-  font-family: 'Courier New', Courier, monospace;
+  border: 1px solid var(--scand-warm-grey);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 th {
-  background: var(--brutal-black);
-  color: var(--brutal-white);
-  font-weight: 700;
+  background: var(--scand-cream);
+  color: var(--scand-charcoal);
+  font-weight: 600;
   padding: 1rem;
   text-align: left;
-  border: var(--brutal-border);
+  border-bottom: 2px solid var(--scand-warm-grey);
+  font-size: 0.9rem;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.03em;
 }
 
 td {
   padding: 1rem;
-  border: var(--brutal-border);
+  border-bottom: 1px solid var(--scand-warm-grey);
 }
 
-tr:nth-child(even) {
-  background: var(--brutal-light-grey);
+tr:last-child td {
+  border-bottom: none;
+}
+
+tr:hover {
+  background: var(--scand-cream);
 }
 
 /* ========================================
    CALLOUT BOXES
-   Warning Style | Industrial
+   Soft | Muted Colors
    ======================================== */
 
 .callout {
-  background: var(--brutal-white);
-  border: var(--brutal-border-thick);
-  border-left: 12px solid var(--brutal-accent);
+  background: var(--scand-white);
+  border: 1px solid var(--scand-warm-grey);
+  border-left: 4px solid var(--scand-accent);
+  border-radius: var(--radius);
   padding: 1.5rem;
   margin: 1.5rem 0;
+  box-shadow: var(--shadow-soft);
 }
 
 .callout-info {
-  border-left-color: var(--brutal-black);
+  border-left-color: var(--scand-grey);
 }
 
 .callout-success {
-  border-left-color: var(--brutal-grey);
+  border-left-color: var(--scand-accent-warm);
 }
 
 /* ========================================
    RESPONSIVE
-   Raw Mobile Experience
+   Clean Mobile Experience
    ======================================== */
 
 @media (max-width: 768px) {
   .page-header {
-    padding: 2rem 1rem;
+    padding: 3rem 1.5rem;
   }
   
   .page-header h1 {
@@ -490,63 +525,60 @@ tr:nth-child(even) {
   }
   
   .main-content {
-    padding: 1rem;
+    padding: 2rem 1.5rem;
     border-left: none;
     border-right: none;
   }
   
   .tutorial-grid {
     grid-template-columns: 1fr;
+    gap: 1rem;
   }
   
   .tutorial-card {
     border-right: none;
   }
   
-  .tutorial-card:nth-child(odd) {
-    border-right: none;
-  }
-  
   h1 {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
   
   h2 {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
   }
   
   pre {
     padding: 1rem;
-    font-size: 0.8rem;
+    font-size: 0.85rem;
   }
 }
 
 /* ========================================
    SCROLLBAR
-   Raw Industrial Style
+   Minimal Scandinavian Style
    ======================================== */
 
 ::-webkit-scrollbar {
-  width: 12px;
-  height: 12px;
+  width: 8px;
+  height: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--brutal-light-grey);
-  border: 1px solid var(--brutal-black);
+  background: var(--scand-warm-grey);
+  border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--brutal-black);
-  border: 1px solid var(--brutal-black);
+  background: var(--scand-grey);
+  border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--brutal-accent);
+  background: var(--scand-dark-grey);
 }
 
 /* Selection */
 ::selection {
-  background: var(--brutal-accent);
-  color: var(--brutal-white);
+  background: var(--scand-accent-light);
+  color: var(--scand-charcoal);
 }
