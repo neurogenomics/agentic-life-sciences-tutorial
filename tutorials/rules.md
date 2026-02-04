@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Rules & Guidelines
+title: Customizing AI Behavior - Project Rules & Standards
 ---
 
-# Rules & Guidelines
+# 📋 Customizing AI Behavior: Project Rules & Standards
 
 Rules files help you customize AI behavior for your specific projects, coding standards, and workflows.
 

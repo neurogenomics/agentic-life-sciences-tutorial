@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Iris Dataset Analysis
+title: Data Analysis with AI - From Dataset to Publication Figures
 ---
 
-# Example: Iris Dataset Analysis
+# 📊 Data Analysis with AI: From Dataset to Publication Figures
 
 This tutorial walks you through using OpenCode to analyze the classic Iris dataset and create visualizations.
 

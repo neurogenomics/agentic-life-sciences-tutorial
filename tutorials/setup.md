@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Setup
+title: Getting Started with AI Coding Tools
 ---
 
-# Setup
+# 🚀 Getting Started with AI Coding Tools
 
 ## Overview
 
