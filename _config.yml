@@ -15,6 +15,13 @@ kramdown:
   input: GFM
   syntax_highlighter: rouge
 
+# Permalink settings for clean URLs (no .html extension)
+permalink: /:path/:basename/
+
+# Include tutorials folder
+include:
+  - tutorials
+
 # Disable download buttons for cleaner layout
 show_downloads: false
 
