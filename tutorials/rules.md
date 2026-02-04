@@ -105,6 +105,25 @@ You can also use this simplified template:
 4. **Project Structure**: File organization, naming conventions
 5. **Domain-Specific**: Field-specific best practices
 
+## Advanced Tips
+
+### External Resources
+
+Check out [claude-mem](https://github.com/thedotmack/claude-mem) - A memory system for Claude Code that helps maintain context across sessions. This can be especially useful when working on long-term projects where you want the AI to remember previous decisions, preferences, and project history.
+
+### Version Control Your Rules
+
+Store your rules files in version control along with your project code. This way:
+- Team members get the same AI behavior
+- You can track how rules evolve
+- New contributors understand your standards immediately
+
+### Combining Rules with Memory
+
+For complex projects, combine structured rules with a memory system:
+- **Rules**: Hard constraints (coding standards, security requirements)
+- **Memory**: Soft preferences (past decisions, what worked/didn't work)
+
 ## Next Steps
 
 Try creating a rules file for your project and see how it improves AI consistency!
