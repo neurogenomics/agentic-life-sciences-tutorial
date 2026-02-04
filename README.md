@@ -1,65 +1,30 @@
-# 🧬 Neurogenomics Skills Cookbook
+# Skills Cookbook
 
-**Master AI-Assisted Coding for Scientific Research**
+Lab guide for adopting agentic work and coding assistants.
 
-A practical guide for adopting agentic AI tools in computational genomics and data science workflows.
+## Tutorials
 
-## 📚 Quick Start Tutorials
-
-<div class="tutorial-grid">
-
-<div class="tutorial-card">
-<h3>🚀 <a href="./tutorials/setup">Getting Started</a></h3>
-<p><strong>Install & Configure</strong><br>Set up OpenCode, OpenRouter, and Kimi K2.5. Your first steps into agentic coding.</p>
-</div>
-
-<div class="tutorial-card">
-<h3>📊 <a href="./tutorials/iris-analysis">Data Analysis</a></h3>
-<p><strong>Hands-On Example</strong><br>Create publication-ready figures from datasets. Export results automatically.</p>
-</div>
-
-<div class="tutorial-card">
-<h3>🎓 <a href="./tutorials/journal-club-slides">Presentations</a></h3>
-<p><strong>Automated Slides</strong><br>Transform scientific papers into PowerPoint decks for lab meetings in minutes.</p>
-</div>
-
-<div class="tutorial-card">
-<h3>📋 <a href="./tutorials/rules">Project Standards</a></h3>
-<p><strong>Custom Rules</strong><br>Define coding standards, security practices, and AI behavior for your projects.</p>
-</div>
-
-<div class="tutorial-card">
-<h3>🤖 <a href="./tutorials/making-agents">Custom Agents</a></h3>
-<p><strong>Specialized Assistants</strong><br>Build agents for code review, research advice, and domain-specific tasks.</p>
-</div>
-
-</div>
+- [Setup](./tutorials/setup) - Get started with OpenCode, OpenRouter, and Kimi K2.5
+- [Iris Dataset Analysis](./tutorials/iris-analysis) - Data analysis example with AI
+- [Journal Club Slides](./tutorials/journal-club-slides) - Create presentations from papers
+- [Rules & Guidelines](./tutorials/rules) - Customize AI behavior with rules files
+- [Making Custom Agents](./tutorials/making-agents) - Build specialized agents
 
 ---
 
-<div class="github-link">
-<strong>🔍 View the project on <a href="https://github.com/neurogenomics/skills-cookbook">GitHub</a></strong>
-</div>
+[View on GitHub](https://github.com/neurogenomics/skills-cookbook)
 
-<div class="extra-info">
+## Extra Resources
 
-## 🔗 Essential Resources
+- [Anthropic's Guide to Building Effective Agents](https://www.anthropic.com/engineering/building-effective-agents)
+- [claude-mem: Memory System](https://github.com/thedotmack/claude-mem)
 
-- <a href="https://www.anthropic.com/engineering/building-effective-agents">Anthropic's Guide to Building Effective Agents</a> — Best practices from the creators of Claude
-- <a href="https://github.com/thedotmack/claude-mem">claude-mem: Memory System</a> — Maintain context across sessions for long-term projects
-
-</div>
-
-<div class="motivation-section">
-
-## 💡 The Future of Scientific Computing
+## Motivation
 
 > "Nothing we do as we know it will be the same in three months"
-
+> 
 > "Code is over"
-
+> 
 > "We should be burning through a data centre's worth of credits"
-
-*— Dr. Nathan Skene, on the paradigm shift in computational research*
-
-</div>
+> 
+> — Dr. Nathan Skene
