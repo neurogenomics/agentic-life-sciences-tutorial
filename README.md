@@ -26,5 +26,3 @@ Lab guide for adopting agentic work and coding assistants.
 > "Code is over"
 > 
 > "We should be burning through a data centre's worth of credits"
-> 
-> — Dr. Nathan Skene
