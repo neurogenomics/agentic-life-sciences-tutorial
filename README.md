@@ -2,38 +2,60 @@
 
 Lab guide for adopting agentic work and coding assistants.
 
-## Tutorials
+## 📚 Tutorials
 
-Get started with AI coding assistants through these hands-on tutorials:
+<div class="tutorial-grid">
 
-### [Setup](./tutorials/setup)
-Learn about the tools (OpenCode, OpenRouter, Kimi K2.5) and how to get started.
+<div class="tutorial-card">
+<h3>🚀 <a href="./tutorials/setup">Setup</a></h3>
+<p>Get started with OpenCode, OpenRouter, and Kimi K2.5. Learn the basics of agentic coding.</p>
+</div>
 
-### [Iris Dataset Analysis](./tutorials/iris-analysis)
-A practical example of data analysis with AI - create figures from the classic Iris dataset.
+<div class="tutorial-card">
+<h3>📊 <a href="./tutorials/iris-analysis">Iris Dataset Analysis</a></h3>
+<p>Hands-on data analysis example. Create visualizations and export results with AI assistance.</p>
+</div>
 
-### [Journal Club Slides](./tutorials/journal-club-slides)
-Create PowerPoint presentations from scientific papers for your journal club.
+<div class="tutorial-card">
+<h3>🎓 <a href="./tutorials/journal-club-slides">Journal Club Slides</a></h3>
+<p>Turn scientific papers into PowerPoint presentations. Perfect for lab meetings.</p>
+</div>
 
-### [Rules & Guidelines](./tutorials/rules)
-Learn how to create and use rules files to customize AI behavior for your projects.
+<div class="tutorial-card">
+<h3>📋 <a href="./tutorials/rules">Rules & Guidelines</a></h3>
+<p>Customize AI behavior with rules files. Learn best practices for project standards.</p>
+</div>
 
-### [Making Custom Agents](./tutorials/making-agents)
-Create specialized AI agents like code-reviewers and research advisors with custom personalities and behaviors.
+<div class="tutorial-card">
+<h3>🤖 <a href="./tutorials/making-agents">Making Custom Agents</a></h3>
+<p>Create specialized agents like code-reviewers and research advisors with custom personalities.</p>
+</div>
+
+</div>
 
 ---
 
-**View the project on [GitHub](https://github.com/neurogenomics/skills-cookbook)**
+<div class="github-link">
+<strong>🔍 View the project on <a href="https://github.com/neurogenomics/skills-cookbook">GitHub</a></strong>
+</div>
 
-## Extra Information
+<div class="extra-info">
 
-- [Anthropic's Guide to Building Effective Agents](https://www.anthropic.com/engineering/building-effective-agents)
-- [claude-mem: Memory system for Claude Code](https://github.com/thedotmack/claude-mem)
+## 📖 Extra Information
 
-## Motivation
+- <a href="https://www.anthropic.com/engineering/building-effective-agents">Anthropic's Guide to Building Effective Agents</a>
+- <a href="https://github.com/thedotmack/claude-mem">claude-mem: Memory system for Claude Code</a>
+
+</div>
+
+<div class="motivation-section">
+
+## 💭 Motivation
 
 > "Nothing we do as we know it will be the same in three months"
 
 > "Code is over"
 
 > "The number of copilot requests we have today is irrelevant. We should be burning through a data centres worth of credits"
+
+</div>
