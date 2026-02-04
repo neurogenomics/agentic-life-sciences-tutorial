@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Journal Club Slides
+title: Automated Presentations - From Papers to PowerPoint
 ---
 
-# Example: Making Journal Club Slides
+# 🎓 Automated Presentations: From Papers to PowerPoint
 
 This tutorial shows how to use OpenCode to create a PowerPoint presentation from a scientific paper.
 

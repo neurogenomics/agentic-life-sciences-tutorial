@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Making Custom Agents
+title: Building Specialized AI Agents for Your Workflow
 ---
 
-# Making Custom Agents
+# 🤖 Building Specialized AI Agents for Your Workflow
 
 OpenCode allows you to create custom agents (called "skills") that specialize in specific tasks. This tutorial shows you how to build your own agents.
 
