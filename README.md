@@ -57,7 +57,9 @@ This is one of the figures it made:
 
 <img width="500" height="500" alt="image" src="https://github.com/user-attachments/assets/2872ea3d-6b51-4ff2-8cf4-afa5d353f971" />
 
+# Extra information
 
+Kimi K2.5 is available as a chatbot: https://openrouter.ai/chat
 
 # Motivation
 
