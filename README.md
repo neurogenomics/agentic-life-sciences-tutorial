@@ -4,11 +4,11 @@ Lab guide for adopting agentic work and coding assistants.
 
 ## Tutorials
 
-- [Setup](./tutorials/setup) - Get started with OpenCode, OpenRouter, and Kimi K2.5
-- [Iris Dataset Analysis](./tutorials/iris-analysis) - Data analysis example with AI
-- [Journal Club Slides](./tutorials/journal-club-slides) - Create presentations from papers
-- [Rules & Guidelines](./tutorials/rules) - Customize AI behavior with rules files
-- [Making Custom Agents](./tutorials/making-agents) - Build specialized agents
+1. [Setup](./tutorials/setup) - Get started with OpenCode, OpenRouter, and Kimi K2.5
+2. [Iris Dataset Analysis](./tutorials/iris-analysis) - Data analysis example with AI
+3. [Journal Club Slides](./tutorials/journal-club-slides) - Create presentations from papers
+4. [Rules & Guidelines](./tutorials/rules) - Customize AI behavior with rules files
+5. [Making Custom Agents](./tutorials/making-agents) - Build specialized agents
 
 ---
 
