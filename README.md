@@ -22,6 +22,11 @@ Learn how to create and use rules files to customize AI behavior for your projec
 
 **View the project on [GitHub](https://github.com/neurogenomics/skills-cookbook)**
 
+## Extra Information
+
+- [Anthropic's Guide to Building Effective Agents](https://www.anthropic.com/engineering/building-effective-agents)
+- [claude-mem: Memory system for Claude Code](https://github.com/thedotmack/claude-mem)
+
 ## Motivation
 
 > "Nothing we do as we know it will be the same in three months"
