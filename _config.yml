@@ -1,15 +1,1 @@
-title: Neurogenomics Skills Cookbook
-description: Master AI-assisted coding for computational genomics research
-
-# Build settings
-markdown: kramdown
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
-
-# Permalink settings for clean URLs (no .html extension)
-permalink: /:path/:basename/
-
-# Include tutorials folder
-include:
-  - tutorials
+title: Skills Cookbook
