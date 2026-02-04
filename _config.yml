@@ -1,0 +1,26 @@
+title: Skills Cookbook
+email: neurogenomics@imperial.ac.uk
+description: >-
+  Lab guide for adopting agentic work and coding assistants.
+  Practical examples using OpenCode, OpenRouter, and Kimi K2.5.
+  
+# Use the Minimal theme
+remote_theme: pages-themes/minimal@v0.2.0
+plugins:
+  - jekyll-remote-theme
+
+# GitHub repository info
+repository: neurogenomics/skills-cookbook
+github_username: neurogenomics
+
+# Build settings
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# Show download button for the repository
+show_downloads: true
+
+# Google Analytics (optional - remove or replace with your tracking ID)
+# google_analytics: UA-XXXXXXXX-X
