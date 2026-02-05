@@ -1,129 +1,139 @@
----
-layout: default
-title: Customizing AI Behavior - Project Rules & Standards
----
+# Creating Your rules.md File
 
-# 📋 Customizing AI Behavior: Project Rules & Standards
+A rules.md file tells the AI how to work with your project. This tutorial shows you how to create one and use the automated setup.
 
-Rules files help you customize AI behavior for your specific projects, coding standards, and workflows.
+## Quick Start: Use the Init Command
 
-## What are Rules?
+The fastest way to get started is letting the AI create your rules for you:
 
-Rules are instruction files that tell the AI how to behave when working on your project. They can include:
+```bash
+opencode init
+```
 
-- **Coding standards** (naming conventions, style guides)
-- **Project-specific requirements** (file structure, dependencies)
-- **Domain knowledge** (best practices for genomics, data analysis, etc.)
-- **Workflow preferences** (testing requirements, commit message formats)
-- **Security guidelines** (input validation, sensitive data handling)
+This command:
+1. Analyzes your project type (Python, R, web, etc.)
+2. Creates a `.opencode/rules/` folder
+3. Generates appropriate starter rules files
+4. Sets up a tasks/todo.md template
+
+## The 7-Step Workflow
+
+Once you have your rules, follow this workflow for every task:
+
+**1. Plan First**
+- Think through the problem
+- Read the codebase if needed
+- Write a plan in `tasks/todo.md`
+
+**2. Make it a Checklist**
+```markdown
+# Current Task
+
+## Plan
+- [ ] Step 1: Read the data loading code
+- [ ] Step 2: Identify the bug in line 45
+- [ ] Step 3: Write fix with test
+- [ ] Step 4: Run tests to verify
+
+## Notes
+Bug appears when file has headers...
+```
+
+**3. Check In**
+Show me the plan before starting. I'll verify it makes sense.
+
+**4. Execute Step by Step**
+Complete each todo item, marking them off as you go.
+
+**5. Explain Changes**
+At every step, give a high-level explanation of what changed.
+
+**6. Keep it Simple**
+Every change should be minimal. No big rewrites.
+
+**7. Final Review**
+Add a review section at the end of todo.md:
+```markdown
+## Review
+
+Changes made:
+- Fixed header parsing bug in load_data.py
+- Added test case for header edge case
+- Verified all existing tests pass
+```
+
+## Your rules.md Template
+
+Here's a simple starter template. Put this in `.opencode/rules/rules.md`:
+
+```markdown
+# Project Rules
+
+## Workflow
+
+Always follow this 7-step process:
+
+1. **Plan First**: Read codebase, write plan in tasks/todo.md
+2. **Checklist**: Make the plan a checklist of todo items
+3. **Check In**: Get approval before starting work
+4. **Execute**: Complete todos one by one, marking them off
+5. **Explain**: Give high-level explanation of each change
+6. **Minimal**: Keep every change simple and small
+7. **Review**: Add review section at end of todo.md
+
+## Code Standards
+
+- Follow existing code style in the project
+- Write tests for new features
+- Never commit secrets or API keys
+- Keep functions small and focused
+
+## Communication
+
+- Be concise
+- Ask clarifying questions when unsure
+- Flag potential issues early
+```
 
 ## Where to Put Rules
 
-Create a `.opencode/rules/` folder in your project or home directory:
-
 ```
 .opencode/
-├── rules/
-│   ├── coding-standards.md
-│   ├── project-guidelines.md
-│   └── security-rules.md
+└── rules/
+    └── rules.md          # Main rules file (required)
+    └── coding-style.md   # Optional: detailed style guide
+    └── security.md       # Optional: security requirements
 ```
 
-## Example Rules File
+## Tips
 
-Here is a complete example rules file for data science projects: [EXAMPLE_RULES.md](../assets/EXAMPLE_RULES.md)
+- **Start simple**: Use the template above, customize as you go
+- **Version control**: Commit your rules with your project
+- **Iterate**: Update rules when you find patterns that work
+- **One project, one rules file**: Most projects only need `rules.md`
 
-You can also use this simplified template:
+## Example Rules for Common Scenarios
 
-```markdown
-# Project Rules for Neurogenomics Analysis
+**Data Science Projects:**
+- Always validate input data shapes
+- Save plots to `figures/` with descriptive names
+- Never modify raw data files
 
-## Coding Standards
-
-### Python
-- Use PEP 8 style guide
-- Maximum line length: 100 characters
-- Use type hints for all function parameters and return values
-- Docstrings required for all public functions (Google style)
-
-### R
-- Use tidyverse style guide
-- Prefer %>% over |>
-- Use meaningful variable names (snake_case)
-
-## Project Structure
-
-- Place analysis scripts in `scripts/`
-- Place results in `results/` with date stamps
-- Place raw data in `data/raw/` (never commit to git)
-- Place processed data in `data/processed/`
-
-## Testing Requirements
-
-- All functions must have unit tests
-- Minimum test coverage: 80%
-- Use pytest for Python, testthat for R
-
-## Dependencies
-
-- Pin all dependency versions in `requirements.txt` or `renv.lock`
-- Document installation steps in README
-
-## Security
-
-- Never hardcode API keys or passwords
-- Use environment variables for secrets
+**Web Development:**
+- Test on mobile viewport sizes
 - Validate all user inputs
-- Sanitize file paths to prevent directory traversal
+- Use semantic HTML elements
 
-## Documentation
-
-- Update README.md for each major feature
-- Include examples in docstrings
-- Document expected input/output formats
-```
-
-## Using Rules
-
-1. Create your rules file(s) in `.opencode/rules/`
-2. The AI will automatically read and follow these rules
-3. You can reference specific rules in prompts: "Follow the testing standards in my rules file"
-
-## Tips for Effective Rules
-
-- Be specific and concrete
-- Include examples where possible
-- Keep rules concise (under 500 lines total is ideal)
-- Update rules as your project evolves
-- Separate different types of rules into different files
-
-## Common Rule Categories
-
-1. **Code Quality**: Linting, formatting, documentation
-2. **Testing**: Coverage requirements, test frameworks
-3. **Security**: Input validation, secrets management
-4. **Project Structure**: File organization, naming conventions
-5. **Domain-Specific**: Field-specific best practices
-
-## Advanced Tips
-
-### External Resources
-
-Check out [claude-mem](https://github.com/thedotmack/claude-mem) - A memory system for Claude Code that helps maintain context across sessions. This can be especially useful when working on long-term projects where you want the AI to remember previous decisions, preferences, and project history.
-
-### Version Control Your Rules
-
-Store your rules files in version control along with your project code. This way:
-- Team members get the same AI behavior
-- You can track how rules evolve
-- New contributors understand your standards immediately
-
-### Combining Rules with Memory
-
-For complex projects, combine structured rules with a memory system:
-- **Rules**: Hard constraints (coding standards, security requirements)
-- **Memory**: Soft preferences (past decisions, what worked/didn't work)
+**Research Code:**
+- Document expected vs actual outputs
+- Save intermediate results for reproducibility
+- Comment complex algorithms
 
 ## Next Steps
 
-Try creating a rules file for your project and see how it improves AI consistency!
+1. Run `opencode init` in your project
+2. Customize the generated `rules.md`
+3. Create your first `tasks/todo.md`
+4. Start using the 7-step workflow
+
+See [EXAMPLE_RULES.md](../assets/EXAMPLE_RULES.md) for a complete, detailed example.
