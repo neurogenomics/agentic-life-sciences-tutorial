@@ -18,6 +18,7 @@ Lab guide for adopting agentic work and coding assistants.
 
 - [Anthropic's Guide to Building Effective Agents](https://www.anthropic.com/engineering/building-effective-agents)
 - [claude-mem: Memory System](https://github.com/thedotmack/claude-mem)
+- [OpenCode Retention Policy](https://openrouter.ai/docs/guides/features/zdr#openrouters-retention-policy)
 
 ## Motivation
 
