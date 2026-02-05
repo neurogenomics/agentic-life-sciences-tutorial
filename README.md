@@ -10,6 +10,12 @@ Lab guide for adopting agentic work and coding assistants.
 4. [Rules & Guidelines](./tutorials/rules.md) - Customize AI behavior with rules files
 5. [Making Custom Agents](./tutorials/making-agents.md) - Build specialized agents
 
+## Agents
+
+Pre-built agent configurations for specific tasks:
+
+- [Prototyping Agent](./agents/prototyping-agent.yaml) - Quick data prototyping with sampled datasets
+
 ---
 
 [View on GitHub](https://github.com/neurogenomics/skills-cookbook)
