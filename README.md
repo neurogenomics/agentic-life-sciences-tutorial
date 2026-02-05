@@ -2,6 +2,8 @@
 
 Lab guide for adopting agentic work and coding assistants.
 
+**[Click here to view tutorials](https://neurogenomics.github.io/skills-cookbook/)**
+
 ## Tutorials
 
 1. [Setup](./tutorials/setup.md) - Get started with OpenCode, OpenRouter, and Kimi K2.5
