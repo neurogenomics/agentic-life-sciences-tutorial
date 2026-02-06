@@ -41,3 +41,4 @@ Pre-built agent configurations for specific tasks:
 > "Code is over"
 >
 > "We should be burning through a data centre's worth of credits"
+> - Nathan
