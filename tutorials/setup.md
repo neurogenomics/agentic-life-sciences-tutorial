@@ -37,15 +37,3 @@ Open OpenCode App on your computer:
 4. Enter API key (supplied separately via email)
 5. At bottom select `Kimi K2.5` - this will listed under OpenRouter
 6. Click ＋ button on the left to make a new project. Then choose your folder for the project, example here being your `testing AI` folder.
-
-## Extra information
-
-Kimi K2.5 is available as a chatbot: https://openrouter.ai/chat
-
-## Motivation
-
-> "Nothing we do as we know it will be the same in three months"
-
-> "Code is over"
-
-> "The number of copilot requests we have today is irrelevant. We should be burning through a data centres worth of credits"

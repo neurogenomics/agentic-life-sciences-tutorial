@@ -27,24 +27,7 @@ Pre-built agent configurations for specific tasks:
 
 ### What security is in place about my data?
 
-**OpenRouter** (the service we use) has the following privacy protections:
-
-**Never logs by default:**
-- Your prompts and responses are never logged
-- Only metadata is stored (token counts, latency, performance metrics)
-- Generation activity remains accessible to you
-
-**You control your data:**
-- Paid requests never route to providers that train on your data
-- Configure privacy settings per request or account-wide
-- Enable Zero Data Retention (ZDR) for enterprise-grade privacy
-- Opt-in to prompt logging for a 1% discount (your choice entirely)
-
-**Provider policies:**
-- Each provider has their own data retention policies
-- Check OpenRouter's privacy dashboard for details on each provider
-
-Learn more: [OpenRouter Privacy Settings](https://openrouter.ai/settings/privacy)
+**OpenRouter** won't log data and has other security measures in plance: [OpenRouter Privacy Settings](https://openrouter.ai/settings/privacy)
 
 ## Useful Commands
 
@@ -59,6 +42,7 @@ Learn more: [OpenRouter Privacy Settings](https://openrouter.ai/settings/privacy
 - [Anthropic's Guide to Building Effective Agents](https://www.anthropic.com/engineering/building-effective-agents)
 - [claude-mem: Memory System](https://github.com/thedotmack/claude-mem)
 - [Claude Code: A Highly Agentic Coding Assistant (DeepLearning.AI)](https://learn.deeplearning.ai/courses/claude-code-a-highly-agentic-coding-assistant)
+- [OpenCode Retention Policy](https://openrouter.ai/docs/guides/features/zdr#openrouters-retention-policy)
 
 ## Motivation
 
@@ -67,3 +51,4 @@ Learn more: [OpenRouter Privacy Settings](https://openrouter.ai/settings/privacy
 > "Code is over"
 >
 > "We should be burning through a data centre's worth of credits"
+> - Nathan
