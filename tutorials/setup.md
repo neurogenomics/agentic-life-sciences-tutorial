@@ -16,7 +16,7 @@ Coding agents are distinct from chatbots because they can read and write files o
 Here are the current tools we are using:
 
 * [OpenCode](https://opencode.ai/) agent interface is an open source alternative to Claude Code
-* [OpenRouter](openrouter.ai) as provider (single subscription to access many models)
+* [OpenRouter](https://openrouter.ai) as provider (single subscription to access many models)
 * [Kimi K2.5](https://www.kimi.com/en) is a current strong coding model
 
 To access Anthropic's Opus 4.5, we are accessing through [GitHub Education](https://github.com/education):
