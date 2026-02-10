@@ -15,7 +15,7 @@ This tutorial walks you through using OpenCode to analyze the Palmer Penguins da
 
 ## Steps
 
-1. Download the "Palmer Penguins dataset" to your folder. This will be an example dataset to use: https://allisonhorst.github.io/palmerpenguins/. You can download the CSV directly from: https://raw.githubusercontent.com/allisonhorst/palmerpenguins/main/inst/extdata/penguins.csv
+1. Download the "Palmer Penguins dataset" to your folder. This will be an example dataset to use: https://allisonhorst.github.io/palmerpenguins/. You can download the CSV directly from [here](https://raw.githubusercontent.com/allisonhorst/palmerpenguins/main/inst/extdata/penguins.csv)
 
 2. Switch to `Plan` mode. This is a mode that won't start to make things. It will ask you questions to help guide your progress.
 
