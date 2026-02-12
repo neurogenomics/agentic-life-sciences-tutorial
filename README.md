@@ -12,6 +12,7 @@ Lab guide for adopting agentic work and coding assistants.
 4. [Rules & Guidelines](./tutorials/rules.md) - Customize AI behavior with rules files
 5. [Making Custom Agents](./tutorials/making-agents.md) - Build specialized agents
 6. [Multiple Sessions with tmux](./tutorials/tmux-sessions.md) - Run parallel Claude sessions
+7. [Data Portal for Single Cell Sequencing](./tutorials/single-cell-portal.md) - Interactive viewer for scRNA-seq data
 
 ## Agents
 
