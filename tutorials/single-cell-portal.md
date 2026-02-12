@@ -9,7 +9,7 @@ Build an interactive viewer for single-cell RNA sequencing data using public dat
 
 ## Organise project
 
-1. Make a new repo for your project
+1. Make a new GitHub repositorie for your project.
 
 2. Download [Github command line](https://github.com/cli/cli). For Mac, this may require install [Homebrew](https://brew.sh).
 
