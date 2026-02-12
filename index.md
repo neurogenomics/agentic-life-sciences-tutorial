@@ -9,6 +9,7 @@ Lab guide for adopting agentic work and coding assistants.
 3. [Journal Club Slides](./tutorials/journal-club-slides) - Create presentations from papers
 4. [Rules & Guidelines](./tutorials/rules) - Customize AI behavior with rules files
 5. [Making Custom Agents](./tutorials/making-agents) - Build specialized agents
+6. [Data Portal for Single Cell Sequencing](./tutorials/single-cell-portal) - Interactive viewer for scRNA-seq data
 
 ---
 
