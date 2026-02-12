@@ -9,10 +9,10 @@ Lab guide for adopting agentic work and coding assistants.
 1. [Setup](./tutorials/setup.md) - Get started with OpenCode, OpenRouter, and Kimi K2.5
 2. [Penguins Dataset Analysis](./tutorials/penguins-analysis.md) - Data analysis example with AI
 3. [Journal Club Slides](./tutorials/journal-club-slides.md) - Create presentations from papers
-4. [Rules & Guidelines](./tutorials/rules.md) - Customize AI behavior with rules files
-5. [Making Custom Agents](./tutorials/making-agents.md) - Build specialized agents
-6. [Multiple Sessions with tmux](./tutorials/tmux-sessions.md) - Run parallel Claude sessions
-7. [Data Portal for Single Cell Sequencing](./tutorials/single-cell-portal.md) - Interactive viewer for scRNA-seq data
+4. [Data Portal for Single Cell Sequencing](./tutorials/single-cell-portal.md) - Interactive viewer for scRNA-seq data
+5. [Rules & Guidelines](./tutorials/rules.md) - Customize AI behavior with rules files
+6. [Making Custom Agents](./tutorials/making-agents.md) - Build specialized agents
+7. [Multiple Sessions with tmux](./tutorials/tmux-sessions.md) - Run parallel Claude sessions
 
 ## Agents
 
