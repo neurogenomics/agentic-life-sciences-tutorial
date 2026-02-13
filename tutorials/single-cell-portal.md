@@ -21,17 +21,11 @@ Build an interactive viewer for single-cell RNA sequencing data using public dat
 
 ## Get prompting!
 
-1. In `Plan` mode:
+1. In `Plan` mode, type:
 
 ```
-I have a single-cell RNA sequencing h5ad file in a folder called [you_folder_name]. Build me an interactive
-website app to explore this data. Include:
-- A UMAP plot colored by cell type and cluster
-- A heatmap of cell type vs cluster
-Make sure not to read the whole data, just check meta data.
+Build an interactive viewer for my single-cell RNA data. The file is at [path/to/data.h5ad].
 ```
-
-2. In the `Plan` mode I chose to use Streamlit because it said it was easy to use :) Work with the AI to make what you want.
 
 ## Result
 
