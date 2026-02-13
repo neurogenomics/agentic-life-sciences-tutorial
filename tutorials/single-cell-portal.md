@@ -31,3 +31,26 @@ Build an interactive viewer for my single-cell RNA data. The file is at [path/to
 
 ![Single Cell Viewer](../assets/images/single_cell_viewer.png)
 
+## Publish to GitHub
+
+Once your app is working, you can save it to GitHub:
+
+### Install GitHub CLI
+
+1. Download [GitHub CLI](https://cli.github.com/)
+2. Authenticate: `gh auth login`
+
+### Upload your code
+
+In chat mode, ask:
+
+```
+Push my project to a new GitHub repository called [your-repo-name]
+```
+
+Or create a repo first:
+
+```
+Create a new private GitHub repository called [your-repo-name], then push my code to it
+```
+
