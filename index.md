@@ -8,8 +8,6 @@ Lab guide for adopting agentic work and coding assistants.
 2. [Penguins Dataset Analysis](./tutorials/penguins-analysis) - Data analysis example with AI
 3. [Journal Club Slides](./tutorials/journal-club-slides) - Create presentations from papers
 4. [Data Portal for Single Cell Sequencing](./tutorials/single-cell-portal) - Interactive viewer for scRNA-seq data
-5. [Rules & Guidelines](./tutorials/rules) - Customize AI behavior with rules files
-6. [Making Custom Agents](./tutorials/making-agents) - Build specialized agents
 
 ---
 
