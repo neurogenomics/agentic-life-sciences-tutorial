@@ -20,10 +20,6 @@ Every message re-sends the **entire conversation** to the API — your rules, al
 - Bash/test output — a single stack trace ≈ 5k–20k tokens ← *silent killer*
 - Web search results — 5k–10k per search
 
-**How a session fills up:**
-
-![Context window fill chart](../assets/images/context-window-fill.png)
-
 ---
 
 ## Context Rot and Cost
