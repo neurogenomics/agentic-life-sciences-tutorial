@@ -89,6 +89,15 @@ The **Ralph Loop** (coined by [Geoffrey Huntley](https://ghuntley.com/ralph/)) a
 
 > *"Cost of a $50k USD contract, delivered, MVP, tested + reviewed: $297 USD."* — Geoffrey Huntley
 
+**When to use it:**
+- **Overnight runs** — set a task list before you sleep, review finished commits in the morning
+- **Repetitive operations** — running the same analysis on 20 datasets, reformatting 50 files, migrating a codebase from one API to another
+- **Long multi-step projects** — building a pipeline stage by stage where each stage needs its own focused context
+- **Quality loops** — have one Claude implement, a second review and write feedback, repeat until it passes
+- **Anything where you'd otherwise babysit a long session** — if you find yourself watching Claude work and not doing anything, that's a Ralph job
+
+The key difference from just running a long session: every iteration starts fresh with no accumulated history, no recency bias from earlier failed attempts, and no cost from re-sending a bloated context. The work accumulates in files and git; the context stays clean.
+
 The simplest version is one line:
 
 ```bash
