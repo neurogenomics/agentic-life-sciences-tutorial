@@ -42,25 +42,38 @@ Current Claude models all support 200,000-token context windows:
 
 ### Claude Code's context breakdown
 
-When you open Claude Code, context starts accumulating immediately:
+Each component of your session occupies a slice of the 200k-token window. Here is how a typical long session fills up:
 
 ```
-Session start (fresh)
-├── System prompt + CLAUDE.md          ~2,000–10,000 tokens  (fixed overhead)
-├── Your first message                 ~50–200 tokens
-└── Model reply                        ~200–1,000 tokens
-                                       ─────────────────
-                                       ~2,500–11,000 tokens total
+Context window (200,000 tokens = 100%)
+├─────────────────────────────────────────────────────────────────────┤
+│                                                                     │
+│  FRESH SESSION (~5k tokens, 2.5%)                                   │
+│  ░░░                                                                │
+│  [System/CLAUDE.md ~4k][msg ~0.5k]                                  │
+│                                                                     │
+│  AFTER 1 HOUR (~80k tokens, 40%)                                    │
+│  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░                          │
+│  [System ~4k][Chat ~40k][File reads ~20k][Bash ~15k]                │
+│                                                                     │
+│  LONG SESSION (~140k tokens, 70%)  ← quality degrades here         │
+│  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ │
+│  [System ~4k][Chat ~60k][File reads ~40k][Bash ~25k][Search ~10k]  │
+│                                                                     │
+│  AUTO-COMPACT TRIGGERS (~160k tokens, 80%)                          │
+│  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+│                                                                     │
+│  REMAINING HEADROOM                                                 │
+│  ░░░░░░░░░░░░░░░░░░░░░                                             │
+│                                                                     │
+└─────────────────────────────────────────────────────────────────────┘
 
-After a long session
-├── System prompt + CLAUDE.md          ~2,000–10,000 tokens
-├── 40 conversation turns              ~20,000–80,000 tokens
-├── File reads (10 files × 500 lines)  ~30,000 tokens
-├── Bash/test output                   ~15,000 tokens
-├── Web search results                 ~10,000 tokens
-│                                      ─────────────────
-│                                      ~77,000–135,000 tokens
-└── You haven't even started the next task yet
+Legend:
+  [System/CLAUDE.md]  Fixed overhead, loads every session     ~2k–10k tokens
+  [Chat history]      Every message + every reply             grows ~1k/turn
+  [File reads]        Each 500-line file ≈ 3k tokens          compounds fast
+  [Bash/test output]  A single stack trace ≈ 5k–20k tokens   silent killer
+  [Web search]        Each search result set ≈ 5k–10k tokens
 ```
 
 ### Every message re-sends the entire context
@@ -109,16 +122,42 @@ As signal-to-noise ratio drops, hallucination risk rises. The model is trying to
 
 ### Cost
 
-API pricing is based on input tokens — the full context window — plus output tokens. With Claude Sonnet 4.6 at current rates:
+API pricing is based on **input tokens** — the full context window — re-sent with every message. The larger the context, the more every single reply costs.
 
-| Context size | Approx. cost per message |
-|---|---|
-| 10,000 tokens | ~$0.03 |
-| 50,000 tokens | ~$0.15 |
-| 100,000 tokens | ~$0.30 |
-| 164,000 tokens | ~$0.50 |
+```
+Cost per message ($) vs context size — input tokens only, per API
 
-In a long session with 50+ messages at 164k tokens, that's **$25+ for a single session** — before you've written a line of production code.
+$2.00 ┤
+      │
+$1.50 ┤                                                    ╭── Opus 4.6  ($5/MTok)
+      │                                                  ╭─╯
+$1.00 ┤                                              ╭───╯
+      │                                          ╭───╯
+$0.75 ┤                                      ╭───╯
+      │                                  ╭───╯
+$0.50 ┤                          ╭───────╯·················· Sonnet 4.6 ($3/MTok)
+      │                      ╭───╯ ╭─────────────────────── GPT-4o     ($2.5/MTok)
+$0.25 ┤              ╭───────╯─────╯
+      │       ╭──────╯╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌ Gemini 1.5 Pro ($1.25/MTok)
+$0.10 ┤  ╭────╯- - - - - - - - - - - - - - - - - - - - - - Haiku 4.5  ($1/MTok)
+      │──╯
+$0.00 ┼──────────┬──────────┬──────────┬──────────┬─────────
+     0k         50k       100k       150k       200k
+                        Input tokens (context size)
+
+  Model              Price/MTok   Cost @ 50k    Cost @ 150k   Cost @ 200k
+  ─────────────────────────────────────────────────────────────────────────
+  claude-haiku-4-5     $1.00        $0.05         $0.15         $0.20
+  gemini-1.5-pro       $1.25        $0.06         $0.19         $0.25
+  gpt-4o               $2.50        $0.13         $0.38         $0.50
+  claude-sonnet-4-6    $3.00        $0.15         $0.45         $0.60
+  claude-opus-4-6      $5.00        $0.25         $0.75         $1.00
+  gpt-4o (mini)        $0.15        $0.01         $0.02         $0.03
+```
+
+In a long session with 50 messages at 150k tokens on Sonnet 4.6, that is **$22.50 in input costs alone** — before a single line of output. The same session on Opus would cost **$37.50**.
+
+This is why context management is a billing issue, not just a quality issue.
 
 ---
 
