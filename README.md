@@ -11,6 +11,7 @@ Lab guide for adopting agentic work and coding assistants.
 3. [Journal Club Slides](./tutorials/journal-club-slides.md) - Create presentations from papers
 4. [Data Portal for Single Cell Sequencing](./tutorials/single-cell-portal.md) - Interactive viewer for scRNA-seq data
 5. [Managing Context: Reducing Hallucinations and Run Costs](./tutorials/context-management.md) - Understand context windows, context rot, PLAN.md workflow, and how to use /compact
+6. [GSD and the Ralph Loop](./tutorials/gsd-ralph.md) - Atomic task workflows and autonomous agentic loops
 
 ## Agents
 
