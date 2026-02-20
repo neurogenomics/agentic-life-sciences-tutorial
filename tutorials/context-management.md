@@ -30,15 +30,15 @@ Every message re-sends the **entire conversation** to the API — your rules, al
 
 ![Cost per message vs context size](../assets/images/context-cost-per-message.png)
 
-| Model | $/MTok | @ 50k | @ 150k | @ 200k |
-|---|---|---|---|---|
-| GPT-4o mini | $0.15 | $0.01 | $0.02 | $0.03 |
-| **Kimi K2.5 ★** | **$0.60** | **$0.03** | **$0.09** | **$0.12** |
-| Claude Haiku 4.5 | $1.00 | $0.05 | $0.15 | $0.20 |
-| Gemini 1.5 Pro | $1.25 | $0.06 | $0.19 | $0.25 |
-| GPT-4o | $2.50 | $0.13 | $0.38 | $0.50 |
-| Claude Sonnet 4.6 | $3.00 | $0.15 | $0.45 | $0.60 |
-| Claude Opus 4.6 | $5.00 | $0.25 | $0.75 | $1.00 |
+| Model | $/MTok input | Context window | @ 50k | @ 150k | @ 200k |
+|---|---|---|---|---|---|
+| GPT-4o mini | $0.15 | 128k | $0.01 | $0.02 | $0.03 |
+| **Kimi K2.5 ★** | **$0.60** | **256k** | **$0.03** | **$0.09** | **$0.12** |
+| Claude Haiku 4.5 | $1.00 | 200k | $0.05 | $0.15 | $0.20 |
+| Gemini 1.5 Pro | $1.25 | 2M | $0.06 | $0.19 | $0.25 |
+| GPT-4o | $2.50 | 128k | $0.13 | $0.38 | $0.50 |
+| Claude Sonnet 4.6 | $3.00 | 200k | $0.15 | $0.45 | $0.60 |
+| Claude Opus 4.6 | $5.00 | 200k | $0.25 | $0.75 | $1.00 |
 
 ★ Kimi K2.5 is the model used in this course (via OpenRouter). Even so, 50 messages × 150k tokens = **$4.50**. Context management is a billing issue, not just a quality issue.
 
