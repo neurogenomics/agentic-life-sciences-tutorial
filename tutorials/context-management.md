@@ -67,114 +67,23 @@ A few things stand out here: **system tools (10.5%)** — Claude Code's built-in
 
 ---
 
-## The Solution: `/compact`
+## The Solutions: `/clear` and `/compact`
 
-Type `/compact` in Claude Code at any time. It summarises the entire conversation into a structured digest (~5k tokens) and discards the raw history — typically a **97% reduction**.
+**`/clear`** resets the conversation entirely — zero history, zero tool outputs, back to just the system prompt. Use it between unrelated tasks or when the session has gone off track. It's instant and free.
 
-Run it after completing a task, before starting something new, or when context hits ~50%.
+**`/compact`** summarises the entire conversation into a structured digest (~5k tokens) and discards the raw history — typically a **97% reduction**. Unlike `/clear` it preserves continuity: decisions, file states, and completed work survive in the summary. Use it when you want to keep going on the same task with a lighter context.
 
-> **Auto-compact warning:** The automatic trigger at 80% only saves titles and brief excerpts — not full content. Don't rely on it. Use `/compact` manually and use PLAN.md (below) for real continuity.
-
----
-
-## PLAN.md — Your Session Handoff File
-
-The real fix for context rot is keeping durable state in **files, not history**. One file — `PLAN.md` — updated every session, is all you need.
-
-**In your first session, ask Claude to create:**
-
-```markdown
-# PLAN.md
-
-## Goal
-[What you are building and why — one paragraph]
-
-## Key Decisions
-[Tech stack, design choices, constraints]
-
-## Stages
-### Stage 1 — ✅ Complete
-- [x] Task A
-
-### Stage 2 — 🔄 In Progress
-- [x] Task B
-- [ ] Task C
-
-## Progress: 40%
-
-## Next Actions
-1. First next step
-2. Second next step
-
-## Session Notes
-[Date] — [What was decided]
-```
-
-**At the end of every session:**
-```
-Update PLAN.md — mark completed tasks, update progress %, write next actions.
-```
-
-**To start the next session:**
-```
-Claude, continue with PLAN.md
-```
-
-Claude reads the file, picks up exactly where you left off, no recap needed. Keep **one** PLAN.md — never plan-v2.md, plan-final.md, etc.
-
-| File | Purpose | Loads |
+| | `/clear` | `/compact` |
 |---|---|---|
-| `CLAUDE.md` | Permanent style & conventions | Automatically, every session |
-| `PLAN.md` | Current project progress | On demand: "continue with PLAN.md" |
-| `memory/decisions.md` | Why choices were made | When you need the history |
+| History after | Gone | Summarised (~5k tokens) |
+| When to use | Between tasks, fresh start | Mid-task, keep continuity |
+| Cost | Free | One summary call |
 
----
-
-## Atomic Tasks
-
-The best defence against context rot is keeping tasks **atomic** — each completable in one fresh session, with state in files not history. See the [GSD and Ralph Loop tutorial](gsd-ralph.md) for the full workflow and automation scripts.
-
----
-
-## Advanced Techniques
-
-**Prompt caching** — when running automated loops, your CLAUDE.md is re-processed every iteration. Add `cache_control` to cache it at 10% of normal price:
-
-```python
-system=[{"type": "text", "text": "...CLAUDE.md...", "cache_control": {"type": "ephemeral"}}]
-```
-
-**Token budgeting** — tell the agent exactly what to return:
-```
-Read only the normalise_counts function — not the whole file
-Summarise test output in 10 lines, failures only
-```
-
-**Multi-agent parallelism** — split independent tasks across separate agents, each with a clean context window. They write results to shared files; a coordinator synthesises.
-
-**Automated hooks** — key hooks for context management:
-
-| Hook | Use |
-|---|---|
-| `SessionStart` (matcher: `compact`) | Re-inject `PLAN.md` after auto-compact |
-| `PreCompact` | Write state to memory files before compaction |
-| `Stop` | Check task completion, keep looping if not done |
-
----
-
-## Summary
-
-| Concept | What to do |
-|---|---|
-| Context rot | `/compact` before hitting 70%, not after |
-| Session handoff | Keep `PLAN.md` updated — "continue with PLAN.md" |
-| Task sizing | One task per session, describable in two sentences |
-| Cost | 50 messages × 150k tokens = $4.50 (Kimi) to $22.50 (Sonnet) |
-| Automation | Prompt caching + hooks for repeated agentic loops |
+> **Auto-compact warning:** The automatic trigger at 80% only saves titles and brief excerpts — not full content. Don't rely on it. Use `/compact` manually.
 
 ---
 
 ## Further Reading
 
-- [GSD and the Ralph Loop](gsd-ralph.md) — atomic tasks and automation scripts
+- [GSD and the Ralph Loop](gsd-ralph.md) — atomic tasks, PLAN.md handoff, and automation scripts
 - [Anthropic: Building Effective Agents](https://www.anthropic.com/engineering/building-effective-agents)

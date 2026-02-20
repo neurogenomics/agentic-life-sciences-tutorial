@@ -5,20 +5,73 @@ title: GSD and the Ralph Loop
 
 # GSD and the Ralph Loop
 
-Manual sessions accumulate history, decisions get buried, and eventually you're spending more time managing the AI than building. GSD and the Ralph Loop solve this by treating each task as a self-contained unit with state living in files, not conversation history.
+The root cause of context rot isn't long sessions — it's keeping state in conversation history instead of files. Once your decisions, progress, and task definitions live in files that Claude reads fresh each time, context management becomes trivial.
+
+---
+
+## PLAN.md — Your Session Handoff File
+
+One file — `PLAN.md` — updated every session, gives Claude everything it needs to pick up where you left off with no recap.
+
+**In your first session, ask Claude to create:**
+
+```markdown
+# PLAN.md
+
+## Goal
+[What you are building and why — one paragraph]
+
+## Key Decisions
+[Tech stack, design choices, constraints]
+
+## Stages
+### Stage 1 — ✅ Complete
+- [x] Task A
+
+### Stage 2 — 🔄 In Progress
+- [x] Task B
+- [ ] Task C
+
+## Progress: 40%
+
+## Next Actions
+1. First next step
+2. Second next step
+
+## Session Notes
+[Date] — [What was decided]
+```
+
+**End of every session:**
+```
+Update PLAN.md — mark completed tasks, update progress %, write next actions.
+```
+
+**Start of next session:**
+```
+Claude, continue with PLAN.md
+```
+
+Claude reads the file, picks up exactly where you left off. Keep **one** PLAN.md — never plan-v2.md, plan-final.md, etc.
+
+| File | Purpose | Loads |
+|---|---|---|
+| `CLAUDE.md` | Permanent style & conventions | Automatically, every session |
+| `PLAN.md` | Current project progress | On demand: "continue with PLAN.md" |
+| `memory/decisions.md` | Why choices were made | When you need the history |
 
 ---
 
 ## Atomic Tasks: GSD
 
-**GSD (Get Shit Done)** is a workflow discipline built around one rule: every task must be atomic — completable in a single fresh session.
+**GSD (Get Shit Done)** makes the file-based approach systematic: every task must be atomic — completable in a single fresh session.
 
 ```
 Spec → Roadmap → Atomic Tasks → Fresh Session → Implement → Verify → Done
                                      ↑ loop if fails ↑
 ```
 
-State lives in files (`PLAN.md`, `progress.txt`), not history. Each session reads the files, does one thing, writes back, and exits clean.
+Each session reads `PLAN.md`, does one thing, writes back, and exits clean. The next session finds exactly where things stand.
 
 | Size | Example | Risk |
 |---|---|---|
@@ -32,7 +85,7 @@ If you can't describe "done" in two sentences, split the task.
 
 ## The Ralph Loop
 
-The **Ralph Loop** (coined by [Geoffrey Huntley](https://ghuntley.com/ralph/)) automates GSD: each iteration spawns a fresh context, reads its task from a file, does the work, commits, and exits. A reviewer checks the output and either ships it or writes feedback for the next iteration. Failed attempts never pollute the context.
+The **Ralph Loop** (coined by [Geoffrey Huntley](https://ghuntley.com/ralph/)) automates GSD entirely: each iteration spawns a fresh context, reads its task from a file, implements it, commits, updates progress, and exits. A reviewer checks the output and either ships it or writes feedback for the next iteration. Failed attempts never pollute the context.
 
 > *"Cost of a $50k USD contract, delivered, MVP, tested + reviewed: $297 USD."* — Geoffrey Huntley
 
@@ -42,13 +95,9 @@ The simplest version is one line:
 while :; do cat PROMPT.md | claude --dangerously-skip-permissions; done
 ```
 
-In practice you want checkpoints and a completion signal.
+In practice you want a progress file and a completion signal.
 
----
-
-## Scripts
-
-**`ralph-once.sh`** — one task at a time, human reviews before the next run:
+**`ralph-once.sh`** — one task at a time, you review before the next run:
 
 ```bash
 #!/bin/bash
@@ -80,16 +129,12 @@ for i in $(seq 1 $MAX_ITERATIONS); do
 done
 ```
 
----
+**How the files work:**
+- **`PRD.md`** — your full spec: what to build, acceptance criteria, constraints. This is the Ralph equivalent of `PLAN.md`.
+- **`progress.txt`** — running log of completed tasks; Claude updates it after each iteration, giving you a full audit trail
+- Each loop starts with a **clean context window** — no accumulated rot, no recency bias from earlier failed attempts
 
-## How it works
-
-1. **`PRD.md`** — your full spec: what to build, acceptance criteria, constraints
-2. **`progress.txt`** — running log of completed tasks; Claude updates it after each iteration
-3. Each loop starts with a **clean context window** — no accumulated rot
-4. The reviewer (you, or a second model) checks output before triggering the next loop
-
-The key insight is that `--dangerously-skip-permissions` in an isolated repo lets Claude commit and move on without pausing for approvals, while `progress.txt` gives you a full audit trail.
+`--dangerously-skip-permissions` in an isolated repo lets Claude commit and move on without pausing for approvals. Scope it with `--allowedTools "Edit,Bash(git commit *)"` if you want tighter control.
 
 ---
 
