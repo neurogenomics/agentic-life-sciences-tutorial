@@ -130,80 +130,9 @@ Claude reads the file, picks up exactly where you left off, no recap needed. Kee
 
 ---
 
-## Atomic Tasks and the Ralph Loop
+## Atomic Tasks
 
-The core idea behind good context management is keeping tasks **atomic** — each completable in one session with a clean context. State lives in files, not history.
-
-**GSD workflow:**
-```
-Spec → Roadmap → Atomic Tasks → Fresh Session → Implement → Verify → Done
-                                     ↑ loop if fails ↑
-```
-
-| Size | Example | Risk |
-|---|---|---|
-| Too large | "Build the analysis pipeline" | Guaranteed rot |
-| Good | "Write the DESeq2 wrapper with tests" | Low |
-| Good | "Fix the NA bug in normalise_counts()" | Very low |
-
-If you can't describe "done" in two sentences, split the task.
-
----
-
-## The Ralph Loop
-
-The **Ralph Loop** (coined by [Geoffrey Huntley](https://ghuntley.com/ralph/)) automates atomic task execution: each iteration spawns a fresh context, reads its task from a file, does the work, then exits. A reviewer checks the output and either ships it or writes feedback for the next iteration. Failed attempts never pollute the context.
-
-> *"Cost of a $50k USD contract, delivered, MVP, tested + reviewed: $297 USD."* — Geoffrey Huntley
-
-The simplest version is one line:
-
-```bash
-while :; do cat PROMPT.md | claude --dangerously-skip-permissions; done
-```
-
-In practice you want checkpoints and a completion signal. Here are two scripts from [aihero.dev](https://www.aihero.dev/getting-started-with-ralph):
-
-**`ralph-once.sh`** — one task, human reviews before next:
-```bash
-#!/bin/bash
-claude --permission-mode acceptEdits \
-  "@PRD.md @progress.txt
-  1. Read the PRD and progress file.
-  2. Find the next incomplete task and implement it.
-  3. Commit your changes.
-  4. Update progress.txt with what you did.
-  ONLY DO ONE TASK AT A TIME."
-```
-
-**`afk-ralph.sh`** — fully autonomous, loops until done:
-```bash
-#!/bin/bash
-MAX_ITERATIONS=${1:-10}
-for i in $(seq 1 $MAX_ITERATIONS); do
-  echo "=== Iteration $i ==="
-  output=$(claude --dangerously-skip-permissions \
-    "@PRD.md @progress.txt
-    Find the next incomplete task, implement it, commit, and update progress.txt.
-    When ALL tasks are complete, output exactly: <promise>COMPLETE</promise>
-    ONLY DO ONE TASK AT A TIME.")
-  if echo "$output" | grep -q "<promise>COMPLETE</promise>"; then
-    echo "All tasks complete."
-    break
-  fi
-done
-```
-
-**How it works:**
-1. `PRD.md` holds your full spec — what to build and why
-2. `progress.txt` tracks what's done — Claude updates it after each task
-3. Each loop iteration has a **clean context window** — no accumulated rot
-4. The reviewer (you, or a second model) checks output before the next loop
-
-**Further reading:**
-- [ghuntley.com/ralph](https://ghuntley.com/ralph/) — the original technique
-- [Getting started with Ralph — aihero.dev](https://www.aihero.dev/getting-started-with-ralph)
-- [Video walkthrough](https://www.youtube.com/watch?v=_IK18goX4X8)
+The best defence against context rot is keeping tasks **atomic** — each completable in one fresh session, with state in files not history. See the [GSD and Ralph Loop tutorial](gsd-ralph.md) for the full workflow and automation scripts.
 
 ---
 
@@ -247,6 +176,5 @@ Summarise test output in 10 lines, failures only
 
 ## Further Reading
 
-- [GSD + BMAD overview](https://pasqualepillitteri.it/en/news/158/framework-ai-spec-driven-development-guide-bmad-gsd-ralph-loop)
-- [Ralph Loop — Goose docs](https://block.github.io/goose/docs/tutorials/ralph-loop/)
+- [GSD and the Ralph Loop](gsd-ralph.md) — atomic tasks and automation scripts
 - [Anthropic: Building Effective Agents](https://www.anthropic.com/engineering/building-effective-agents)
