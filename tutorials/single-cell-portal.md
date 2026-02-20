@@ -54,3 +54,7 @@ Or create a repo first:
 Create a new private GitHub repository called [your-repo-name], then push my code to it
 ```
 
+### Keep your context clean while working
+
+Long sessions building and debugging your app will fill the context window quickly. Before pushing to GitHub, read the [Managing Context](./context-management) tutorial to learn how to use `/compact`, maintain a `PLAN.md`, and avoid hallucinations on longer projects.
+
