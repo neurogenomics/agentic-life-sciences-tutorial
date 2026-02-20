@@ -42,6 +42,8 @@ Every message re-sends the **entire conversation** to the API — your rules, al
 
 ★ Kimi K2.5 is the model used in this course (via OpenRouter). Even so, 50 messages × 150k tokens = **$4.50**. Context management is a billing issue, not just a quality issue.
 
+For up-to-date pricing and context window specs across all models, see [models.dev](https://models.dev/).
+
 **Check your context at any time** with `/context`. Here's real output from the session used to write this tutorial (reading files, running web searches, generating charts):
 
 ```
