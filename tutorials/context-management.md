@@ -42,24 +42,26 @@ Every message re-sends the **entire conversation** to the API — your rules, al
 
 ★ Kimi K2.5 is the model used in this course (via OpenRouter). Even so, 50 messages × 150k tokens = **$4.50**. Context management is a billing issue, not just a quality issue.
 
-**Check your context at any time** with `/context`:
+**Check your context at any time** with `/context`. Here's real output from the session used to write this tutorial (reading files, running web searches, generating charts):
 
 ```
-> /context
+❯ /context
 
-  Context window usage
-  ────────────────────────────────────────────
-  Used:       47,832 tokens  ████░░░░░░  24%
-  Remaining: 152,168 tokens
-  Limit:     200,000 tokens
+  Context Usage
+  claude-sonnet-4-6 · 56k/200k tokens (28%)
 
-  Breakdown
-  • System prompt / CLAUDE.md:   4,521 tokens
-  • Conversation history:        31,204 tokens
-  • Tool outputs:                12,107 tokens
+  Estimated usage by category
+  System prompt:   3.5k tokens  (1.7%)
+  System tools:     21k tokens (10.5%)
+  MCP tools:       4.7k tokens  (2.3%)
+  Skills:           <1k tokens  (0.0%)
+  Messages:        28.2k tokens (14.1%)
+  Compact buffer:    3k tokens  (1.5%)
+  ─────────────────────────────────────
+  Free space:       140k tokens (69.8%)
 ```
 
-This session (editing this tutorial, reading files, web searches) used ~48k tokens — 24% of the window. Each subsequent message re-sends all of it.
+A few things stand out here: **system tools (10.5%)** — Claude Code's built-in tool definitions are re-sent every message even when unused. **MCP tools** add another 2.3% just for being registered, regardless of use. Both are fixed overhead you can't compress away — only `/compact` or a fresh session resets them.
 
 ---
 
