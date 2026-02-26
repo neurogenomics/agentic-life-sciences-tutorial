@@ -1,7 +1,5 @@
 ---
-layout: home
-title: Home
-nav_order: 1
+layout: default
 ---
 
 # Skills Cookbook

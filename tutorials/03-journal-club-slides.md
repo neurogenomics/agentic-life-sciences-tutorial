@@ -1,8 +1,6 @@
 ---
 layout: default
 title: Automated Presentations
-parent: Tutorials
-nav_order: 3
 ---
 
 # 🎓 Automated Presentations: From Papers to PowerPoint

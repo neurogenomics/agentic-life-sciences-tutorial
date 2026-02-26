@@ -1,8 +1,6 @@
 ---
 layout: default
 title: Managing Context
-parent: Tutorials
-nav_order: 5
 ---
 
 # Managing Context: Reducing Hallucinations and Run Costs
