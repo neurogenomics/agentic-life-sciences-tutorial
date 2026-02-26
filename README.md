@@ -2,7 +2,7 @@
 
 Lab guide for adopting agentic work and coding assistants.
 
-**[Click here to view tutorials](https://neurogenomics.github.io/skills-cookbook/)**
+**View tutorials:** [GitHub Pages](https://neurogenomics.github.io/agentic-life-science-tutorial-private/) · [Browse in GitHub](./tutorials)
 
 ## Tutorials
 

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+    <meta name="description" content="{{ page.description | default: site.description }}">
+    {{ seo }}
+    <link rel="stylesheet" href="{{ '/assets/styles.css' | relative_url }}">
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header">
+        <div class="header-inner">
+          <p class="eyebrow">Agentic lab reference</p>
+          <h1 class="site-title"><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
+          <p class="site-description">{{ site.description }}</p>
+        </div>
+      </header>
+      <main class="site-main">
+        <article class="content">
+          {{ content }}
+        </article>
+      </main>
+      <footer class="site-footer">
+        <p>Keeping workflows tidy for the UKDRI labs · {{ site.time | date: '%Y' }}</p>
+      </footer>
+    </div>
+  </body>
+</html>
