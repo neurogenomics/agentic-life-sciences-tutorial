@@ -1,8 +1,9 @@
 title: Skills Cookbook
 description: Lab guide for adopting agentic work and coding assistants.
-theme: just-the-docs
+remote_theme: just-the-docs/just-the-docs@v0.8.0
 
 plugins:
+  - jekyll-remote-theme
   - jekyll-seo-tag
 
 # just-the-docs settings
