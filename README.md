@@ -13,6 +13,10 @@ Lab guide for adopting agentic work and coding assistants.
 5. [Managing Context: Reducing Hallucinations and Run Costs](./tutorials/05-context-management.md) - Understand context windows, context rot, PLAN.md workflow, and how to use /compact
 6. [GSD and the Ralph Loop](./tutorials/06-gsd-ralph.md) - Atomic task workflows and autonomous agentic loops
 
+## Prerequisites
+
+- [GitHub Education — Free Copilot Access](./tutorials/github-education.md) - Apply for GitHub Education benefits and activate Copilot Pro with Claude
+
 ## Agents
 
 Pre-built agent configurations for specific tasks:
