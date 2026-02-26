@@ -19,10 +19,12 @@ GitHub Education gives verified students and faculty free access to GitHub Copil
 
 ### Step 1 — Apply for GitHub Education
 
-1. Go to [github.com/education](https://github.com/education)
-2. Click **Get student benefits** or **Get faculty benefits**
-3. Complete the application — you'll need an academic email address or proof of affiliation
-4. Submit and wait for approval. Benefits become available within **72 hours** of verification
+1. Go to [github.com/education](https://github.com/education) and click **Join GitHub Education**
+
+   ![GitHub Education homepage with Join button](../assets/images/github-education-join.png)
+
+2. Complete the application — you'll need an academic email address or proof of affiliation
+3. Submit and wait for approval. Benefits become available within **72 hours** of verification
 
 ### Step 2 — Redeem your Copilot Pro coupon
 
