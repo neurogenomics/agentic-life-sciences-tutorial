@@ -24,13 +24,9 @@ The `pptx` skill is particularly useful here: instead of asking Claude to write 
 
 ### Installing a skill
 
-Skills live in your `~/.claude/skills/` directory. To install the `pptx` skill, clone or copy the skill folder there:
+Skills live in your `~/.claude/skills/` directory. To install the `pptx` skill, download the [pptx skill folder](https://github.com/anthropics/skills/tree/main/skills/pptx) and place it inside `~/.claude/skills/`.
 
-```bash
-git clone https://github.com/anthropics/skills ~/.claude/skills/pptx --depth 1
-```
-
-After installation your directory should look like this:
+Your directory should then look like this:
 
 ![.claude directory showing skills/pptx folder structure](../assets/images/skills-directory-structure.png)
 
