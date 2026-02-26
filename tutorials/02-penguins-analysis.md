@@ -1,6 +1,8 @@
 ---
 layout: default
-title: Data Analysis with AI - From Dataset to Publication Figures
+title: Data Analysis with AI
+parent: Tutorials
+nav_order: 2
 ---
 
 # Data Analysis with AI: From Dataset to Publication Figures
