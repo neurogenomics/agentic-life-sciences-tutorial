@@ -1,23 +1,11 @@
 title: Skills Cookbook
 description: Lab guide for adopting agentic work and coding assistants.
-remote_theme: just-the-docs/just-the-docs@v0.6.2
+theme: minima
 
 plugins:
-  - jekyll-remote-theme
   - jekyll-seo-tag
 
-# just-the-docs settings
-color_scheme: default
-search_enabled: true
-heading_anchors: true
-
-footer_content: "Skills Cookbook &mdash; Neurogenomics Lab, Imperial College London"
-
-back_to_top: true
-back_to_top_text: "Back to top"
-
-aux_links:
-  "View on GitHub":
-    - "https://github.com/neurogenomics/agentic-life-science-tutorial-private"
-
-aux_links_new_tab: true
+# Minima theme settings
+minima:
+  social_links:
+    github: neurogenomics/agentic-life-science-tutorial-private

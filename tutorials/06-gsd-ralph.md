@@ -1,8 +1,6 @@
 ---
 layout: default
 title: GSD and the Ralph Loop
-parent: Tutorials
-nav_order: 6
 ---
 
 # GSD and the Ralph Loop
