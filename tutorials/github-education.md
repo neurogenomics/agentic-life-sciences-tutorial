@@ -1,6 +1,7 @@
 ---
 layout: default
 title: GitHub Education — Free Copilot Access
+nav_order: 3
 ---
 
 # GitHub Education — Free Copilot Access

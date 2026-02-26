@@ -1,1 +1,25 @@
 title: Skills Cookbook
+description: Lab guide for adopting agentic work and coding assistants.
+remote_theme: just-the-docs/just-the-docs
+
+plugins:
+  - jekyll-remote-theme
+  - jekyll-seo-tag
+
+# just-the-docs settings
+color_scheme: default
+search_enabled: true
+heading_anchors: true
+
+footer_content: "Skills Cookbook &mdash; Neurogenomics Lab, Imperial College London"
+
+# Back to top link
+back_to_top: true
+back_to_top_text: "Back to top"
+
+# Aux links in the top-right corner
+aux_links:
+  "View on GitHub":
+    - "https://github.com/neurogenomics/skills-cookbook"
+
+aux_links_new_tab: true

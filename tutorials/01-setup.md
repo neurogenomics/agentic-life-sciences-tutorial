@@ -1,6 +1,8 @@
 ---
 layout: default
 title: Getting Started with AI Coding Tools
+parent: Tutorials
+nav_order: 1
 ---
 
 # 🚀 Getting Started with AI Coding Tools

@@ -1,6 +1,8 @@
 ---
 layout: default
 title: Data Portal for Single Cell Sequencing
+parent: Tutorials
+nav_order: 4
 ---
 
 # Data Portal for Single Cell Sequencing
