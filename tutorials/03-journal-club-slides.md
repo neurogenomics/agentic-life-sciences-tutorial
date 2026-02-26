@@ -22,6 +22,28 @@ Claude Code supports **skills** — reusable, community-contributed prompt templ
 
 The `pptx` skill is particularly useful here: instead of asking Claude to write Python/`python-pptx` code, you can invoke the skill directly with `/pptx` and Claude will handle the presentation creation end-to-end.
 
+### Installing a skill
+
+Skills live in your `~/.claude/skills/` directory. To install the `pptx` skill, clone or copy the skill folder there:
+
+```bash
+git clone https://github.com/anthropics/skills ~/.claude/skills/pptx --depth 1
+```
+
+After installation your directory should look like this:
+
+![.claude directory showing skills/pptx folder structure](../assets/images/skills-directory-structure.png)
+
+### Invoking a skill
+
+Skills are invoked with a `/` prefix followed by the skill name. To use the pptx skill:
+
+```
+/pptx Make me a 5-slide journal club presentation for this paper: <url>
+```
+
+> **Important:** You must **restart your Claude Code session** after installing a new skill for it to be recognised. Skills are loaded at session startup — Claude will not see them if added mid-session.
+
 ## Steps
 
 You can run this in `Plan` mode to optimise the output. Here is a prompt for the paper [Integration of variant annotations using deep set networks boosts rare variant association testing](https://www.nature.com/articles/s41588-024-01919-z):
