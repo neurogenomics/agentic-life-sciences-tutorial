@@ -11,6 +11,22 @@ This repo is designed to aid the adoption of agentic work in the lab, along with
 
 Coding agents are distinct from chatbots because they can read and write files on your computer.
 
+## How AI Coding Tools Work
+
+A coding agent is not a single thing — it is a stack of three layers:
+
+![Agent → Provider → Model]({{ site.baseurl }}/assets/images/stack-of-agents.svg)
+
+- **Agent** — the program on your computer (or in the cloud) that reads your files, runs commands, and writes code. Examples: GitHub Copilot, Claude Code, OpenCode.
+- **Provider** — the service that hosts and serves the AI model. Examples: GitHub, Anthropic, OpenRouter.
+- **Model** — the large language model that actually generates the code. Examples: Claude Opus 4.5, GPT-4.1, Kimi K2.5.
+
+You choose an agent, connect it to a provider, and pick a model. Different combinations have different privacy and cost implications:
+
+![Privacy comparison across providers]({{ site.baseurl }}/assets/images/table-of-privacy.svg)
+
+---
+
 ## Tools
 
 There are three AI coding tools worth knowing about. "Downloading" one of these tools means installing a program on your computer that can read and write files in your project folder, run terminal commands, and interact with APIs — it is not just a chatbot, it is a coding agent that operates on your local files.
