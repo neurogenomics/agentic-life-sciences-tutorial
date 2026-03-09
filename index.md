@@ -14,6 +14,7 @@ Lab guide for adopting agentic work and coding assistants.
 4. [Data Portal for Single Cell Sequencing](./tutorials/04-single-cell-portal) — Interactive viewer for scRNA-seq data
 5. [Managing Context: Reducing Hallucinations and Run Costs](./tutorials/05-context-management) — Understand context windows, context rot, and how to use /compact
 6. [GSD and the Ralph Loop](./tutorials/06-gsd-ralph) — Atomic task workflows and autonomous agentic loops
+7. [Agent Package Manager (APM)](./tutorials/07-apm) — Dependency manager for AI agent context
 
 ## Prerequisites
 

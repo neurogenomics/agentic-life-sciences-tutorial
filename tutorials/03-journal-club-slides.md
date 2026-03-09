@@ -13,33 +13,6 @@ This tutorial shows how to use OpenCode to create a PowerPoint presentation from
 - How to include figures and key takeaways
 - How to format slides for journal club
 
-## Skills
-
-Claude Code supports **skills** — reusable, community-contributed prompt templates that extend Claude's capabilities for specific tasks.
-
-- [Browse all Anthropic skills](https://github.com/anthropics/skills)
-- [pptx skill](https://github.com/anthropics/skills/tree/main/skills/pptx) — generates PowerPoint files directly from a prompt
-
-The `pptx` skill is particularly useful here: instead of asking Claude to write Python/`python-pptx` code, you can invoke the skill directly with `/pptx` and Claude will handle the presentation creation end-to-end.
-
-### Installing a skill
-
-Skills live in your `~/.claude/skills/` directory. To install the `pptx` skill, download the [pptx skill folder](https://github.com/anthropics/skills/tree/main/skills/pptx) and place it inside `~/.claude/skills/`.
-
-Your directory should then look like this:
-
-![.claude directory showing skills/pptx folder structure](../assets/images/skills-directory-structure.png)
-
-### Invoking a skill
-
-Skills are invoked with a `/` prefix followed by the skill name. To use the pptx skill:
-
-```
-/pptx Make me a 5-slide journal club presentation for this paper: <url>
-```
-
-> **Important:** You must **restart your Claude Code session** after installing a new skill for it to be recognised. Skills are loaded at session startup — Claude will not see them if added mid-session.
-
 ## Steps
 
 You can run this in `Plan` mode to optimise the output. Here is a prompt for the paper [Integration of variant annotations using deep set networks boosts rare variant association testing](https://www.nature.com/articles/s41588-024-01919-z):
@@ -74,3 +47,65 @@ Some ideas:
 - Specify the audience level (beginner, advanced, etc.)
 - Ask for a consistent color scheme or theme
 - Request more detailed figure annotations
+
+---
+
+## Advanced: Getting Skills with APM
+
+The presentation above works, but the output can be improved significantly by using a **skill** — a reusable prompt template that teaches Claude how to do a specific task well.
+
+### Why skills matter
+
+Skills give the agent domain-specific knowledge so it doesn't have to figure everything out from scratch each time. The difference is significant:
+
+| | With skill | Without skill |
+|---|---|---|
+| Workflow | Automatic execution | User provides instructions each time |
+| Interaction | 2 clarifying questions | 15 back-and-forth messages |
+| Failed API calls | 0 | 3 requiring retry |
+| Tokens consumed | ~6,000 | ~12,000 |
+
+Skills cut cost, reduce errors, and produce better output with less effort.
+
+### Getting skills from Anthropic
+
+Anthropic maintain a library of official skills at [github.com/anthropics/skills](https://github.com/anthropics/skills), including a [`pptx` skill](https://github.com/anthropics/skills/tree/main/skills/pptx) that generates polished PowerPoint files directly.
+
+Instead of manually downloading skills, you can use the **Agentic Package Manager (APM)** to install them in one command. APM is a dependency manager for AI agent context — think npm or pip, but for prompts, instructions, and skills. See the [APM tutorial](07-apm) for the full guide.
+
+### Install APM
+
+```bash
+curl -sSL https://raw.githubusercontent.com/microsoft/apm/main/install.sh | sh
+```
+
+### Install the pptx skill
+
+From your project directory:
+
+```bash
+apm init                                          # creates apm.yml if you don't have one
+apm install anthropics/skills/skills/pptx         # install the pptx skill
+apm compile --target claude                       # generate CLAUDE.md with the skill included
+```
+
+### Use the skill
+
+Restart your Claude Code session (skills are loaded at startup), then invoke it with:
+
+```
+/pptx Make me a 5-slide journal club presentation for this paper: <url>
+```
+
+Instead of writing Python/`python-pptx` code, Claude handles the entire presentation creation end-to-end using the skill's built-in template and logic.
+
+### Browse more skills
+
+You can explore the full Anthropic skills library for other useful capabilities:
+
+```bash
+# Browse what's available
+apm search anthropics/skills
+```
+
+Or visit [github.com/anthropics/skills](https://github.com/anthropics/skills) directly to see all available skills.

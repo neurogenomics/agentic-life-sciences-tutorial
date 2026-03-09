@@ -1,0 +1,7 @@
+name: agentic-life-science-tutorial
+version: 0.1.0
+description: Lab guide for adopting agentic work and coding assistants in life sciences
+author: neurogenomics
+dependencies:
+  apm:
+  - anthropics/skills/skills/pptx

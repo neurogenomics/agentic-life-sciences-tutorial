@@ -1,0 +1,9 @@
+lockfile_version: '1'
+generated_at: '2026-03-09T09:48:03.922254+00:00'
+apm_version: 0.7.4
+dependencies:
+- repo_url: anthropics/skills
+  host: github.com
+  resolved_commit: b0cbd3df1533b396d281a6886d5132f623393a9c
+  virtual_path: skills/pptx
+  is_virtual: true
