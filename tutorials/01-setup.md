@@ -13,25 +13,54 @@ Coding agents are distinct from chatbots because they can read and write files o
 
 ## Tools
 
-Here are the current tools we are using:
+There are three AI coding tools worth knowing about. "Downloading" one of these tools means installing a program on your computer that can read and write files in your project folder, run terminal commands, and interact with APIs — it is not just a chatbot, it is a coding agent that operates on your local files.
 
-* [OpenCode](https://opencode.ai/) agent interface is an open source alternative to Claude Code
-* [OpenRouter](https://openrouter.ai) as provider (single subscription to access many models)
-* [Kimi K2.5](https://www.kimi.com/en) is a current strong coding model
+### GitHub Copilot (Recommended — free for students)
 
-To access Anthropic's Opus 4.5, we are accessing through [GitHub Education](https://github.com/education):
-* Using [OpenCode](https://opencode.ai/) as the interface to run the models
-* Selecting [GitHub Copilot](https://github.com/features/copilot) as provider: `Connect provider`
-* Select Opus 4.5 or other models available through GitHub Copilot
+[GitHub Copilot](https://github.com/features/copilot) is GitHub's AI coding assistant. It runs inside VS Code and gives you access to top models (Claude Opus 4.5, GPT-4.1, Gemini) through your GitHub account — no separate API key needed.
 
-## Installation
+**What downloading it means:** You install the GitHub Copilot extension inside VS Code. This adds an AI chat panel and inline code suggestions directly in your editor. The models run on GitHub's servers; the extension just connects your editor to them.
+
+**Why we recommend it:** Free with [GitHub Education](https://education.github.com), gives access to multiple frontier models, and integrates directly into VS Code where you already write code.
+
+### GitHub Codex
+
+[Codex](https://github.com/features/codex) is GitHub's cloud-based coding agent. Unlike Copilot (which works alongside you in VS Code), Codex runs autonomously in a cloud sandbox — you give it a task and it works independently, then opens a pull request with its changes.
+
+**What downloading it means:** There is nothing to download. Codex runs entirely in the browser at github.com. You open a repository on GitHub, click the Codex tab, and assign it tasks. It clones your repo into a cloud environment, makes changes, and submits them as a PR for you to review.
+
+### Claude Code
+
+[Claude Code](https://docs.anthropic.com/en/docs/claude-code) is Anthropic's terminal-based coding agent. It runs in your terminal (command line) and operates directly on your local files.
+
+**What downloading it means:** You install a command-line program (via `npm install -g @anthropic-ai/claude-code`). When you run `claude` in a terminal inside your project folder, it starts an interactive session where you chat with Claude and it can read, edit, and create files on your machine. Requires a paid Anthropic API subscription or access through a provider.
+
+### OpenCode + OpenRouter (alternative)
+
+[OpenCode](https://opencode.ai/) is an open-source desktop app that provides a similar agent interface. It can connect to many model providers, including [OpenRouter](https://openrouter.ai) (a single subscription to access many models) and GitHub Copilot.
+
+**What downloading it means:** You download a desktop application. It provides a chat interface that can read and write files in your project, similar to Claude Code but with a graphical interface and support for multiple providers.
+
+---
+
+## Installation — GitHub Copilot (Recommended)
+
+1. Sign up for [GitHub Education](https://education.github.com) with your university email to get Copilot Pro free
+2. Install [VS Code](https://code.visualstudio.com/) if you don't have it
+3. Open VS Code → Extensions (sidebar) → search "GitHub Copilot" → Install
+4. Sign in with your GitHub account when prompted
+5. Open the Copilot Chat panel (sidebar icon or `Ctrl+Shift+I` / `Cmd+Shift+I`)
+6. Select a model (e.g. Claude Opus 4.5) from the model picker at the top of the chat
+7. Make a new folder to begin — e.g. create a `testing AI` folder in your Documents, then open it in VS Code (`File → Open Folder`)
+
+## Installation — OpenCode + OpenRouter (Alternative)
 
 Download [OpenCode Desktop App](https://opencode.ai/download)
 
 Make a new folder to begin. Example create a `testing AI` folder in your `Documents`. To use these models, it needs to be given a project folder to work in.
 
 Open OpenCode App on your computer:
-1. Click ⚙️ `Settings` 
+1. Click ⚙️ `Settings`
 2. Navigate to `Providers`
 3. Select to `OpenRouter`
 4. Enter API key (supplied separately via email)
