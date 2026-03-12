@@ -1,6 +1,5 @@
 title: Skills Cookbook
 description: Lab guide for adopting agentic work and coding assistants.
-theme: minima
 
 plugins:
   - jekyll-seo-tag
@@ -9,8 +8,3 @@ markdown: kramdown
 kramdown:
   syntax_highlighter: rouge
 highlighter: rouge
-
-# Minima theme settings
-minima:
-  social_links:
-    github: neurogenomics/agentic-life-science-tutorial-private
