@@ -13,7 +13,6 @@ export const TUTORIAL_PAGES = [
   '/tutorials/03-journal-club-slides',
   '/tutorials/04-single-cell-portal',
   '/tutorials/05-context-management',
-  '/tutorials/06-gsd-ralph',
   '/tutorials/07-apm',
 ] as const;
 
@@ -24,7 +23,6 @@ export const SLIDE_PAGES = [
   '/slides/03-journal-club-slides',
   '/slides/04-single-cell-portal',
   '/slides/05-context-management',
-  '/slides/06-gsd-ralph',
   '/slides/07-apm',
 ] as const;
 

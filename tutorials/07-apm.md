@@ -220,9 +220,8 @@ This pulls in the skills, instructions, and agent configs from this repo into yo
 | `CLAUDE.md` (hand-written) | `apm compile --target claude` (auto-generated) |
 | Sharing agents via "copy this file" | Publish as Git repo, `apm install owner/repo` |
 | `PLAN.md` session handoff | Still manual — APM handles context, not workflow |
-| Ralph Loop scripts | Can use `apm run` for prompt execution |
 
-APM doesn't replace your workflow — it manages the **context** that feeds into it. Your `PLAN.md`, Ralph scripts, and `/compact` habits all still apply. APM just makes the *rules, skills, and instructions* portable and versioned.
+APM doesn't replace your workflow — it manages the **context** that feeds into it. Your `PLAN.md` and `/compact` habits all still apply. APM just makes the *rules, skills, and instructions* portable and versioned.
 
 ---
 

@@ -61,19 +61,9 @@ layout: default
     <p class="tutorial-card__desc">Understand context windows and costs — learn how context rot develops and how to use <code>/compact</code> to keep runs cheap and accurate.</p>
   </a>
 
-  <a class="tutorial-card" href="./tutorials/06-gsd-ralph">
-    <div class="tutorial-card__header">
-      <span class="tutorial-card__number">06</span>
-      <span class="difficulty-badge difficulty-badge--advanced badge-advanced">Advanced</span>
-      <span class="time-estimate">25 min</span>
-    </div>
-    <h3 class="tutorial-card__title">GSD &amp; Ralph Loop</h3>
-    <p class="tutorial-card__desc">Atomic task workflows — decompose complex goals into minimal tasks and run autonomous agentic loops that self-verify completion.</p>
-  </a>
-
   <a class="tutorial-card" href="./tutorials/07-apm">
     <div class="tutorial-card__header">
-      <span class="tutorial-card__number">07</span>
+      <span class="tutorial-card__number">06</span>
       <span class="difficulty-badge difficulty-badge--advanced badge-advanced">Advanced</span>
       <span class="time-estimate">30 min</span>
     </div>

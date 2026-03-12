@@ -25,7 +25,6 @@ const ALL_NAV_TITLES = [
   'Journal Club Slides',
   'Single Cell Portal',
   'Managing Context',
-  'GSD and the Ralph Loop',
   'Agent Package Manager',
 ];
 

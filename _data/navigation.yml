@@ -26,9 +26,6 @@ sections:
       - title: Managing Context
         url: /tutorials/05-context-management
         time: "20 min"
-      - title: GSD and the Ralph Loop
-        url: /tutorials/06-gsd-ralph
-        time: "25 min"
       - title: Agent Package Manager
         url: /tutorials/07-apm
         time: "30 min"

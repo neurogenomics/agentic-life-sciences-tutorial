@@ -85,5 +85,4 @@ A few things stand out here: **system tools (10.5%)** — Claude Code's built-in
 
 ## Further Reading
 
-- [GSD and the Ralph Loop](gsd-ralph.md) — atomic tasks, PLAN.md handoff, and automation scripts
 - [Anthropic: Building Effective Agents](https://www.anthropic.com/engineering/building-effective-agents)
