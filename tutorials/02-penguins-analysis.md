@@ -1,6 +1,8 @@
 ---
-layout: default
+layout: docs
 title: Data Analysis with AI
+difficulty: intermediate
+time_estimate: "30 min"
 ---
 
 # Data Analysis with AI: From Dataset to Publication Figures

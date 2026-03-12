@@ -1,0 +1,30 @@
+---
+layout: default
+---
+<div class="docs-layout">
+  <aside class="sidebar" id="sidebar" role="navigation" aria-label="Tutorial navigation">
+    {% include sidebar.html %}
+  </aside>
+
+  <article class="docs-content">
+    {% include breadcrumbs.html %}
+
+    {% include slide-button.html %}
+
+    <!-- Difficulty badge + time estimate -->
+    {% if page.difficulty %}
+    <div class="docs-meta">
+      <span class="difficulty-badge difficulty-badge--{{ page.difficulty }}">{{ page.difficulty }}</span>
+      {% if page.time_estimate %}<span class="time-estimate">{{ page.time_estimate }}</span>{% endif %}
+    </div>
+    {% endif %}
+
+    {{ content }}
+
+    {% include prev-next.html %}
+  </article>
+
+  <aside class="toc-sidebar" role="complementary" aria-label="Table of contents">
+    {% include toc.html %}
+  </aside>
+</div>

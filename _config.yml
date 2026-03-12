@@ -5,6 +5,11 @@ theme: minima
 plugins:
   - jekyll-seo-tag
 
+markdown: kramdown
+kramdown:
+  syntax_highlighter: rouge
+highlighter: rouge
+
 # Minima theme settings
 minima:
   social_links:

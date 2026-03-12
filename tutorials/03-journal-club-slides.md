@@ -1,6 +1,8 @@
 ---
-layout: default
+layout: docs
 title: Automated Presentations
+difficulty: intermediate
+time_estimate: "25 min"
 ---
 
 # 🎓 Automated Presentations: From Papers to PowerPoint
