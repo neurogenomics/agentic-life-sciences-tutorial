@@ -1,0 +1,21 @@
+{% for section in site.data.navigation.sections %}
+<nav class="sidebar-nav-section">
+  <div class="sidebar-nav-title">
+    {{ section.title }}
+    <span class="difficulty-badge difficulty-badge--{{ section.difficulty }}">{{ section.difficulty }}</span>
+  </div>
+  <ul class="sidebar-nav-list">
+    {% for item in section.items %}
+    <li>
+      {% assign item_url_slash = item.url | append: '/' %}
+      <a class="sidebar-nav-link"
+         href="{{ item.url | relative_url }}"
+         {% if page.url == item.url or page.url == item_url_slash %}aria-current="page"{% endif %}>
+        <span>{{ item.title }}</span>
+        <span class="sidebar-nav-time">{{ item.time }}</span>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</nav>
+{% endfor %}

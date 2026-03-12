@@ -1,6 +1,8 @@
 ---
-layout: default
+layout: docs
 title: Getting Started with AI Coding Tools
+difficulty: beginner
+time_estimate: "20 min"
 ---
 
 # 🚀 Getting Started with AI Coding Tools

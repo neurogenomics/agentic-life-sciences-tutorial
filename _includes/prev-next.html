@@ -1,0 +1,95 @@
+{% comment %}
+  prev-next.html
+  Flattens all nav items from site.data.navigation.sections into a single
+  ordered array, locates the current page, then renders Previous / Next links.
+
+  Prev link is hidden on the first page; Next link is hidden on the last page.
+  Uses data-testid attributes for automated testing.
+{% endcomment %}
+
+{% comment %}
+  Step 1 — Build a flat ordered array of all nav items.
+  Liquid doesn't have a real array-push, so we serialise each item as a
+  pipe-delimited string "title|url" and collect them in a joined string,
+  then split again later. This keeps the logic self-contained.
+{% endcomment %}
+{% assign all_items = "" %}
+{% for section in site.data.navigation.sections %}
+  {% for item in section.items %}
+    {% assign entry = item.title | append: "|" | append: item.url %}
+    {% if all_items == "" %}
+      {% assign all_items = entry %}
+    {% else %}
+      {% assign all_items = all_items | append: "~" | append: entry %}
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+{% assign flat_items = all_items | split: "~" %}
+
+{% comment %}
+  Step 2 — Find the index of the current page.
+{% endcomment %}
+{% assign current_index = nil %}
+{% for entry in flat_items %}
+  {% assign parts = entry | split: "|" %}
+  {% assign entry_url = parts[1] %}
+  {% assign entry_url_slash = entry_url | append: "/" %}
+  {% if page.url == entry_url or page.url == entry_url_slash %}
+    {% assign current_index = forloop.index0 %}
+  {% endif %}
+{% endfor %}
+
+{% comment %}
+  Step 3 — Only render when we know where we are in the nav.
+{% endcomment %}
+{% if current_index != nil %}
+
+  {% assign prev_index = current_index | minus: 1 %}
+  {% assign next_index = current_index | plus: 1 %}
+  {% assign last_index  = flat_items.size | minus: 1 %}
+
+  {% comment %} Resolve prev item {% endcomment %}
+  {% assign prev_entry = nil %}
+  {% if current_index > 0 %}
+    {% assign prev_entry = flat_items[prev_index] %}
+  {% endif %}
+
+  {% comment %} Resolve next item {% endcomment %}
+  {% assign next_entry = nil %}
+  {% if current_index < last_index %}
+    {% assign next_entry = flat_items[next_index] %}
+  {% endif %}
+
+  {% comment %} Render only when at least one neighbour exists {% endcomment %}
+  {% if prev_entry or next_entry %}
+  <nav class="prev-next" aria-label="Page navigation">
+
+    {% if prev_entry %}
+      {% assign prev_parts = prev_entry | split: "|" %}
+      {% assign prev_title = prev_parts[0] %}
+      {% assign prev_url   = prev_parts[1] %}
+      <a href="{{ prev_url | relative_url }}" class="prev" data-testid="prev-link">
+        <span class="label">← Previous</span>
+        <span class="title">{{ prev_title }}</span>
+      </a>
+    {% else %}
+      {% comment %} Empty cell keeps the grid balanced {% endcomment %}
+      <span></span>
+    {% endif %}
+
+    {% if next_entry %}
+      {% assign next_parts = next_entry | split: "|" %}
+      {% assign next_title = next_parts[0] %}
+      {% assign next_url   = next_parts[1] %}
+      <a href="{{ next_url | relative_url }}" class="next" data-testid="next-link">
+        <span class="label">Next →</span>
+        <span class="title">{{ next_title }}</span>
+      </a>
+    {% else %}
+      <span></span>
+    {% endif %}
+
+  </nav>
+  {% endif %}
+
+{% endif %}

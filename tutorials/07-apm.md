@@ -1,6 +1,8 @@
 ---
-layout: default
+layout: docs
 title: Agent Package Manager (APM)
+difficulty: advanced
+time_estimate: "30 min"
 ---
 
 # Agent Package Manager (APM)

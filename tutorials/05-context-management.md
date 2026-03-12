@@ -1,6 +1,8 @@
 ---
-layout: default
+layout: docs
 title: Managing Context
+difficulty: advanced
+time_estimate: "20 min"
 ---
 
 # Managing Context: Reducing Hallucinations and Run Costs

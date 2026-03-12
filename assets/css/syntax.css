@@ -1,0 +1,112 @@
+/* ==========================================================================
+   Syntax Highlighting — Monokai-inspired theme for Rouge
+   Targets Rouge's generated HTML classes inside .highlight wrappers.
+   ========================================================================== */
+
+/* Wrapper produced by Rouge / kramdown */
+.highlight {
+  background: #282a36;
+  border-radius: var(--radius-md, 8px);
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+}
+
+.highlight pre {
+  background: transparent;
+  margin: 0;
+  padding: 1rem 1.25rem;
+  color: #f8f8f2;
+  font-size: 0.88rem;
+  line-height: 1.65;
+}
+
+/* Inline highlighted spans must also be transparent */
+.highlight code {
+  background: transparent;
+  color: inherit;
+  padding: 0;
+  border-radius: 0;
+  font-size: inherit;
+}
+
+/* ---- Token colours ---- */
+
+/* Comments */
+.highlight .c,
+.highlight .c1,
+.highlight .cm,
+.highlight .cs,
+.highlight .cp,
+.highlight .cd  { color: #6272a4; font-style: italic; }
+
+/* Keywords */
+.highlight .k,
+.highlight .kc,
+.highlight .kd,
+.highlight .kn,
+.highlight .kp,
+.highlight .kr,
+.highlight .kt  { color: #ff79c6; font-weight: bold; }
+
+/* Strings */
+.highlight .s,
+.highlight .s1,
+.highlight .s2,
+.highlight .sb,
+.highlight .sc,
+.highlight .sd,
+.highlight .se,
+.highlight .sh,
+.highlight .si,
+.highlight .sx,
+.highlight .sr,
+.highlight .ss  { color: #f1fa8c; }
+
+/* Numbers */
+.highlight .m,
+.highlight .mf,
+.highlight .mh,
+.highlight .mi,
+.highlight .mo,
+.highlight .il  { color: #bd93f9; }
+
+/* Operators */
+.highlight .o,
+.highlight .ow  { color: #ff79c6; }
+
+/* Names / identifiers */
+.highlight .n   { color: #f8f8f2; }
+.highlight .na  { color: #50fa7b; }   /* attribute */
+.highlight .nb  { color: #8be9fd; }   /* builtin */
+.highlight .nc  { color: #50fa7b; font-weight: bold; } /* class name */
+.highlight .nd  { color: #50fa7b; }   /* decorator */
+.highlight .ne  { color: #ffb86c; font-weight: bold; } /* exception */
+.highlight .nf  { color: #50fa7b; }   /* function name */
+.highlight .ni  { color: #f8f8f2; }   /* entity */
+.highlight .nn  { color: #f8f8f2; }   /* namespace */
+.highlight .nt  { color: #ff79c6; }   /* tag */
+.highlight .nv,
+.highlight .nx  { color: #f8f8f2; }   /* variable */
+
+/* Punctuation */
+.highlight .p   { color: #f8f8f2; }
+
+/* Literals */
+.highlight .l,
+.highlight .ld  { color: #f1fa8c; }
+
+/* Generic tokens */
+.highlight .ge  { font-style: italic; }
+.highlight .gs  { font-weight: bold; }
+.highlight .gh  { color: #50fa7b; font-weight: bold; }   /* heading */
+.highlight .gu  { color: #6272a4; font-weight: bold; }   /* subheading */
+.highlight .gd  { color: #ff5555; background: rgba(255,85,85,0.15); } /* deleted */
+.highlight .gi  { color: #50fa7b; background: rgba(80,250,123,0.12); } /* inserted */
+.highlight .gr  { color: #ff5555; }   /* error */
+.highlight .gt  { color: #ff5555; }   /* traceback */
+
+/* Error */
+.highlight .err { color: #ff5555; background: rgba(255,85,85,0.2); border-radius: 2px; }
+
+/* Line numbers (when enabled) */
+.highlight .gl  { color: #6272a4; padding-right: 1.25rem; user-select: none; }

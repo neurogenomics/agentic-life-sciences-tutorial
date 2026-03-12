@@ -1,0 +1,51 @@
+{% comment %}
+  breadcrumbs.html
+  Renders a schema.org BreadcrumbList breadcrumb trail.
+  Shows: Home → [Section title if page lives in a nav section] → [Page title]
+  The current page is rendered as a <span> (not a link) with aria-current="page".
+{% endcomment %}
+
+{% comment %} Find which section the current page belongs to {% endcomment %}
+{% assign current_section = nil %}
+{% for section in site.data.navigation.sections %}
+  {% for item in section.items %}
+    {% assign item_url_slash = item.url | append: '/' %}
+    {% if page.url == item.url or page.url == item_url_slash %}
+      {% assign current_section = section %}
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+
+<nav class="breadcrumbs" aria-label="Breadcrumb" data-testid="breadcrumbs">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList"
+      style="list-style:none;margin:0;padding:0;display:flex;align-items:center;gap:0.35rem;flex-wrap:wrap;">
+
+    {% comment %} Crumb 1: Home {% endcomment %}
+    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"
+        style="display:flex;align-items:center;gap:0.35rem;">
+      <a href="{{ '/' | relative_url }}" itemprop="item">
+        <span itemprop="name">Home</span>
+      </a>
+      <meta itemprop="position" content="1" />
+      <span class="separator" aria-hidden="true">/</span>
+    </li>
+
+    {% comment %} Crumb 2 (optional): Section title when page is inside a nav section {% endcomment %}
+    {% if current_section %}
+    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"
+        style="display:flex;align-items:center;gap:0.35rem;">
+      <span itemprop="name">{{ current_section.title }}</span>
+      <meta itemprop="position" content="2" />
+      <span class="separator" aria-hidden="true">/</span>
+    </li>
+    {% endif %}
+
+    {% comment %} Final crumb: current page (not a link) {% endcomment %}
+    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"
+        style="display:flex;align-items:center;">
+      <span itemprop="name" aria-current="page">{{ page.title }}</span>
+      <meta itemprop="position" content="{% if current_section %}3{% else %}2{% endif %}" />
+    </li>
+
+  </ol>
+</nav>

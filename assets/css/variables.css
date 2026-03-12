@@ -1,0 +1,67 @@
+/* ==========================================================================
+   Design Tokens — Imperial College branding + docs site variables
+   ========================================================================== */
+
+:root {
+  /* Imperial College brand palette */
+  --imperial-blue: #003E74;
+  --imperial-light: #0060a8;
+  --imperial-dark: #002147;
+
+  /* Text colours */
+  --text-primary: #0e1726;
+  --text-secondary: #475569;
+  --text-muted: rgba(15, 23, 42, 0.55);
+  --text-inverse: #f8fafc;
+
+  /* Background colours */
+  --bg-primary: #f8f9fb;
+  --bg-card: #ffffff;
+  --bg-code: #0f172a;
+  --bg-sidebar: #f1f3f7;
+  --bg-overlay: rgba(0, 0, 0, 0.45);
+
+  /* Border colours */
+  --border-light: rgba(15, 23, 42, 0.1);
+  --border-medium: rgba(15, 23, 42, 0.18);
+
+  /* Difficulty badge colours */
+  --badge-beginner: #16a34a;
+  --badge-beginner-bg: #dcfce7;
+  --badge-intermediate: #d97706;
+  --badge-intermediate-bg: #fef3c7;
+  --badge-advanced: #dc2626;
+  --badge-advanced-bg: #fee2e2;
+
+  /* Layout dimensions */
+  --sidebar-width: 280px;
+  --toc-width: 220px;
+  --content-max: 800px;
+  --header-height: 56px;
+
+  /* Typography */
+  --font-sans: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  /* Spacing */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-normal: 250ms ease;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.08);
+  --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.12);
+  --shadow-lg: 0 12px 40px rgba(15, 23, 42, 0.16);
+
+  /* Border radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+}

@@ -1,6 +1,8 @@
 ---
-layout: default
+layout: docs
 title: GSD and the Ralph Loop
+difficulty: advanced
+time_estimate: "25 min"
 ---
 
 # GSD and the Ralph Loop

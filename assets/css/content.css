@@ -1,0 +1,333 @@
+/* ==========================================================================
+   Content — typography, headings, code, badges, images
+   ========================================================================== */
+
+/* ---- Base typography ---- */
+.docs-content h1,
+.docs-content h2,
+.docs-content h3,
+.docs-content h4 {
+  color: var(--imperial-dark);
+  margin-top: 1.75rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.docs-content h1 {
+  font-size: 1.75rem;
+  font-weight: 800;
+  margin-top: 0;
+}
+
+.docs-content h2 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.docs-content h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.docs-content p {
+  line-height: 1.7;
+  margin-top: 0;
+  margin-bottom: var(--space-md);
+}
+
+.docs-content a {
+  color: var(--imperial-light);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.docs-content a:hover,
+.docs-content a:focus-visible {
+  color: var(--imperial-blue);
+}
+
+/* ---- Lists ---- */
+.docs-content ol,
+.docs-content ul {
+  padding-left: 1.35rem;
+  margin-top: 0;
+  margin-bottom: var(--space-md);
+}
+
+.docs-content li + li {
+  margin-top: 0.35rem;
+}
+
+.docs-content li {
+  line-height: 1.65;
+}
+
+/* ---- Inline code ---- */
+.docs-content code {
+  background: var(--bg-code);
+  color: var(--text-inverse);
+  padding: 0.15rem 0.35rem;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: 0.88rem;
+}
+
+/* ---- Code blocks ---- */
+.docs-content pre {
+  background: var(--bg-code);
+  color: var(--text-inverse);
+  padding: var(--space-md) var(--space-lg);
+  border-radius: var(--radius-md);
+  overflow-x: auto;
+  font-size: 0.88rem;
+  line-height: 1.6;
+  margin-bottom: var(--space-lg);
+}
+
+.docs-content pre code {
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  font-size: inherit;
+}
+
+/* ---- Images ---- */
+.docs-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
+}
+
+/* ---- Blockquotes ---- */
+.docs-content blockquote {
+  margin: var(--space-md) 0;
+  padding: var(--space-sm) var(--space-lg);
+  border-left: 3px solid var(--imperial-blue);
+  background: rgba(0, 62, 116, 0.04);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+.docs-content blockquote p {
+  margin-bottom: 0;
+}
+
+/* ---- Tables ---- */
+.docs-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: var(--space-lg);
+  font-size: 0.92rem;
+}
+
+.docs-content th,
+.docs-content td {
+  padding: var(--space-sm) var(--space-md);
+  border: 1px solid var(--border-light);
+  text-align: left;
+}
+
+.docs-content th {
+  background: var(--bg-sidebar);
+  font-weight: 600;
+}
+
+/* ---- Horizontal rules ---- */
+.docs-content hr {
+  border: none;
+  border-top: 1px solid var(--border-light);
+  margin: var(--space-xl) 0;
+}
+
+/* ---- Difficulty badge ---- */
+.difficulty-badge {
+  display: inline-block;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  letter-spacing: 0.02em;
+}
+
+.difficulty-badge--beginner {
+  color: var(--badge-beginner);
+  background: var(--badge-beginner-bg);
+}
+
+.difficulty-badge--intermediate {
+  color: var(--badge-intermediate);
+  background: var(--badge-intermediate-bg);
+}
+
+.difficulty-badge--advanced {
+  color: var(--badge-advanced);
+  background: var(--badge-advanced-bg);
+}
+
+/* ---- Time estimate ---- */
+.time-estimate {
+  display: inline-block;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-left: var(--space-sm);
+}
+
+/* ---- Docs meta (badge + time row) ---- */
+.docs-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-lg);
+}
+
+/* ---- Content styles for non-docs pages ---- */
+.content h1,
+.content h2,
+.content h3 {
+  margin-top: 1.6rem;
+  margin-bottom: 0.5rem;
+  color: var(--imperial-dark);
+}
+
+.content p + p {
+  margin-top: var(--space-md);
+}
+
+.content ol,
+.content ul {
+  padding-left: 1.35rem;
+  margin-top: var(--space-md);
+}
+
+.content li + li {
+  margin-top: 0.4rem;
+}
+
+.content code {
+  background: var(--bg-code);
+  color: var(--text-inverse);
+  padding: 0.2rem 0.35rem;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: 0.92rem;
+}
+
+.content img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ==========================================================================
+   Homepage — hero + tutorial card grid
+   ========================================================================== */
+
+/* ---- Hero ---- */
+.hero {
+  padding: var(--space-2xl) 0 var(--space-xl);
+  border-bottom: 1px solid var(--border-light);
+  margin-bottom: var(--space-xl);
+}
+
+.hero__title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--imperial-dark);
+  margin: 0 0 var(--space-sm);
+  line-height: 1.2;
+}
+
+.hero__subtitle {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin: 0;
+  max-width: 560px;
+}
+
+/* ---- Tutorial card grid ---- */
+.tutorial-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-lg);
+  margin: var(--space-lg) 0 var(--space-2xl);
+}
+
+/* ---- Individual card ---- */
+.tutorial-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  text-decoration: none;
+  color: inherit;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition-fast), transform var(--transition-fast),
+              border-color var(--transition-fast);
+}
+
+.tutorial-card:hover,
+.tutorial-card:focus-visible {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+  border-color: var(--imperial-light);
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ---- Card header row (number + badge + time) ---- */
+.tutorial-card__header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+.tutorial-card__number {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+  min-width: 1.8rem;
+}
+
+/* ---- Card title ---- */
+.tutorial-card__title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--imperial-dark);
+  margin: 0 0 var(--space-xs);
+  line-height: 1.3;
+}
+
+/* ---- Card description ---- */
+.tutorial-card__desc {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+  flex: 1;
+}
+
+.tutorial-card__desc code {
+  background: var(--bg-code);
+  color: var(--text-inverse);
+  padding: 0.1rem 0.3rem;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+}
+
+/* ---- Responsive: collapse to single column on narrow screens ---- */
+@media (max-width: 480px) {
+  .tutorial-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .hero__title {
+    font-size: 1.75rem;
+  }
+}

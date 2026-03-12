@@ -1,6 +1,8 @@
 ---
-layout: default
+layout: docs
 title: GitHub Education — Free Copilot Access
+difficulty: beginner
+time_estimate: "10 min"
 nav_order: 3
 ---
 

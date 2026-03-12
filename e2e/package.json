@@ -1,0 +1,15 @@
+{
+  "name": "skills-cookbook-e2e",
+  "private": true,
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:a11y": "playwright test tests/accessibility.spec.ts"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.10.0",
+    "@playwright/test": "^1.50.0",
+    "@types/node": "^25.5.0",
+    "typescript": "^5.6.0"
+  }
+}

@@ -1,6 +1,8 @@
 ---
-layout: default
+layout: docs
 title: Data Portal for Single Cell Sequencing
+difficulty: intermediate
+time_estimate: "30 min"
 ---
 
 # Data Portal for Single Cell Sequencing
