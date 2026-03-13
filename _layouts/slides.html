@@ -15,7 +15,7 @@
 
   <div class="reveal">
     <div class="slides"
-         data-tutorial-url="{{ page.tutorial_url | relative_url }}">
+         {% if page.tutorial_url %}data-tutorial-url="{{ page.tutorial_url | relative_url }}"{% endif %}>
       {{ content }}
     </div>
   </div>
