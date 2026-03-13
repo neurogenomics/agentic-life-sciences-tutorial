@@ -2,7 +2,7 @@
 
 Lab guide for adopting agentic work and coding assistants.
 
-**View tutorials:** [GitHub Pages](https://neurogenomics.github.io/agentic-life-science-tutorial-private/) · [Browse in GitHub](./tutorials)
+**View tutorials:** [GitHub Pages](https://neurogenomics.github.io/agentic-life-sciences-tutorial/) · [Browse in GitHub](./tutorials)
 
 ## Tutorials
 
@@ -11,6 +11,7 @@ Lab guide for adopting agentic work and coding assistants.
 3. [Journal Club Slides](./tutorials/03-journal-club-slides.md) - Create presentations from papers
 4. [Data Portal for Single Cell Sequencing](./tutorials/04-single-cell-portal.md) - Interactive viewer for scRNA-seq data
 5. [Managing Context: Reducing Hallucinations and Run Costs](./tutorials/05-context-management.md) - Understand context windows, context rot, PLAN.md workflow, and how to use /compact
+6. [APM](./tutorials/07-apm.md) - Dependency manager for AI context — declare, version, and inject context modules automatically
 
 ## Prerequisites
 
@@ -24,13 +25,13 @@ Pre-built agent configurations for specific tasks:
 
 ---
 
-[View on GitHub](https://github.com/neurogenomics/skills-cookbook)
+[View on GitHub](https://github.com/neurogenomics/agentic-life-sciences-tutorial)
 
 ## FAQ
 
 ### What security is in place about my data?
 
-**OpenRouter** won't log data and has other security measures in plance: [OpenRouter Privacy Settings](https://openrouter.ai/settings/privacy)
+**OpenRouter** won't log data and has other security measures in place: [OpenRouter Privacy Settings](https://openrouter.ai/settings/privacy)
 
 ## Useful Commands
 
