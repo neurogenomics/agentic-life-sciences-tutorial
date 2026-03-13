@@ -41,6 +41,7 @@ title: "Getting Started with AI Coding Tools — Slides"
       <tr><th>Provider</th><th>Model(s)</th><th>Data Retention</th><th>Train on Prompts</th></tr>
     </thead>
     <tbody>
+      <tr><td><a href="https://docs.github.com/en/copilot/reference/ai-models/model-hosting">GitHub Copilot</a></td><td>Claude, GPT, Gemini</td><td>Zero retention</td><td>✓ Does not train</td></tr>
       <tr><td>Anthropic</td><td>Opus, Sonnet, Haiku</td><td>Retained for 30 days</td><td>✓ Does not train</td></tr>
       <tr><td>Moonshot AI</td><td>Kimi</td><td>Zero retention</td><td>✓ Does not train</td></tr>
       <tr><td>OpenAI</td><td>Codex</td><td>Retained for unknown period</td><td>✓ Does not train</td></tr>
