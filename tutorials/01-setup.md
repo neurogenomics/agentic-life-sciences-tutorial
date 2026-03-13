@@ -85,18 +85,3 @@ There are three AI coding tools worth knowing about. "Downloading" one of these 
 6. Select a model (e.g. Claude Opus 4.5) from the model picker at the top of the chat
 7. Make a new folder to begin — e.g. create a `testing AI` folder in your Documents, then open it in VS Code (`File → Open Folder`)
 
----
-
-## Installation — OpenCode + OpenRouter (Alternative)
-
-Download [OpenCode Desktop App](https://opencode.ai/download)
-
-Make a new folder to begin. Example create a `testing AI` folder in your `Documents`. To use these models, it needs to be given a project folder to work in.
-
-Open OpenCode App on your computer:
-1. Click ⚙️ `Settings`
-2. Navigate to `Providers`
-3. Select to `OpenRouter`
-4. Enter API key (supplied separately via email)
-5. At bottom select `Kimi K2.5` - this will listed under OpenRouter
-6. Click ＋ button on the left to make a new project. Then choose your folder for the project, example here being your `testing AI` folder.
