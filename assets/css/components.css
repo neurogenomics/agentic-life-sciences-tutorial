@@ -180,31 +180,6 @@
 
 /* ---- Slide button ---- */
 .btn-slides,
-.slide-button {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-sm);
-  padding: var(--space-sm) var(--space-md);
-  background: var(--imperial-blue);
-  color: #fff;
-  border: none;
-  border-radius: 20px;
-  font-size: 0.82rem;
-  font-weight: 600;
-  cursor: pointer;
-  text-decoration: none;
-  transition: background var(--transition-fast);
-  margin-bottom: var(--space-md);
-}
-
-.btn-slides:hover,
-.btn-slides:focus-visible,
-.slide-button:hover,
-.slide-button:focus-visible {
-  background: var(--imperial-light, #005ca3);
-  color: #fff;
-  text-decoration: none;
-}
 
 /* ---- Sidebar navigation component ---- */
 .sidebar-nav-section {

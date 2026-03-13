@@ -1,0 +1,100 @@
+<h2>Slide Deck Format</h2>
+<p class="subtitle">How should the built-in slides work?</p>
+
+<div class="cards">
+  <!-- Option A: Reveal.js -->
+  <div class="card" data-choice="a" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#0f172a;padding:20px;border-radius:8px 8px 0 0;">
+      <div style="background:#1a1a2e;border-radius:8px;overflow:hidden;aspect-ratio:16/9;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px;position:relative;">
+        <div style="font-size:20px;font-weight:800;color:white;margin-bottom:8px;">Getting Started with AI Tools</div>
+        <div style="font-size:12px;color:#94a3b8;margin-bottom:16px;">Skills Cookbook &middot; Tutorial 01</div>
+        <div style="display:flex;gap:12px;margin-bottom:16px;">
+          <div style="background:#3b82f6;width:8px;height:8px;border-radius:50%;"></div>
+          <div style="background:#475569;width:8px;height:8px;border-radius:50%;"></div>
+          <div style="background:#475569;width:8px;height:8px;border-radius:50%;"></div>
+          <div style="background:#475569;width:8px;height:8px;border-radius:50%;"></div>
+        </div>
+        <div style="position:absolute;bottom:8px;right:12px;font-size:10px;color:#475569;">1 / 12</div>
+        <div style="position:absolute;left:8px;top:50%;transform:translateY(-50%);color:#475569;font-size:18px;">&#9664;</div>
+        <div style="position:absolute;right:8px;top:50%;transform:translateY(-50%);color:#94a3b8;font-size:18px;">&#9654;</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>A. Reveal.js Slides</h3>
+      <p>Full-screen browser presentations with arrow key navigation, speaker notes, and slide transitions. Each tutorial auto-generates a slide deck from its content. Keyboard-driven, works great for workshops.</p>
+    </div>
+  </div>
+
+  <!-- Option B: Scrollytelling -->
+  <div class="card" data-choice="b" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#0f172a;padding:20px;border-radius:8px 8px 0 0;">
+      <div style="background:#ffffff;border-radius:8px;overflow:hidden;padding:0;">
+        <!-- Step indicator -->
+        <div style="background:#f8fafc;padding:8px 16px;display:flex;align-items:center;gap:8px;border-bottom:1px solid #e2e8f0;">
+          <div style="display:flex;gap:4px;">
+            <div style="width:20px;height:4px;background:#3b82f6;border-radius:2px;"></div>
+            <div style="width:20px;height:4px;background:#3b82f6;border-radius:2px;"></div>
+            <div style="width:20px;height:4px;background:#e2e8f0;border-radius:2px;"></div>
+            <div style="width:20px;height:4px;background:#e2e8f0;border-radius:2px;"></div>
+          </div>
+          <span style="font-size:10px;color:#64748b;">Step 2 of 4</span>
+        </div>
+        <!-- Content -->
+        <div style="padding:16px;">
+          <div style="font-size:14px;font-weight:700;color:#0f172a;margin-bottom:8px;">How AI Coding Tools Work</div>
+          <div style="font-size:11px;color:#475569;margin-bottom:10px;">A coding agent is a stack of three layers...</div>
+          <div style="background:#f0f9ff;padding:10px;border-radius:6px;border:1px solid #bae6fd;margin-bottom:10px;">
+            <div style="display:flex;flex-direction:column;gap:4px;font-size:11px;">
+              <div style="background:#3b82f6;color:white;padding:4px 8px;border-radius:4px;text-align:center;">Agent</div>
+              <div style="text-align:center;color:#94a3b8;">&#8595;</div>
+              <div style="background:#6366f1;color:white;padding:4px 8px;border-radius:4px;text-align:center;">Provider</div>
+              <div style="text-align:center;color:#94a3b8;">&#8595;</div>
+              <div style="background:#8b5cf6;color:white;padding:4px 8px;border-radius:4px;text-align:center;">Model</div>
+            </div>
+          </div>
+          <div style="display:flex;justify-content:space-between;">
+            <div style="background:#f1f5f9;padding:4px 12px;border-radius:4px;font-size:11px;color:#64748b;">&#8592; Back</div>
+            <div style="background:#3b82f6;padding:4px 12px;border-radius:4px;font-size:11px;color:white;">Continue &#8594;</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>B. Step-by-Step Walkthrough</h3>
+      <p>Inline step-by-step mode within the tutorial page itself. Click "Continue" to advance through focused sections with progress bar. No separate window — stays in the docs layout. Good for self-paced learning.</p>
+    </div>
+  </div>
+
+  <!-- Option C: Both -->
+  <div class="card" data-choice="c" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#0f172a;padding:20px;border-radius:8px 8px 0 0;">
+      <div style="display:flex;gap:10px;">
+        <!-- Doc view -->
+        <div style="flex:1;background:#ffffff;border-radius:6px;padding:10px;font-size:10px;">
+          <div style="font-weight:700;color:#0f172a;margin-bottom:4px;font-size:12px;">Tutorial (read)</div>
+          <div style="height:6px;background:#e2e8f0;border-radius:2px;width:90%;margin-bottom:4px;"></div>
+          <div style="height:6px;background:#e2e8f0;border-radius:2px;width:75%;margin-bottom:4px;"></div>
+          <div style="height:6px;background:#e2e8f0;border-radius:2px;width:85%;margin-bottom:8px;"></div>
+          <div style="display:flex;gap:6px;">
+            <div style="background:#fef3c7;padding:2px 6px;border-radius:3px;font-size:9px;color:#92400e;">&#9654; Present</div>
+            <div style="background:#dbeafe;padding:2px 6px;border-radius:3px;font-size:9px;color:#1e40af;">&#9655; Steps</div>
+          </div>
+        </div>
+        <!-- Slide view -->
+        <div style="flex:1;background:#1a1a2e;border-radius:6px;padding:10px;font-size:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;aspect-ratio:4/3;">
+          <div style="font-size:12px;font-weight:700;color:white;margin-bottom:4px;">Slide View</div>
+          <div style="font-size:9px;color:#94a3b8;">Full-screen presentation</div>
+          <div style="display:flex;gap:4px;margin-top:8px;">
+            <div style="width:6px;height:6px;background:#3b82f6;border-radius:50%;"></div>
+            <div style="width:6px;height:6px;background:#475569;border-radius:50%;"></div>
+            <div style="width:6px;height:6px;background:#475569;border-radius:50%;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>C. Both Modes</h3>
+      <p>Each tutorial has a "Present" button (full-screen Reveal.js slides for workshops) AND a "Step mode" toggle (inline walkthrough for self-study). Two ways to consume the same content.</p>
+    </div>
+  </div>
+</div>
