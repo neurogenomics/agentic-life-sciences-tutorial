@@ -94,7 +94,7 @@
 
   /**
    * Normalize a URL path for comparison:
-   * strip trailing slash, strip base-url prefix variants.
+   * strip trailing slash, .html extension, and lowercase.
    */
   function normalizePath(url) {
     if (!url) return '';
@@ -104,7 +104,7 @@
     } catch (e) {
       // relative path already
     }
-    return url.replace(/\/$/, '').toLowerCase();
+    return url.replace(/\.html$/, '').replace(/\/$/, '').toLowerCase();
   }
 
   /**
