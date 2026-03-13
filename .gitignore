@@ -9,3 +9,4 @@ apm_modules/
 # APM integrated skills
 .github/skills/*-apm/
 # APM integrated skills
+.superpowers/
