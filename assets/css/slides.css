@@ -126,6 +126,12 @@
   border-radius: 6px;
 }
 
+.reveal img[src$=".svg"],
+.reveal .title-slide img {
+  box-shadow: none;
+  border-radius: 0;
+}
+
 /* ---- Blockquotes ---- */
 .reveal blockquote {
   border-left: 4px solid #003E74;
