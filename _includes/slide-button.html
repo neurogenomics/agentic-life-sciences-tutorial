@@ -1,9 +1,0 @@
-{% if page.url contains '/tutorials/' %}
-{% assign slide_slug = page.url | remove: '/tutorials/' | remove: '/' | remove: '.html' %}
-<a href="{{ '/slides/' | append: slide_slug | relative_url }}"
-   class="slide-button"
-   data-testid="slide-button"
-   title="View as slide deck">
-  &#9654; Slides
-</a>
-{% endif %}
