@@ -29,6 +29,8 @@ You choose an agent, connect it to a provider, and pick a model. Different combi
 
 ![Privacy comparison across providers]({{ site.baseurl }}/assets/images/table-of-privacy.svg)
 
+> **Note:** Free models on OpenRouter may train on your interactions. If data privacy is important, use a paid model or check the model's training policy on OpenRouter before use.
+
 ---
 
 ## Tools
