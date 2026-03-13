@@ -25,7 +25,7 @@ A coding agent is not a single thing — it is a stack of three layers:
 - **Provider** — the service that hosts and serves the AI model. Examples: GitHub, Anthropic, OpenRouter.
 - **Model** — the large language model that actually generates the code. Examples: Claude Opus 4.5, GPT-4.1, Kimi K2.5.
 
-You choose an agent, connect it to a provider, and pick a model. Different combinations have different privacy and cost implications:
+You choose an agent, connect it to a provider, and pick a model. Different combinations have different privacy and cost implications (see [OpenRouter's privacy and model safety settings](https://openrouter.ai/settings/privacy)):
 
 ![Privacy comparison across providers]({{ site.baseurl }}/assets/images/table-of-privacy.svg)
 
