@@ -16,23 +16,36 @@ permalink: /workshops/agentic-ai-neuroscience-2026/
   main#main-content { background: var(--paper); }
 
   .wx {
-    max-width: 1200px;
+    max-width: 1280px;
     margin: 0 auto;
-    padding: 3rem 1.5rem 4rem;
+    padding: 1.25rem 1.25rem 3rem;
     color: var(--ink);
     font-feature-settings: "ss01", "cv11";
   }
 
-  /* ---------- hero ---------- */
+  /* ---------- compact hero + QR row (above the fold) ---------- */
+  .wx-top {
+    display: grid;
+    grid-template-columns: minmax(260px, 1fr) minmax(0, 2fr);
+    gap: 1rem;
+    align-items: stretch;
+  }
+  @media (max-width: 900px) {
+    .wx-top { grid-template-columns: 1fr; }
+  }
+
   .wx-hero {
     position: relative;
     border: 1px solid var(--line);
-    border-radius: 20px;
-    padding: 3.5rem 2rem 3rem;
+    border-radius: 16px;
+    padding: 1.5rem 1.5rem 1.25rem;
     overflow: hidden;
     background: var(--ink);
     color: #fff;
     isolation: isolate;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
   .wx-hero::before {
     content: "";
@@ -69,10 +82,10 @@ permalink: /workshops/agentic-ai-neuroscience-2026/
     box-shadow: 0 0 12px var(--accent);
   }
   .wx-hero h1 {
-    font-size: clamp(2.4rem, 6vw, 4.8rem);
-    line-height: 0.95;
+    font-size: clamp(1.6rem, 2.4vw, 2.25rem);
+    line-height: 1;
     letter-spacing: -0.02em;
-    margin: 1.5rem 0 0.75rem;
+    margin: 0.75rem 0 0.5rem;
     font-weight: 800;
   }
   .wx-hero h1 em {
@@ -84,21 +97,21 @@ permalink: /workshops/agentic-ai-neuroscience-2026/
   }
   .wx-hero__meta {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 1rem 2rem;
-    margin-top: 2rem;
-    padding-top: 1.5rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem 1rem;
+    margin-top: 0.75rem;
+    padding-top: 0.75rem;
     border-top: 1px solid rgba(255,255,255,0.18);
-    font-size: 0.95rem;
+    font-size: 0.8rem;
   }
   .wx-hero__meta dt {
-    font-size: 0.7rem;
-    letter-spacing: 0.15em;
+    font-size: 0.6rem;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
-    opacity: 0.6;
-    margin-bottom: 0.25rem;
+    opacity: 0.55;
+    margin-bottom: 0.1rem;
   }
-  .wx-hero__meta dd { margin: 0; font-weight: 500; }
+  .wx-hero__meta dd { margin: 0; font-weight: 500; font-size: 0.85rem; }
 
   /* ---------- step strip ---------- */
   .wx-steps {
@@ -126,80 +139,68 @@ permalink: /workshops/agentic-ai-neuroscience-2026/
   .wx-step__title { font-weight: 700; margin-top: 0.15rem; }
   .wx-step__body { font-size: 0.9rem; color: #555; margin-top: 0.15rem; }
 
-  /* ---------- QR grid ---------- */
+  /* ---------- QR row ---------- */
   .wx-qr {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.25rem;
-    margin-top: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+  }
+  @media (max-width: 620px) {
+    .wx-qr { grid-template-columns: 1fr; }
   }
   .wx-qr__card {
     background: #fff;
     border: 1px solid var(--line);
-    border-radius: 18px;
-    padding: 1.75rem 1.5rem 1.25rem;
+    border-radius: 14px;
+    padding: 0.85rem 0.9rem 0.75rem;
     position: relative;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
     display: flex;
     flex-direction: column;
+    text-decoration: none;
+    color: inherit;
   }
   .wx-qr__card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 20px 40px -20px rgba(11, 15, 26, 0.25);
-  }
-  .wx-qr__card::after {
-    content: attr(data-index);
-    position: absolute;
-    top: 1rem; right: 1.25rem;
-    font-family: "JetBrains Mono", ui-monospace, monospace;
-    font-size: 0.7rem;
-    color: #999;
-    letter-spacing: 0.1em;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px -16px rgba(11, 15, 26, 0.25);
   }
   .wx-qr__label {
-    font-size: 0.7rem;
-    letter-spacing: 0.15em;
+    font-size: 0.6rem;
+    letter-spacing: 0.14em;
     text-transform: uppercase;
     color: var(--accent);
-    font-weight: 600;
+    font-weight: 700;
   }
   .wx-qr__title {
-    font-size: 1.35rem;
+    font-size: 1rem;
     font-weight: 700;
-    margin: 0.4rem 0 0.35rem;
+    margin: 0.15rem 0 0.35rem;
     letter-spacing: -0.01em;
-  }
-  .wx-qr__desc {
-    color: #555;
-    font-size: 0.9rem;
-    margin-bottom: 1rem;
-    flex-grow: 1;
   }
   .wx-qr__img {
     background: var(--paper);
-    border-radius: 12px;
-    padding: 1rem;
+    border-radius: 8px;
+    padding: 0.5rem;
     display: flex;
     justify-content: center;
+    flex-grow: 1;
   }
   .wx-qr__img img {
     width: 100%;
-    max-width: 220px;
+    max-width: 160px;
     height: auto;
     image-rendering: pixelated;
   }
   .wx-qr__link {
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     font-family: "JetBrains Mono", ui-monospace, monospace;
-    font-size: 0.75rem;
+    font-size: 0.65rem;
     color: var(--accent-2);
     word-break: break-all;
     text-decoration: none;
-    display: inline-block;
-    border-top: 1px dashed var(--line);
-    padding-top: 0.75rem;
+    display: block;
+    line-height: 1.2;
   }
-  .wx-qr__link:hover { text-decoration: underline; }
 
   /* ---------- section heads ---------- */
   .wx-head {
@@ -332,77 +333,48 @@ permalink: /workshops/agentic-ai-neuroscience-2026/
 
 <div class="wx">
 
-  <section class="wx-hero">
-    <span class="wx-hero__tag">Workshop · Live today</span>
-    <h1>Agentic AI<br>for <em>Neuroscience</em>.</h1>
-    <dl class="wx-hero__meta">
-      <div><dt>Date</dt><dd>15 April 2026</dd></div>
-      <div><dt>Host</dt><dd>UK Dementia Research Institute</dd></div>
-      <div><dt>Venue</dt><dd>Imperial College London</dd></div>
-      <div><dt>Channel</dt><dd>#agentic-ai-for-neuroscience-workshop</dd></div>
-    </dl>
-  </section>
-
-  <div class="wx-head">
-    <h2>Start here</h2>
-    <span class="wx-head__count">03 steps</span>
-  </div>
-
-  <ol class="wx-steps">
-    <li class="wx-step">
-      <div class="wx-step__num">01</div>
-      <div class="wx-step__title">Join Slack</div>
-      <div class="wx-step__body">Introduce yourself in the workshop channel.</div>
-    </li>
-    <li class="wx-step">
-      <div class="wx-step__num">02</div>
-      <div class="wx-step__title">Open the tutorials</div>
-      <div class="wx-step__body">Start with Tutorial 01 — Setup on your laptop.</div>
-    </li>
-    <li class="wx-step">
-      <div class="wx-step__num">03</div>
-      <div class="wx-step__title">Submit the strategy form</div>
-      <div class="wx-step__body">Share how you want agentic AI in your research.</div>
-    </li>
-  </ol>
-
-  <div class="wx-head">
-    <h2>Scan to join</h2>
-    <span class="wx-head__count">03 codes</span>
-  </div>
-
-  <div class="wx-qr">
-
-    <a class="wx-qr__card" data-index="01 · TUTORIALS" href="https://neurogenomics.github.io/agentic-life-sciences-tutorial/">
-      <span class="wx-qr__label">Skills Cookbook</span>
-      <div class="wx-qr__title">Tutorials</div>
-      <p class="wx-qr__desc">Follow the Skills Cookbook at your own pace. Six tutorials, one challenge.</p>
-      <div class="wx-qr__img">
-        <img src="https://api.qrserver.com/v1/create-qr-code/?size=400x400&margin=0&data=https%3A%2F%2Fneurogenomics.github.io%2Fagentic-life-sciences-tutorial%2F&color=0b0f1a&bgcolor=f6f5f1" alt="QR code to tutorials">
+  <div class="wx-top">
+    <section class="wx-hero">
+      <div>
+        <span class="wx-hero__tag">Workshop · 15 April 2026</span>
+        <h1>Agentic AI for <em>Neuroscience</em>.</h1>
       </div>
-      <span class="wx-qr__link">neurogenomics.github.io/agentic-life-sciences-tutorial</span>
-    </a>
+      <dl class="wx-hero__meta">
+        <div><dt>Host</dt><dd>UKDRI</dd></div>
+        <div><dt>Venue</dt><dd>Imperial</dd></div>
+        <div><dt>Channel</dt><dd>#agentic-ai-for-neuroscience-workshop</dd></div>
+        <div><dt>Status</dt><dd>Live today</dd></div>
+      </dl>
+    </section>
 
-    <a class="wx-qr__card" data-index="02 · SLACK" href="https://join.slack.com/share/enQtMTA5NDY1MDgyNjkyMzItNDRlMGU0ODM1NTEzNGQ1NjA2Y2U3ZGMyZWYwYjQwYTczNjhkMmY1ODAzM2YxOGNjOTQzMzBhYmVlMTJmYjMzYQ">
-      <span class="wx-qr__label">Community</span>
-      <div class="wx-qr__title">Slack workspace</div>
-      <p class="wx-qr__desc">#agentic-ai-for-neuroscience-workshop. Ask questions, share outputs, post screenshots.</p>
-      <div class="wx-qr__img">
-        <img src="https://api.qrserver.com/v1/create-qr-code/?size=400x400&margin=0&data=https%3A%2F%2Fjoin.slack.com%2Fshare%2FenQtMTA5NDY1MDgyNjkyMzItNDRlMGU0ODM1NTEzNGQ1NjA2Y2U3ZGMyZWYwYjQwYTczNjhkMmY1ODAzM2YxOGNjOTQzMzBhYmVlMTJmYjMzYQ&color=0b0f1a&bgcolor=f6f5f1" alt="QR code to Slack">
-      </div>
-      <span class="wx-qr__link">join.slack.com/share/...</span>
-    </a>
+    <div class="wx-qr">
+      <a class="wx-qr__card" href="https://neurogenomics.github.io/agentic-life-sciences-tutorial/">
+        <span class="wx-qr__label">Tutorials</span>
+        <div class="wx-qr__title">Skills Cookbook</div>
+        <div class="wx-qr__img">
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=400x400&margin=0&data=https%3A%2F%2Fneurogenomics.github.io%2Fagentic-life-sciences-tutorial%2F&color=0b0f1a&bgcolor=f6f5f1" alt="QR code to tutorials">
+        </div>
+        <span class="wx-qr__link">neurogenomics.github.io/agentic-life-sciences-tutorial</span>
+      </a>
 
-    <a class="wx-qr__card" data-index="03 · FORM" href="https://forms.cloud.microsoft/e/mF0jqv9Xr1">
-      <span class="wx-qr__label">Tell us</span>
-      <div class="wx-qr__title">AI strategy form</div>
-      <p class="wx-qr__desc">Two minutes. How you want to use agentic AI in your research.</p>
-      <div class="wx-qr__img">
-        <img src="https://api.qrserver.com/v1/create-qr-code/?size=400x400&margin=0&data=https%3A%2F%2Fforms.cloud.microsoft%2Fe%2FmF0jqv9Xr1&color=0b0f1a&bgcolor=f6f5f1" alt="QR code to form">
-      </div>
-      <span class="wx-qr__link">forms.cloud.microsoft/e/mF0jqv9Xr1</span>
-    </a>
+      <a class="wx-qr__card" href="https://join.slack.com/share/enQtMTA5NDY1MDgyNjkyMzItNDRlMGU0ODM1NTEzNGQ1NjA2Y2U3ZGMyZWYwYjQwYTczNjhkMmY1ODAzM2YxOGNjOTQzMzBhYmVlMTJmYjMzYQ">
+        <span class="wx-qr__label">Slack</span>
+        <div class="wx-qr__title">Join workspace</div>
+        <div class="wx-qr__img">
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=400x400&margin=0&data=https%3A%2F%2Fjoin.slack.com%2Fshare%2FenQtMTA5NDY1MDgyNjkyMzItNDRlMGU0ODM1NTEzNGQ1NjA2Y2U3ZGMyZWYwYjQwYTczNjhkMmY1ODAzM2YxOGNjOTQzMzBhYmVlMTJmYjMzYQ&color=0b0f1a&bgcolor=f6f5f1" alt="QR code to Slack">
+        </div>
+        <span class="wx-qr__link">#agentic-ai-for-neuroscience-workshop</span>
+      </a>
 
+      <a class="wx-qr__card" href="https://forms.cloud.microsoft/e/mF0jqv9Xr1">
+        <span class="wx-qr__label">Form</span>
+        <div class="wx-qr__title">AI strategy</div>
+        <div class="wx-qr__img">
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=400x400&margin=0&data=https%3A%2F%2Fforms.cloud.microsoft%2Fe%2FmF0jqv9Xr1&color=0b0f1a&bgcolor=f6f5f1" alt="QR code to form">
+        </div>
+        <span class="wx-qr__link">forms.cloud.microsoft/e/mF0jqv9Xr1</span>
+      </a>
+    </div>
   </div>
 
   <div class="wx-head">
