@@ -34,8 +34,8 @@ Can your agent write a figure legend as well as the authors did?
 
 If you find a prompt that works, package it as a **skill** so any agent can call it the same way next time. A skill is a folder with a `SKILL.md` that defines the trigger, inputs, outputs, and workflow.
 
-- [**Anthropic Skills overview**](https://www.anthropic.com/news/skills) — what skills are and why they exist
-- [**Claude Skills documentation**](https://docs.claude.com/en/docs/claude-code/skills) — how to author and load skills in Claude Code
+- [**Anthropic Skills overview**](https://claude.com/blog/skills) — what skills are and why they exist
+- [**Claude Skills documentation**](https://code.claude.com/docs/en/skills) — how to author and load skills in Claude Code
 - [**anthropics/skills**](https://github.com/anthropics/skills) — reference repo with official skills (`pptx`, `pdf`, `docx`, etc.) you can copy from
 - [**Skills cookbook**](https://github.com/anthropics/claude-cookbooks) — examples and patterns
 
