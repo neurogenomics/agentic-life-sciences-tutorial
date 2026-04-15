@@ -35,49 +35,14 @@ You choose an agent, connect it to a provider, and pick a model. Different combi
 
 ## Tools
 
-There are three AI coding tools worth knowing about. "Downloading" one of these tools means installing a program on your computer that can read and write files in your project folder, run terminal commands, and interact with APIs — it is not just a chatbot, it is a coding agent that operates on your local files.
+A coding agent is a program on your computer that reads and writes files, runs commands, and operates on your project — not just a chatbot.
 
----
+- **[GitHub Copilot](https://github.com/features/copilot)** (recommended) — free for students via [GitHub Education](https://education.github.com). CLI or desktop, access to Claude, GPT, and Gemini through one subscription.
+- **[GitHub Codex](https://github.com/features/codex)** — cloud agent; assign tasks on github.com and it opens a PR.
+- **[Claude Code](https://docs.anthropic.com/en/docs/claude-code)** — Anthropic's terminal agent. Paid.
+- **[OpenCode](https://opencode.ai/) + [OpenRouter](https://openrouter.ai)** — open-source desktop app, many providers.
 
-### GitHub Copilot (Recommended — free for students)
+## Get started with GitHub Copilot
 
-[GitHub Copilot](https://github.com/features/copilot) is GitHub's AI coding assistant. It gives you access to top models (Claude Opus 4.5, GPT-4.1, Gemini) through your GitHub account — no separate API key needed.
-
-**What downloading it means:** You install the GitHub Copilot extension inside your editor. This adds an AI chat panel and inline code suggestions. The models run on GitHub's servers; the extension just connects your editor to them.
-
-**Why we recommend it:** Free with [GitHub Education](https://education.github.com), gives access to multiple frontier models, and integrates directly into the editor where you already write code.
-
----
-
-### GitHub Codex
-
-[Codex](https://github.com/features/codex) is GitHub's cloud-based coding agent. Unlike Copilot (which works alongside you in VS Code), Codex runs autonomously in a cloud sandbox — you give it a task and it works independently, then opens a pull request with its changes.
-
-**What downloading it means:** There is nothing to download. Codex runs entirely in the browser at github.com. You open a repository on GitHub, click the Codex tab, and assign it tasks. It clones your repo into a cloud environment, makes changes, and submits them as a PR for you to review.
-
----
-
-### Claude Code
-
-[Claude Code](https://docs.anthropic.com/en/docs/claude-code) is Anthropic's terminal-based coding agent. It runs in your terminal (command line) and operates directly on your local files.
-
-**What downloading it means:** You install a command-line program (via `npm install -g @anthropic-ai/claude-code`). When you run `claude` in a terminal inside your project folder, it starts an interactive session where you chat with Claude and it can read, edit, and create files on your machine. Requires a paid Anthropic API subscription or access through a provider.
-
----
-
-### OpenCode + OpenRouter (alternative)
-
-[OpenCode](https://opencode.ai/) is an open-source desktop app that provides a similar agent interface. It can connect to many model providers, including [OpenRouter](https://openrouter.ai) (a single subscription to access many models) and GitHub Copilot.
-
-**What downloading it means:** You download a desktop application. It provides a chat interface that can read and write files in your project, similar to Claude Code but with a graphical interface and support for multiple providers.
-
----
-
-## Installation — GitHub Copilot (Recommended)
-
-> For a detailed step-by-step walkthrough with screenshots — including applying for GitHub Education, redeeming your Copilot Pro coupon, and enabling the coding agent — see the [GitHub Education guide](github-education).
-
-1. Follow the [GitHub Education signup guide](github-education) to get Copilot Pro free and enable the coding agent
-2. Select a model (e.g. Claude Opus 4.5) from the model picker at the top of the Copilot Chat panel
-3. Make a new folder to begin — e.g. create a `testing AI` folder in your Documents, then open it in VS Code (`File → Open Folder`)
+Follow the [GitHub Education signup guide](github-education) to get Copilot Pro free and install the CLI.
 
