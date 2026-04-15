@@ -74,7 +74,7 @@ layout: default
     <a class="workshop-banner__card" href="./tutorials/08-figure-legend-challenge">
       <span class="workshop-banner__featured">Featured Challenge</span>
       <strong>Figure Legend Generator</strong>
-      <span>Build the best agent for publication-ready legends. Leaderboard + prize.</span>
+      <span>Download a figure, strip the legend, see if your agent can write it back.</span>
     </a>
     <a class="workshop-banner__card" href="./workshops/agentic-ai-neuroscience-2026/">
       <strong>Workshop Landing Page</strong>
