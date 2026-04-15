@@ -7,6 +7,82 @@ layout: default
   <p class="hero__subtitle">Lab guide for adopting agentic work and coding assistants.</p>
 </section>
 
+<style>
+  .workshop-banner {
+    background: linear-gradient(135deg, #1a2a6c 0%, #b21f1f 50%, #fdbb2d 100%);
+    color: #fff;
+    border-radius: 14px;
+    padding: 2rem 2rem 1.75rem;
+    margin: 2rem 0 2.5rem;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.12);
+  }
+  .workshop-banner__eyebrow {
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    opacity: 0.85;
+    margin: 0 0 0.4rem;
+  }
+  .workshop-banner h2 {
+    margin: 0 0 0.5rem;
+    font-size: 1.8rem;
+    color: #fff;
+    border: none;
+  }
+  .workshop-banner p { margin: 0 0 1.25rem; opacity: 0.95; }
+  .workshop-banner__cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+  }
+  .workshop-banner__card {
+    display: block;
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 10px;
+    padding: 1rem 1.1rem;
+    color: #fff;
+    text-decoration: none;
+    transition: transform 0.15s ease, background 0.15s ease;
+  }
+  .workshop-banner__card:hover {
+    background: rgba(255,255,255,0.22);
+    transform: translateY(-2px);
+  }
+  .workshop-banner__card strong { display: block; font-size: 1.05rem; margin-bottom: 0.2rem; }
+  .workshop-banner__card span { font-size: 0.9rem; opacity: 0.9; }
+  .workshop-banner__featured {
+    display: inline-block;
+    background: #fdbb2d;
+    color: #1a2a6c;
+    font-weight: 700;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    padding: 0.15rem 0.5rem;
+    border-radius: 4px;
+    margin-bottom: 0.4rem;
+  }
+</style>
+
+<section class="workshop-banner">
+  <p class="workshop-banner__eyebrow">Agentic AI Workshop Series</p>
+  <h2>Agentic AI for Neuroscience · 15 April 2026</h2>
+  <p>UKDRI workshop series on agentic AI tooling for neuroscience labs. Landing page has QR codes for tutorials, Slack, and the AI strategy form.</p>
+
+  <div class="workshop-banner__cards">
+    <a class="workshop-banner__card" href="./tutorials/08-figure-legend-challenge">
+      <span class="workshop-banner__featured">Featured Challenge</span>
+      <strong>Figure Legend Generator</strong>
+      <span>Build the best agent for publication-ready legends. Leaderboard + prize.</span>
+    </a>
+    <a class="workshop-banner__card" href="./workshops/agentic-ai-neuroscience-2026/">
+      <strong>Workshop Landing Page</strong>
+      <span>QR codes: tutorials, Slack, AI strategy form.</span>
+    </a>
+  </div>
+</section>
+
 ## Tutorials
 
 <div class="tutorial-cards">
