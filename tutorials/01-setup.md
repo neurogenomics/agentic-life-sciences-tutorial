@@ -20,7 +20,7 @@ Coding agents are distinct from chatbots because they can read and write files o
 A coding agent is a program on your computer that reads and writes files, runs commands, and operates on your project — not just a chatbot.
 
 - **[GitHub Copilot](https://github.com/features/copilot)** (recommended) — GitHub; CLI or desktop. Follow the [GitHub Education signup guide](github-education) to get Copilot Pro free and install the CLI.
-- **[GitHub Codex](https://github.com/features/codex)** — GitHub; cloud agent.
+- **[OpenAI Codex](https://github.com/openai/codex)** — OpenAI; CLI and cloud agent.
 - **[Claude Code](https://docs.anthropic.com/en/docs/claude-code)** — Anthropic; CLI. Paid.
 - **[OpenCode](https://opencode.ai/) + [OpenRouter](https://openrouter.ai)** — open-source; desktop app, many providers.
 
