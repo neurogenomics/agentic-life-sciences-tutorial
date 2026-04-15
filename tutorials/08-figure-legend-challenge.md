@@ -30,6 +30,17 @@ Can your agent write a figure legend as well as the authors did?
 - The [**PubMed MCP**](https://modelcontextprotocol.io/) and [**Anthropic's life-sciences skills**](https://www.anthropic.com/solutions/life-sciences) can pull the paper's methods for extra context.
 - Share attempts in the workshop Slack channel.
 
+## Want to make it reusable? Build a skill.
+
+If you find a prompt that works, package it as a **skill** so any agent can call it the same way next time. A skill is a folder with a `SKILL.md` that defines the trigger, inputs, outputs, and workflow.
+
+- [**Anthropic Skills overview**](https://www.anthropic.com/news/skills) — what skills are and why they exist
+- [**Claude Skills documentation**](https://docs.claude.com/en/docs/claude-code/skills) — how to author and load skills in Claude Code
+- [**anthropics/skills**](https://github.com/anthropics/skills) — reference repo with official skills (`pptx`, `pdf`, `docx`, etc.) you can copy from
+- [**Skills cookbook**](https://github.com/anthropics/claude-cookbooks) — examples and patterns
+
+A "figure-legend" skill would take an image (and optionally a methods blurb), call a vision model with a tuned prompt, and return a journal-style legend. Save it once, share it in Slack, every lab member benefits.
+
 ## Impossible mode
 
 For when you've nailed the gnomAD legend and want to break your agent.
