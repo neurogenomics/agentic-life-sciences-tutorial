@@ -37,10 +37,10 @@ You choose an agent, connect it to a provider, and pick a model. Different combi
 
 A coding agent is a program on your computer that reads and writes files, runs commands, and operates on your project — not just a chatbot.
 
-- **[GitHub Copilot](https://github.com/features/copilot)** (recommended) — free for students via [GitHub Education](https://education.github.com). CLI or desktop, access to Claude, GPT, and Gemini through one subscription.
-- **[GitHub Codex](https://github.com/features/codex)** — cloud agent; assign tasks on github.com and it opens a PR.
-- **[Claude Code](https://docs.anthropic.com/en/docs/claude-code)** — Anthropic's terminal agent. Paid.
-- **[OpenCode](https://opencode.ai/) + [OpenRouter](https://openrouter.ai)** — open-source desktop app, many providers.
+- **[GitHub Copilot](https://github.com/features/copilot)** (recommended) — GitHub; free for students via [GitHub Education](https://education.github.com). CLI or desktop.
+- **[GitHub Codex](https://github.com/features/codex)** — GitHub; cloud agent.
+- **[Claude Code](https://docs.anthropic.com/en/docs/claude-code)** — Anthropic; CLI. Paid.
+- **[OpenCode](https://opencode.ai/) + [OpenRouter](https://openrouter.ai)** — open-source; desktop app, many providers.
 
 ## Get started with GitHub Copilot
 

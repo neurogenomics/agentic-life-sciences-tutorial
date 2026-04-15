@@ -38,27 +38,26 @@ permalink: /workshops/agentic-ai-neuroscience-2026/
   /* ---------- hero + QR row (single viewport) ---------- */
   .wx-top {
     display: grid;
-    grid-template-columns: minmax(240px, 0.9fr) minmax(0, 3fr);
+    grid-template-columns: 1fr;
     gap: 1.25rem;
-    align-items: stretch;
-  }
-  @media (max-width: 1000px) {
-    .wx-top { grid-template-columns: 1fr; }
   }
 
   .wx-hero {
     position: relative;
     border: 1px solid var(--line);
     border-radius: 18px;
-    padding: 1.5rem 1.5rem 1.25rem;
+    padding: 1.5rem 2rem;
     overflow: hidden;
     background: var(--ink);
     color: #fff;
     isolation: isolate;
     display: flex;
-    flex-direction: column;
+    align-items: center;
     justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
   }
+  .wx-hero__left { display: flex; flex-direction: column; gap: 0.5rem; }
   .wx-hero::before {
     content: "";
     position: absolute;
@@ -95,10 +94,10 @@ permalink: /workshops/agentic-ai-neuroscience-2026/
     box-shadow: 0 0 12px var(--accent);
   }
   .wx-hero h1 {
-    font-size: clamp(1.6rem, 2vw, 2.1rem);
+    font-size: clamp(1.6rem, 2.6vw, 2.4rem);
     line-height: 1;
     letter-spacing: -0.02em;
-    margin: 0.75rem 0 0.75rem;
+    margin: 0;
     font-weight: 800;
   }
   .wx-hero h1 em {
@@ -109,21 +108,24 @@ permalink: /workshops/agentic-ai-neuroscience-2026/
     color: transparent;
   }
   .wx-hero__meta {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.6rem 1rem;
-    margin-top: 0.75rem;
-    padding-top: 0.75rem;
-    border-top: 1px solid rgba(255,255,255,0.18);
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding-left: 1.5rem;
+    border-left: 1px solid rgba(255,255,255,0.18);
   }
+  .wx-hero__meta > div { min-width: 0; }
   .wx-hero__meta dt {
     font-size: 0.6rem;
     letter-spacing: 0.13em;
     text-transform: uppercase;
     opacity: 0.55;
-    margin-bottom: 0.15rem;
+    margin-bottom: 0.2rem;
   }
-  .wx-hero__meta dd { margin: 0; font-weight: 500; font-size: 0.82rem; }
+  .wx-hero__meta dd { margin: 0; font-weight: 500; font-size: 0.85rem; }
+  @media (max-width: 760px) {
+    .wx-hero__meta { padding-left: 0; border-left: none; border-top: 1px solid rgba(255,255,255,0.18); padding-top: 0.75rem; flex-wrap: wrap; }
+  }
 
   /* ---------- step strip ---------- */
   .wx-steps {
@@ -167,15 +169,15 @@ permalink: /workshops/agentic-ai-neuroscience-2026/
     background: rgba(255, 255, 255, 0.82);
     backdrop-filter: blur(8px);
     border: 1px solid var(--line);
-    border-radius: 14px;
-    padding: 0.9rem 0.9rem 0.85rem;
+    border-radius: 16px;
+    padding: 1.25rem 1.1rem 1rem;
     position: relative;
     transition: transform 0.15s ease, box-shadow 0.15s ease;
     display: flex;
     flex-direction: column;
     text-decoration: none;
     color: inherit;
-    gap: 0.35rem;
+    gap: 0.4rem;
   }
   .wx-qr__card:hover {
     transform: translateY(-2px);
@@ -198,22 +200,23 @@ permalink: /workshops/agentic-ai-neuroscience-2026/
     font-weight: 700;
   }
   .wx-qr__title {
-    font-size: 0.95rem;
+    font-size: 1.05rem;
     font-weight: 700;
     margin: 0;
     letter-spacing: -0.01em;
+    min-height: 2.5em;
   }
   .wx-qr__img {
     background: var(--paper);
-    border-radius: 8px;
-    padding: 0.5rem;
+    border-radius: 10px;
+    padding: 0.75rem;
     display: flex;
     justify-content: center;
     margin-top: 0.25rem;
   }
   .wx-qr__img img {
     width: 100%;
-    max-width: 150px;
+    max-width: 200px;
     height: auto;
     image-rendering: pixelated;
   }
@@ -410,15 +413,14 @@ permalink: /workshops/agentic-ai-neuroscience-2026/
 
   <div class="wx-top">
     <section class="wx-hero">
-      <div>
-        <span class="wx-hero__tag">Workshop · 15 April 2026</span>
+      <div class="wx-hero__left">
+        <span class="wx-hero__tag">Workshop · 15 April 2026 · Live today</span>
         <h1>Agentic AI for <em>Neuroscience</em>.</h1>
       </div>
       <dl class="wx-hero__meta">
         <div><dt>Host</dt><dd>UKDRI</dd></div>
-        <div><dt>Venue</dt><dd>Imperial</dd></div>
+        <div><dt>Venue</dt><dd>Imperial College London</dd></div>
         <div><dt>Channel</dt><dd>#agentic-ai-for-neuroscience-workshop</dd></div>
-        <div><dt>Status</dt><dd>Live today</dd></div>
       </dl>
     </section>
 
