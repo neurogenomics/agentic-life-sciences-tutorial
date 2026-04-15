@@ -35,11 +35,11 @@ permalink: /workshops/agentic-ai-neuroscience-2026/
   /* ---------- compact hero + QR row (above the fold) ---------- */
   .wx-top {
     display: grid;
-    grid-template-columns: minmax(260px, 1fr) minmax(0, 2fr);
+    grid-template-columns: minmax(240px, 1.1fr) minmax(0, 3fr);
     gap: 1rem;
     align-items: stretch;
   }
-  @media (max-width: 900px) {
+  @media (max-width: 1000px) {
     .wx-top { grid-template-columns: 1fr; }
   }
 
@@ -152,10 +152,13 @@ permalink: /workshops/agentic-ai-neuroscience-2026/
   /* ---------- QR row ---------- */
   .wx-qr {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.75rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.65rem;
   }
-  @media (max-width: 620px) {
+  @media (max-width: 900px) {
+    .wx-qr { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 520px) {
     .wx-qr { grid-template-columns: 1fr; }
   }
   .wx-qr__card {
@@ -175,6 +178,15 @@ permalink: /workshops/agentic-ai-neuroscience-2026/
     transform: translateY(-2px);
     box-shadow: 0 12px 28px -16px rgba(11, 15, 26, 0.25);
   }
+  .wx-qr__card--accent {
+    background: linear-gradient(180deg, rgba(255, 90, 31, 0.95), rgba(255, 120, 60, 0.95));
+    color: #fff;
+    border-color: rgba(255, 90, 31, 0.6);
+  }
+  .wx-qr__card--accent .wx-qr__label { color: #fff; opacity: 0.9; }
+  .wx-qr__card--accent .wx-qr__title { color: #fff; }
+  .wx-qr__card--accent .wx-qr__link { color: rgba(255,255,255,0.9); }
+  .wx-qr__card--accent .wx-qr__img { background: rgba(255, 255, 255, 0.9); }
   .wx-qr__label {
     font-size: 0.6rem;
     letter-spacing: 0.14em;
@@ -433,56 +445,15 @@ permalink: /workshops/agentic-ai-neuroscience-2026/
         </div>
         <span class="wx-qr__link">forms.cloud.microsoft/e/mF0jqv9Xr1</span>
       </a>
-    </div>
-  </div>
 
-  <div class="wx-head">
-    <h2>Challenge · Figure Legend Generator</h2>
-    <span class="wx-head__count">hack today</span>
-  </div>
-
-  <div class="wx-panel">
-    <p class="wx-lead">Can your agent write a figure legend as well as the authors did?</p>
-    <ol class="wx-task">
-      <li>Download the figure below.</li>
-      <li>Give it to your agent and ask for a publication-ready legend.</li>
-      <li>Compare to the original in the paper.</li>
-    </ol>
-    <div class="wx-tip">
-      <strong>Tips.</strong> Start in <code>Plan</code> mode so the agent asks what it needs before drafting. The <strong>PubMed MCP</strong> and the <strong>ClawBio</strong> life-sciences skills can pull the paper's methods for extra context. Share attempts in the Slack channel.
-    </div>
-  </div>
-
-  <div class="wx-figure">
-    <img src="{{ '/assets/images/gnomad-karczewski-2020-fig1.webp' | relative_url }}" alt="Karczewski 2020 gnomAD Figure 1">
-    <div class="wx-figure__meta">
-      <div>
-        <strong>Karczewski et al. 2020</strong> · <em>Nature</em><br>
-        <span class="wx-cite">The mutational constraint spectrum quantified from variation in 141,456 humans. Fig 1.</span>
-      </div>
-      <div class="wx-figure__actions">
-        <a href="{{ '/assets/images/gnomad-karczewski-2020-fig1.webp' | relative_url }}" download>Download</a>
-        <a href="https://www.nature.com/articles/s41586-020-2308-7">Paper</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="wx-head wx-head--danger">
-    <h2>Impossible mode</h2>
-    <span class="wx-head__count">good luck</span>
-  </div>
-
-  <div class="wx-figure wx-figure--danger">
-    <img src="{{ '/assets/images/impossible-mode.jpeg' | relative_url }}" alt="Dense multi-panel figure — impossible mode">
-    <div class="wx-figure__meta">
-      <div>
-        <strong>Impossible mode</strong> · <em>Cell Metabolism</em> Figure S1<br>
-        <span class="wx-cite">~30 panels in one figure: IHC, western blots, bar charts, karyograms, micrographs. No agent writes this legend in one shot. Prize for getting closest.</span>
-      </div>
-      <div class="wx-figure__actions">
-        <a href="{{ '/assets/images/impossible-mode.jpeg' | relative_url }}" download>Download</a>
-        <a href="https://www.sciencedirect.com/science/article/pii/S1550413117306745">Paper</a>
-      </div>
+      <a class="wx-qr__card wx-qr__card--accent" href="{{ '/tutorials/08-figure-legend-challenge' | relative_url }}">
+        <span class="wx-qr__label">Challenge</span>
+        <div class="wx-qr__title">Figure legend hack</div>
+        <div class="wx-qr__img">
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=400x400&margin=0&data=https%3A%2F%2Fneurogenomics.github.io%2Fagentic-life-sciences-tutorial%2Ftutorials%2F08-figure-legend-challenge&color=0b0f1a&bgcolor=f6f5f1" alt="QR code to challenge">
+        </div>
+        <span class="wx-qr__link">tutorials/08-figure-legend-challenge</span>
+      </a>
     </div>
   </div>
 
