@@ -467,9 +467,28 @@ permalink: /workshops/agentic-ai-neuroscience-2026/
     </div>
   </div>
 
+  <div class="wx-head wx-head--danger">
+    <h2>Impossible mode</h2>
+    <span class="wx-head__count">good luck</span>
+  </div>
+
+  <div class="wx-figure wx-figure--danger">
+    <img src="{{ '/assets/images/impossible-mode.jpeg' | relative_url }}" alt="Dense multi-panel figure — impossible mode">
+    <div class="wx-figure__meta">
+      <div>
+        <strong>Impossible mode</strong> · <em>Cell Metabolism</em> Figure S1<br>
+        <span class="wx-cite">~30 panels in one figure: IHC, western blots, bar charts, karyograms, micrographs. No agent writes this legend in one shot. Prize for getting closest.</span>
+      </div>
+      <div class="wx-figure__actions">
+        <a href="{{ '/assets/images/impossible-mode.jpeg' | relative_url }}" download>Download</a>
+        <a href="https://www.sciencedirect.com/science/article/pii/S1550413117306745">Paper</a>
+      </div>
+    </div>
+  </div>
+
   <div class="wx-mark">
     <span>// UKDRI · Skene Lab · Imperial</span>
-    <span>v1.1 · 2026-04-15</span>
+    <span>v1.2 · 2026-04-15</span>
   </div>
 
 </div>
