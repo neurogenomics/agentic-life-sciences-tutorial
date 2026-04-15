@@ -170,7 +170,7 @@ permalink: /workshops/agentic-ai-neuroscience-2026/
   /* ---------- QR row ---------- */
   .wx-qr {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 0.85rem;
   }
   @media (max-width: 900px) {
