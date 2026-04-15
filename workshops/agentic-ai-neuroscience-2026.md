@@ -241,7 +241,89 @@ permalink: /workshops/agentic-ai-neuroscience-2026/
     letter-spacing: 0.05em;
   }
 
+  /* ---------- challenge panel ---------- */
+  .wx-panel {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 1.75rem 2rem;
+  }
+  .wx-lead {
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin: 0 0 1rem;
+  }
+  .wx-task {
+    margin: 0 0 1.25rem 1.25rem;
+    padding: 0;
+  }
+  .wx-task li { margin: 0.35rem 0; }
+  .wx-tip {
+    background: rgba(59, 107, 255, 0.06);
+    border-left: 3px solid var(--accent-2);
+    padding: 0.75rem 1rem;
+    border-radius: 4px;
+    font-size: 0.92rem;
+  }
+  .wx-tip code {
+    background: rgba(11,15,26,0.08);
+    padding: 0.05rem 0.35rem;
+    border-radius: 4px;
+    font-size: 0.85em;
+  }
+
+  /* ---------- tables ---------- */
+  .wx-table {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    overflow: hidden;
+  }
+  .wx-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+  }
+  .wx-table th, .wx-table td {
+    text-align: left;
+    padding: 0.85rem 1rem;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+  }
+  .wx-table tr:last-child td { border-bottom: none; }
+  .wx-table th {
+    background: var(--paper);
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #555;
+    font-weight: 600;
+  }
+  .wx-table td a {
+    color: var(--accent-2);
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 0.85rem;
+  }
+  .wx-cite {
+    display: block;
+    font-size: 0.8rem;
+    color: #888;
+    font-style: italic;
+    margin-top: 0.15rem;
+  }
+  .wx-note {
+    padding: 0.75rem 1rem;
+    font-size: 0.85rem;
+    color: #666;
+    background: var(--paper);
+    margin: 0;
+    border-top: 1px solid var(--line);
+  }
+
   @media (max-width: 640px) {
+    .wx-table { overflow-x: auto; }
+    .wx-table table { min-width: 600px; }
     .wx-hero { padding: 2.5rem 1.5rem 2rem; }
     .wx-step { border-right: none; border-bottom: 1px solid var(--line); }
     .wx-step:last-child { border-bottom: none; }
@@ -323,9 +405,148 @@ permalink: /workshops/agentic-ai-neuroscience-2026/
 
   </div>
 
+  <div class="wx-head">
+    <h2>Challenge · Figure Legend Generator</h2>
+    <span class="wx-head__count">hack today</span>
+  </div>
+
+  <div class="wx-panel">
+    <p class="wx-lead">Can your agent write a figure legend as well as the authors did?</p>
+    <ol class="wx-task">
+      <li>Pick a figure from the tables below and download the image.</li>
+      <li>Give it to your agent and ask for a publication-ready legend.</li>
+      <li>Compare to the original in the paper.</li>
+    </ol>
+    <div class="wx-tip">
+      <strong>Tips.</strong> Start in <code>Plan</code> mode so the agent asks what it needs before drafting. The <strong>PubMed MCP</strong> and the <strong>ClawBio</strong> life-sciences skills can pull the paper's methods for extra context. Share attempts in the Slack channel.
+    </div>
+  </div>
+
+  <div class="wx-head">
+    <h2>Warm-up figures</h2>
+    <span class="wx-head__count">easy mode</span>
+  </div>
+
+  <div class="wx-table">
+    <table>
+      <thead>
+        <tr><th>Figure</th><th>Why</th><th>Download</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Palmer Penguins — bill dimensions</td>
+          <td>Teaching figure, clean 3-species layout</td>
+          <td><a href="https://allisonhorst.github.io/palmerpenguins/reference/figures/culmen_depth.png">PNG</a></td>
+        </tr>
+        <tr>
+          <td>Palmer Penguins — flipper vs body mass</td>
+          <td>Scatter with legend, colour key</td>
+          <td><a href="https://allisonhorst.github.io/palmerpenguins/articles/examples/mass_flipper.png">PNG</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="wx-head">
+    <h2>Neuroscience figures</h2>
+    <span class="wx-head__count">snRNA-seq · GWAS</span>
+  </div>
+
+  <div class="wx-table">
+    <table>
+      <thead>
+        <tr><th>Paper</th><th>Suggested figure</th><th>Why it is a good test</th><th>Source</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Agarwal et al. 2020 — <em>Nat Commun</em><br><span class="wx-cite">Human substantia nigra atlas</span></td>
+          <td>Fig 1</td>
+          <td>Clean UMAP + barplot. Good warm-up.</td>
+          <td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7463023/">PMC7463023</a></td>
+        </tr>
+        <tr>
+          <td>Mathys et al. 2019 — <em>Nature</em><br><span class="wx-cite">snRNA-seq in Alzheimer's</span></td>
+          <td>Fig 2</td>
+          <td>Composition + DE gene panels.</td>
+          <td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6737283/">PMC6737283</a></td>
+        </tr>
+        <tr>
+          <td>Skene et al. 2018 — <em>Nat Genet</em><br><span class="wx-cite">Cell types in schizophrenia</span></td>
+          <td>Fig 3</td>
+          <td>GWAS enrichment × cell ontology.</td>
+          <td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6546635/">PMC6546635</a></td>
+        </tr>
+        <tr>
+          <td>Bryois et al. 2020 — <em>Nat Genet</em><br><span class="wx-cite">MAGMA cell-typing across traits</span></td>
+          <td>Fig 2</td>
+          <td>Trait × cell-type matrix. Many labels to name.</td>
+          <td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7610352/">PMC7610352</a></td>
+        </tr>
+        <tr>
+          <td>Smajić et al. 2022 — <em>Brain</em><br><span class="wx-cite">PD midbrain single-cell</span></td>
+          <td>Fig 1</td>
+          <td>Atlas UMAP split by condition.</td>
+          <td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8864739/">PMC8864739</a></td>
+        </tr>
+        <tr>
+          <td>Siletti et al. 2023 — <em>Science</em><br><span class="wx-cite">Human brain transcriptomic atlas</span></td>
+          <td>Fig 1 or Fig 3</td>
+          <td>461-cluster UMAP + sunburst hierarchy.</td>
+          <td><a href="https://www.biorxiv.org/content/10.1101/2022.10.12.511898v1">bioRxiv preprint</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="wx-head">
+    <h2>Microscopy figures</h2>
+    <span class="wx-head__count">hard mode</span>
+  </div>
+
+  <div class="wx-table">
+    <table>
+      <thead>
+        <tr><th>Paper</th><th>Suggested figure</th><th>Why it is a good test</th><th>Source</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Kamath et al. 2022 — <em>Nat Neurosci</em><br><span class="wx-cite">PD-vulnerable dopamine neurons</span></td>
+          <td>Fig 4</td>
+          <td>smFISH / RNAscope of SOX6, CALB1. 3 channels.</td>
+          <td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9477726/">PMC9477726</a></td>
+        </tr>
+        <tr>
+          <td>Keren-Shaul et al. 2017 — <em>Cell</em><br><span class="wx-cite">DAM microglia in AD</span></td>
+          <td>Fig 4</td>
+          <td>Iba1 / TREM2 / Clec7a triple-stain around plaques.</td>
+          <td><a href="https://www.cell.com/cell/fulltext/S0092-8674(17)30578-0">Cell open</a></td>
+        </tr>
+        <tr>
+          <td>Smajić et al. 2022 — <em>Brain</em><br><span class="wx-cite">PD midbrain IHC</span></td>
+          <td>Fig 5</td>
+          <td>Iba1 / GFAP staining, PD vs control.</td>
+          <td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8864739/">PMC8864739</a></td>
+        </tr>
+        <tr>
+          <td>La Manno et al. 2021 — <em>Nature</em><br><span class="wx-cite">Developing mouse brain atlas</span></td>
+          <td>Fig 5</td>
+          <td>IHC + spatial transcriptomics overlays.</td>
+          <td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8209913/">PMC8209913</a></td>
+        </tr>
+        <tr>
+          <td>Yao et al. 2023 — <em>Nature</em><br><span class="wx-cite">Mouse whole-brain MERFISH</span></td>
+          <td>Fig 2</td>
+          <td>MERFISH sections registered to CCF.</td>
+          <td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10700148/">PMC10700148</a></td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="wx-note">To grab a PMC figure: open the article, click the figure thumbnail, then "Download image" → save the JPG/TIFF. Or right-click the hi-res preview.</p>
+  </div>
+
   <div class="wx-mark">
     <span>// UKDRI · Skene Lab · Imperial</span>
-    <span>v1.0 · 2026-04-15</span>
+    <span>v1.1 · 2026-04-15</span>
   </div>
 
 </div>
