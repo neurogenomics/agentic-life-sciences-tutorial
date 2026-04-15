@@ -44,4 +44,4 @@ For when you've nailed the gnomAD legend and want to break your agent.
 
 [**Download figure**]({{ '/assets/images/impossible-mode.jpeg' | relative_url }})
 
-~30 panels in one figure: IHC, western blots, bar charts, karyograms, micrographs, FISH. Mixed conditions, mixed genotypes, mixed timepoints. No agent writes this legend in one shot. Prize for getting closest.
+~30 panels in one figure: IHC, western blots, bar charts, karyograms, micrographs, FISH. Mixed conditions, mixed genotypes, mixed timepoints. No agent writes this legend in one shot.
