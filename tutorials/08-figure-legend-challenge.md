@@ -27,7 +27,7 @@ Can your agent write a figure legend as well as the authors did?
 ## Tips
 
 - Start in **Plan mode** so the agent asks you what it needs before drafting.
-- The **PubMed MCP** and ClawBio's life-sciences skills can pull the paper's methods for extra context.
+- The [**PubMed MCP**](https://claude.ai/mcp) and [**ClawBio's life-sciences skills**](https://www.anthropic.com/solutions/life-sciences) can pull the paper's methods for extra context.
 - Share attempts in the workshop Slack channel.
 
 ## Why this is a good test
