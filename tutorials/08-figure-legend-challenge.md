@@ -30,10 +30,6 @@ Can your agent write a figure legend as well as the authors did?
 - The [**PubMed MCP**](https://claude.ai/mcp) and [**Anthropic's life-sciences skills**](https://www.anthropic.com/solutions/life-sciences) can pull the paper's methods for extra context.
 - Share attempts in the workshop Slack channel.
 
-## Why this is a good test
-
-Eight panels (A–H), three modalities: an ancestry UMAP, a stacked sample-count bar, MAPS score scatters, mutation-class percentages, and variant-count barplots. Colour semantics change between panels. A good legend names every panel, every abbreviation (MAPS, pLoF, CpG), and both the exome and genome splits.
-
 ## Impossible mode
 
 For when you've nailed the gnomAD legend and want to break your agent.
