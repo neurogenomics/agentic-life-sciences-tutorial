@@ -42,22 +42,36 @@ permalink: /workshops/agentic-ai-neuroscience-2026/
     gap: 1.25rem;
   }
 
-  .wx-hero {
-    position: relative;
-    border: 1px solid var(--line);
-    border-radius: 18px;
-    padding: 1.5rem 2rem;
-    overflow: hidden;
-    background: var(--ink);
-    color: #fff;
-    isolation: isolate;
+  .wx-title {
     display: flex;
-    align-items: center;
+    align-items: baseline;
     justify-content: space-between;
-    gap: 2rem;
+    gap: 1.5rem;
+    padding: 0.25rem 0.5rem 1rem;
+    border-bottom: 2px solid var(--ink);
     flex-wrap: wrap;
   }
-  .wx-hero__left { display: flex; flex-direction: column; gap: 0.5rem; }
+  .wx-title h1 {
+    margin: 0;
+    font-size: clamp(1.8rem, 4.5vw, 3.4rem);
+    line-height: 1;
+    letter-spacing: -0.025em;
+    font-weight: 800;
+  }
+  .wx-title h1 em {
+    font-style: normal;
+    background: linear-gradient(90deg, #ff5a1f, #c2410c);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .wx-title__date {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 0.95rem;
+    letter-spacing: 0.05em;
+    color: var(--ink);
+    opacity: 0.7;
+  }
   .wx-hero::before {
     content: "";
     position: absolute;
@@ -169,8 +183,8 @@ permalink: /workshops/agentic-ai-neuroscience-2026/
     background: rgba(255, 255, 255, 0.82);
     backdrop-filter: blur(8px);
     border: 1px solid var(--line);
-    border-radius: 16px;
-    padding: 1.25rem 1.1rem 1rem;
+    border-radius: 18px;
+    padding: 1.5rem 1.5rem 1.25rem;
     position: relative;
     transition: transform 0.15s ease, box-shadow 0.15s ease;
     display: flex;
@@ -200,11 +214,10 @@ permalink: /workshops/agentic-ai-neuroscience-2026/
     font-weight: 700;
   }
   .wx-qr__title {
-    font-size: 1.05rem;
+    font-size: 1.2rem;
     font-weight: 700;
     margin: 0;
     letter-spacing: -0.01em;
-    min-height: 2.5em;
   }
   .wx-qr__img {
     background: var(--paper);
@@ -216,7 +229,7 @@ permalink: /workshops/agentic-ai-neuroscience-2026/
   }
   .wx-qr__img img {
     width: 100%;
-    max-width: 200px;
+    max-width: 280px;
     height: auto;
     image-rendering: pixelated;
   }
@@ -412,16 +425,9 @@ permalink: /workshops/agentic-ai-neuroscience-2026/
 <div class="wx">
 
   <div class="wx-top">
-    <section class="wx-hero">
-      <div class="wx-hero__left">
-        <span class="wx-hero__tag">Workshop · 15 April 2026 · Live today</span>
-        <h1>Agentic AI for <em>Neuroscience</em>.</h1>
-      </div>
-      <dl class="wx-hero__meta">
-        <div><dt>Host</dt><dd>UKDRI</dd></div>
-        <div><dt>Venue</dt><dd>Imperial College London</dd></div>
-        <div><dt>Channel</dt><dd>#agentic-ai-for-neuroscience-workshop</dd></div>
-      </dl>
+    <section class="wx-title">
+      <h1>Agentic AI for <em>Neuroscience</em></h1>
+      <span class="wx-title__date">15 April 2026</span>
     </section>
 
     <div class="wx-qr">
