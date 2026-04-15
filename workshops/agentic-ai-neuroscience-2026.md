@@ -25,36 +25,32 @@ permalink: /workshops/agentic-ai-neuroscience-2026/
   .site-header { background: transparent !important; border-bottom-color: rgba(26, 15, 8, 0.08) !important; }
 
   .wx {
-    max-width: 1280px;
+    max-width: 1240px;
     margin: 0 auto;
-    padding: 1.25rem 1.25rem 3rem;
+    padding: 3rem 2.5rem 3rem;
     color: var(--ink);
     font-feature-settings: "ss01", "cv11";
   }
+  @media (max-width: 700px) {
+    .wx { padding: 1.5rem 1.25rem 2rem; }
+  }
 
-  /* ---------- compact hero + QR row (above the fold) ---------- */
+  /* ---------- hero + QR row (above the fold) ---------- */
   .wx-top {
     display: grid;
-    grid-template-columns: minmax(240px, 1.1fr) minmax(0, 3fr);
-    gap: 1rem;
-    align-items: stretch;
-  }
-  @media (max-width: 1000px) {
-    .wx-top { grid-template-columns: 1fr; }
+    grid-template-columns: minmax(280px, 1fr);
+    gap: 2rem;
   }
 
   .wx-hero {
     position: relative;
     border: 1px solid var(--line);
-    border-radius: 16px;
-    padding: 1.5rem 1.5rem 1.25rem;
+    border-radius: 20px;
+    padding: 2.25rem 2.5rem 2rem;
     overflow: hidden;
     background: var(--ink);
     color: #fff;
     isolation: isolate;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
   }
   .wx-hero::before {
     content: "";
@@ -92,10 +88,10 @@ permalink: /workshops/agentic-ai-neuroscience-2026/
     box-shadow: 0 0 12px var(--accent);
   }
   .wx-hero h1 {
-    font-size: clamp(1.6rem, 2.4vw, 2.25rem);
+    font-size: clamp(2rem, 4vw, 3.25rem);
     line-height: 1;
     letter-spacing: -0.02em;
-    margin: 0.75rem 0 0.5rem;
+    margin: 1.25rem 0 1rem;
     font-weight: 800;
   }
   .wx-hero h1 em {
@@ -107,21 +103,20 @@ permalink: /workshops/agentic-ai-neuroscience-2026/
   }
   .wx-hero__meta {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.5rem 1rem;
-    margin-top: 0.75rem;
-    padding-top: 0.75rem;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1rem 2rem;
+    margin-top: 1.5rem;
+    padding-top: 1.25rem;
     border-top: 1px solid rgba(255,255,255,0.18);
-    font-size: 0.8rem;
   }
   .wx-hero__meta dt {
-    font-size: 0.6rem;
-    letter-spacing: 0.12em;
+    font-size: 0.68rem;
+    letter-spacing: 0.15em;
     text-transform: uppercase;
-    opacity: 0.55;
-    margin-bottom: 0.1rem;
+    opacity: 0.6;
+    margin-bottom: 0.25rem;
   }
-  .wx-hero__meta dd { margin: 0; font-weight: 500; font-size: 0.85rem; }
+  .wx-hero__meta dd { margin: 0; font-weight: 500; font-size: 0.95rem; }
 
   /* ---------- step strip ---------- */
   .wx-steps {
@@ -153,7 +148,7 @@ permalink: /workshops/agentic-ai-neuroscience-2026/
   .wx-qr {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 0.65rem;
+    gap: 1.25rem;
   }
   @media (max-width: 900px) {
     .wx-qr { grid-template-columns: repeat(2, 1fr); }
@@ -162,17 +157,18 @@ permalink: /workshops/agentic-ai-neuroscience-2026/
     .wx-qr { grid-template-columns: 1fr; }
   }
   .wx-qr__card {
-    background: rgba(255, 255, 255, 0.78);
+    background: rgba(255, 255, 255, 0.82);
     backdrop-filter: blur(8px);
     border: 1px solid var(--line);
-    border-radius: 14px;
-    padding: 0.85rem 0.9rem 0.75rem;
+    border-radius: 18px;
+    padding: 1.5rem 1.25rem 1.25rem;
     position: relative;
     transition: transform 0.15s ease, box-shadow 0.15s ease;
     display: flex;
     flex-direction: column;
     text-decoration: none;
     color: inherit;
+    gap: 0.5rem;
   }
   .wx-qr__card:hover {
     transform: translateY(-2px);
@@ -188,41 +184,42 @@ permalink: /workshops/agentic-ai-neuroscience-2026/
   .wx-qr__card--accent .wx-qr__link { color: rgba(255,255,255,0.9); }
   .wx-qr__card--accent .wx-qr__img { background: rgba(255, 255, 255, 0.9); }
   .wx-qr__label {
-    font-size: 0.6rem;
-    letter-spacing: 0.14em;
+    font-size: 0.65rem;
+    letter-spacing: 0.16em;
     text-transform: uppercase;
     color: var(--accent);
     font-weight: 700;
   }
   .wx-qr__title {
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: 700;
-    margin: 0.15rem 0 0.35rem;
+    margin: 0;
     letter-spacing: -0.01em;
   }
   .wx-qr__img {
     background: var(--paper);
-    border-radius: 8px;
-    padding: 0.5rem;
+    border-radius: 12px;
+    padding: 0.85rem;
     display: flex;
     justify-content: center;
-    flex-grow: 1;
+    margin-top: 0.5rem;
   }
   .wx-qr__img img {
     width: 100%;
-    max-width: 160px;
+    max-width: 200px;
     height: auto;
     image-rendering: pixelated;
   }
   .wx-qr__link {
-    margin-top: 0.5rem;
+    margin-top: 0.75rem;
     font-family: "JetBrains Mono", ui-monospace, monospace;
-    font-size: 0.65rem;
+    font-size: 0.7rem;
     color: var(--accent-2);
     word-break: break-all;
     text-decoration: none;
     display: block;
-    line-height: 1.2;
+    line-height: 1.3;
+    opacity: 0.85;
   }
 
   /* ---------- section heads ---------- */
@@ -251,7 +248,7 @@ permalink: /workshops/agentic-ai-neuroscience-2026/
 
   /* ---------- footer mark ---------- */
   .wx-mark {
-    margin-top: 3rem;
+    margin-top: 2.5rem;
     padding-top: 1.5rem;
     border-top: 1px solid var(--line);
     display: flex;

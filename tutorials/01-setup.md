@@ -41,11 +41,11 @@ There are three AI coding tools worth knowing about. "Downloading" one of these 
 
 ### GitHub Copilot (Recommended — free for students)
 
-[GitHub Copilot](https://github.com/features/copilot) is GitHub's AI coding assistant. It runs inside VS Code and gives you access to top models (Claude Opus 4.5, GPT-4.1, Gemini) through your GitHub account — no separate API key needed.
+[GitHub Copilot](https://github.com/features/copilot) is GitHub's AI coding assistant. It gives you access to top models (Claude Opus 4.5, GPT-4.1, Gemini) through your GitHub account — no separate API key needed.
 
-**What downloading it means:** You install the GitHub Copilot extension inside VS Code. This adds an AI chat panel and inline code suggestions directly in your editor. The models run on GitHub's servers; the extension just connects your editor to them.
+**What downloading it means:** You install the GitHub Copilot extension inside your editor. This adds an AI chat panel and inline code suggestions. The models run on GitHub's servers; the extension just connects your editor to them.
 
-**Why we recommend it:** Free with [GitHub Education](https://education.github.com), gives access to multiple frontier models, and integrates directly into VS Code where you already write code.
+**Why we recommend it:** Free with [GitHub Education](https://education.github.com), gives access to multiple frontier models, and integrates directly into the editor where you already write code.
 
 ---
 
@@ -77,11 +77,7 @@ There are three AI coding tools worth knowing about. "Downloading" one of these 
 
 > For a detailed step-by-step walkthrough with screenshots — including applying for GitHub Education, redeeming your Copilot Pro coupon, and enabling the coding agent — see the [GitHub Education guide](github-education).
 
-1. Sign up for [GitHub Education](https://education.github.com) with your university email to get Copilot Pro free
-2. Install [VS Code](https://code.visualstudio.com/) if you don't have it
-3. Open VS Code → Extensions (sidebar) → search "GitHub Copilot" → Install
-4. Sign in with your GitHub account when prompted
-5. Open the Copilot Chat panel (sidebar icon or `Ctrl+Shift+I` / `Cmd+Shift+I`)
-6. Select a model (e.g. Claude Opus 4.5) from the model picker at the top of the chat
-7. Make a new folder to begin — e.g. create a `testing AI` folder in your Documents, then open it in VS Code (`File → Open Folder`)
+1. Follow the [GitHub Education signup guide](github-education) to get Copilot Pro free and enable the coding agent
+2. Select a model (e.g. Claude Opus 4.5) from the model picker at the top of the Copilot Chat panel
+3. Make a new folder to begin — e.g. create a `testing AI` folder in your Documents, then open it in VS Code (`File → Open Folder`)
 
