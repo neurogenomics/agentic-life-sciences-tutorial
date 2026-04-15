@@ -61,9 +61,19 @@ layout: default
     <p class="tutorial-card__desc">Understand context windows and costs — learn how context rot develops and how to use <code>/compact</code> to keep runs cheap and accurate.</p>
   </a>
 
+  <a class="tutorial-card" href="./tutorials/08-figure-legend-challenge">
+    <div class="tutorial-card__header">
+      <span class="tutorial-card__number">07</span>
+      <span class="difficulty-badge difficulty-badge--intermediate badge-intermediate">Challenge</span>
+      <span class="time-estimate">45 min</span>
+    </div>
+    <h3 class="tutorial-card__title">Figure Legend Generator</h3>
+    <p class="tutorial-card__desc">Workshop challenge — build an agent that writes publication-ready figure legends. Best generator wins.</p>
+  </a>
+
   <a class="tutorial-card" href="./tutorials/07-apm">
     <div class="tutorial-card__header">
-      <span class="tutorial-card__number">06</span>
+      <span class="tutorial-card__number">08</span>
       <span class="difficulty-badge difficulty-badge--advanced badge-advanced">Advanced</span>
       <span class="time-estimate">30 min</span>
     </div>
