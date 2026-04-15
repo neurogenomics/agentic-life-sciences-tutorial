@@ -234,16 +234,17 @@ permalink: /workshops/agentic-ai-neuroscience-2026/
     image-rendering: pixelated;
   }
   .wx-qr__link {
-    margin-top: 0.4rem;
+    margin-top: 0.75rem;
     font-family: "JetBrains Mono", ui-monospace, monospace;
-    font-size: 0.62rem;
-    color: var(--accent-2);
+    font-size: 0.85rem;
+    color: var(--ink);
     word-break: break-all;
     text-decoration: none;
     display: block;
-    line-height: 1.25;
-    opacity: 0.85;
+    line-height: 1.35;
+    font-weight: 500;
   }
+  .wx-qr__card--accent .wx-qr__link { color: #fff; opacity: 0.95; }
 
   /* ---------- section heads ---------- */
   .wx-head {
