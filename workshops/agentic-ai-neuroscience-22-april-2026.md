@@ -213,7 +213,6 @@ permalink: /workshops/agentic-ai-neuroscience-22-april-2026/
       <ul class="wx-task">
         <li>Laptop with macOS, Windows, or Linux. Admin rights to install apps.</li>
         <li><strong>3–5 PDFs</strong> of papers you actually want to think about — review articles + primary research works best.</li>
-        <li>(Optional) The <a href="https://obsidian.md/clipper" target="_blank" rel="noopener">Obsidian Web Clipper</a> browser extension for any web articles you want to include.</li>
       </ul>
       <p class="wx-tip">No need to install anything in advance — we will install <strong>Obsidian</strong> and <strong>opencode</strong> together during the install phase. If you want to get ahead, see <a href="{{ '/tutorials/01-setup' | relative_url }}">Setup</a> and <a href="{{ '/tutorials/get-opencode' | relative_url }}">Get OpenCode</a>.</p>
     </div>
