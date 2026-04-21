@@ -218,28 +218,6 @@ permalink: /workshops/agentic-ai-neuroscience-22-april-2026/
     </div>
   </section>
 
-  <section>
-    <div class="wx-head"><h2>If you finish early</h2></div>
-    <div class="wx-stretch">
-      <div class="wx-stretch__card">
-        <h4>Linting pass</h4>
-        <p>Ask the agent to run a "health check" on your wiki — find inconsistent entries, broken links, missing summaries, orphan notes.</p>
-      </div>
-      <div class="wx-stretch__card">
-        <h4>Claude-Obsidian plugin</h4>
-        <p>Install the <a href="https://github.com/AgriciDaniel/claude-obsidian" target="_blank" rel="noopener">claude-obsidian</a> plugin so Claude can chat directly inside Obsidian alongside opencode.</p>
-      </div>
-      <div class="wx-stretch__card">
-        <h4>Matplotlib figure</h4>
-        <p>Ask the agent to write a Python script that reads the wiki metadata and renders a figure — citation timeline, concept co-occurrence, anything.</p>
-      </div>
-      <div class="wx-stretch__card">
-        <h4>Marp slide deck</h4>
-        <p>Have the agent turn your Q&amp;A answer into a Marp slide deck, then export to PDF from Obsidian.</p>
-      </div>
-    </div>
-  </section>
-
   <div class="wx-mark">
     <span>// UKDRI · Skene Lab · Imperial</span>
     <span>v1.0 · 2026-04-22</span>
