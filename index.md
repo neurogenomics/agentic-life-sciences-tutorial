@@ -66,22 +66,33 @@ layout: default
 </style>
 
 <section class="workshop-banner">
-  <p class="workshop-banner__eyebrow">Agentic AI Workshop Series</p>
-  <h2>Agentic AI for Neuroscience · 15 April 2026</h2>
-  <p>UKDRI workshop series on agentic AI tooling for neuroscience labs. Landing page has QR codes for tutorials, Slack, and the AI strategy form.</p>
+  <p class="workshop-banner__eyebrow">Agentic AI Workshop Series · Session 2</p>
+  <h2>Second Brain · 22 April 2026</h2>
+  <p>Build a personal research wiki with your agent. 30 min talk from Will Leeney, then a 90 min hands-on workshop: drop 3–5 of your own papers into a folder, watch the agent compile a linked wiki, then query across it.</p>
 
   <div class="workshop-banner__cards">
-    <a class="workshop-banner__card" href="./tutorials/08-figure-legend-challenge">
-      <span class="workshop-banner__featured">Featured Challenge</span>
-      <strong>Figure Legend Generator</strong>
-      <span>Download a figure, strip the legend, see if your agent can write it back.</span>
+    <a class="workshop-banner__card" href="./workshops/agentic-ai-neuroscience-22-april-2026/">
+      <span class="workshop-banner__featured">Tomorrow's Workshop</span>
+      <strong>Workshop Landing Page · 22 April</strong>
+      <span>Plan, QR codes, slides, stretch goals.</span>
     </a>
-    <a class="workshop-banner__card" href="./workshops/agentic-ai-neuroscience-2026/">
-      <strong>Workshop Landing Page</strong>
-      <span>QR codes: tutorials, Slack, AI strategy form.</span>
+    <a class="workshop-banner__card" href="./tutorials/09-second-brain">
+      <strong>Second Brain walkthrough</strong>
+      <span>Karpathy's raw → wiki → Q&amp;A pattern in Obsidian + opencode.</span>
+    </a>
+    <a class="workshop-banner__card" href="./workshops/22-april-slides.html">
+      <strong>Process slides</strong>
+      <span>HTML deck walking through the workshop plan.</span>
     </a>
   </div>
 </section>
+
+<details style="margin: 1.5rem 0 2.5rem; padding: 0.75rem 1rem; background: rgba(11,15,26,0.03); border-radius: 8px;">
+  <summary style="cursor: pointer; font-weight: 600; color: #555;">Previous: 15 April 2026 · Figure Legend Challenge</summary>
+  <div style="margin-top: 0.75rem; padding-left: 0.5rem;">
+    <p><a href="./workshops/agentic-ai-neuroscience-2026/">15 April landing page</a> · <a href="./tutorials/08-figure-legend-challenge">Figure Legend Generator challenge</a></p>
+  </div>
+</details>
 
 ## Tutorials
 
@@ -155,6 +166,26 @@ layout: default
     </div>
     <h3 class="tutorial-card__title">APM</h3>
     <p class="tutorial-card__desc">Dependency manager for AI context — use the Agent Package Manager to declare, version, and inject context modules automatically.</p>
+  </a>
+
+  <a class="tutorial-card" href="./tutorials/09-second-brain">
+    <div class="tutorial-card__header">
+      <span class="tutorial-card__number">09</span>
+      <span class="difficulty-badge difficulty-badge--intermediate badge-intermediate">Intermediate</span>
+      <span class="time-estimate">70 min</span>
+    </div>
+    <h3 class="tutorial-card__title">Second Brain</h3>
+    <p class="tutorial-card__desc">Build a personal research wiki from your own papers — drop PDFs in <code>raw/</code>, have the agent compile summaries, concept articles and backlinks, then query across it.</p>
+  </a>
+
+  <a class="tutorial-card" href="./tutorials/10-second-brain-stretch">
+    <div class="tutorial-card__header">
+      <span class="tutorial-card__number">10</span>
+      <span class="difficulty-badge difficulty-badge--advanced badge-advanced">Advanced</span>
+      <span class="time-estimate">30 min</span>
+    </div>
+    <h3 class="tutorial-card__title">Second Brain — Stretch Goals</h3>
+    <p class="tutorial-card__desc">Once your wiki works — run a linting pass, add the claude-obsidian plugin, render matplotlib figures from frontmatter, turn answers into Marp decks, vibe-code a search engine.</p>
   </a>
 
 </div>
