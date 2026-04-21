@@ -20,6 +20,9 @@ sections:
       - title: Single Cell Portal
         url: /tutorials/04-single-cell-portal
         time: "30 min"
+      - title: Second Brain
+        url: /tutorials/09-second-brain
+        time: "70 min"
   - title: Advanced Workflows
     difficulty: advanced
     items:
@@ -28,4 +31,7 @@ sections:
         time: "20 min"
       - title: Agent Package Manager
         url: /tutorials/07-apm
+        time: "30 min"
+      - title: Second Brain — Stretch Goals
+        url: /tutorials/10-second-brain-stretch
         time: "30 min"

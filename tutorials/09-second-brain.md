@@ -7,6 +7,14 @@ time_estimate: "70 min"
 
 # 🧠 Second Brain — Build a Research Wiki With Your Agent
 
+## Inspiration for this workshop
+
+This workshop builds directly on the following prior work — read these to go deeper:
+
+- [Andrej Karpathy — **LLM Knowledge Bases** gist](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f) — the `raw/` → `wiki/` → Q&A pattern this tutorial implements
+- [AgriciDaniel — **claude-obsidian** plugin](https://github.com/AgriciDaniel/claude-obsidian) — Claude chatting directly inside Obsidian
+- [**Obsidian Web Clipper**](https://obsidian.md/clipper) — one-click web article → markdown for your `raw/` folder
+
 ## Overview
 
 A **second brain** is a folder of markdown files that an agent reads, writes, and queries for you.
@@ -195,11 +203,3 @@ After the workshop, the loop is:
 3. Periodically ask the agent to **lint** the wiki — find inconsistencies, suggest new concept articles, propose merges.
 
 The [stretch-goals tutorial](./10-second-brain-stretch) covers linting, the claude-obsidian plugin, and matplotlib-figure outputs.
-
----
-
-## Credits
-
-- [Andrej Karpathy — LLM Knowledge Bases gist](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f)
-- [AgriciDaniel — claude-obsidian plugin](https://github.com/AgriciDaniel/claude-obsidian)
-- [Obsidian Web Clipper](https://obsidian.md/clipper)
