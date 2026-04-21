@@ -9,12 +9,12 @@ layout: default
 
 <style>
   .workshop-banner {
-    background: linear-gradient(135deg, #1a2a6c 0%, #b21f1f 50%, #fdbb2d 100%);
+    background: linear-gradient(135deg, #0b1a4a 0%, #1d3fb3 45%, #3b6bff 100%);
     color: #fff;
     border-radius: 14px;
     padding: 2rem 2rem 1.75rem;
     margin: 2rem 0 2.5rem;
-    box-shadow: 0 6px 24px rgba(0,0,0,0.12);
+    box-shadow: 0 6px 24px rgba(11, 15, 26, 0.18);
   }
   .workshop-banner__eyebrow {
     font-size: 0.8rem;
@@ -54,8 +54,8 @@ layout: default
   .workshop-banner__card span { font-size: 0.9rem; opacity: 0.9; }
   .workshop-banner__featured {
     display: inline-block;
-    background: #fdbb2d;
-    color: #1a2a6c;
+    background: #7ea0ff;
+    color: #0b1a4a;
     font-weight: 700;
     font-size: 0.75rem;
     letter-spacing: 0.08em;
