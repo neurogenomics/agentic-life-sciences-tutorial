@@ -114,22 +114,13 @@ permalink: /workshops/agentic-ai-neuroscience-22-april-2026/
     </section>
 
     <div class="wx-qr">
-      <a class="wx-qr__card" href="{{ '/tutorials/09-second-brain' | relative_url }}">
-        <span class="wx-qr__label">Tutorial</span>
-        <div class="wx-qr__title">Second Brain walkthrough</div>
+      <a class="wx-qr__card" href="https://neurogenomics.github.io/agentic-life-sciences-tutorial/">
+        <span class="wx-qr__label">Tutorials</span>
+        <div class="wx-qr__title">Skills Cookbook</div>
         <div class="wx-qr__img">
-          <img src="https://api.qrserver.com/v1/create-qr-code/?size=400x400&margin=0&data=https%3A%2F%2Fneurogenomics.github.io%2Fagentic-life-sciences-tutorial%2Ftutorials%2F09-second-brain&color=0b0f1a&bgcolor=f6f5f1" alt="QR to second brain tutorial">
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=400x400&margin=0&data=https%3A%2F%2Fneurogenomics.github.io%2Fagentic-life-sciences-tutorial%2F&color=0b0f1a&bgcolor=f6f5f1" alt="QR code to tutorials">
         </div>
-        <span class="wx-qr__link">tutorials/09-second-brain</span>
-      </a>
-
-      <a class="wx-qr__card" href="{{ '/workshops/22-april-slides.html' | relative_url }}">
-        <span class="wx-qr__label">Slides</span>
-        <div class="wx-qr__title">Process slides</div>
-        <div class="wx-qr__img">
-          <img src="https://api.qrserver.com/v1/create-qr-code/?size=400x400&margin=0&data=https%3A%2F%2Fneurogenomics.github.io%2Fagentic-life-sciences-tutorial%2Fworkshops%2F22-april-slides.html&color=0b0f1a&bgcolor=f6f5f1" alt="QR to slides">
-        </div>
-        <span class="wx-qr__link">workshops/22-april-slides.html</span>
+        <span class="wx-qr__link">neurogenomics.github.io/agentic-life-sciences-tutorial</span>
       </a>
 
       <a class="wx-qr__card" href="https://join.slack.com/share/enQtMTA5NDY1MDgyNjkyMzItNDRlMGU0ODM1NTEzNGQ1NjA2Y2U3ZGMyZWYwYjQwYTczNjhkMmY1ODAzM2YxOGNjOTQzMzBhYmVlMTJmYjMzYQ">
@@ -141,6 +132,15 @@ permalink: /workshops/agentic-ai-neuroscience-22-april-2026/
         <span class="wx-qr__link">#agentic-ai-for-neuroscience-workshop</span>
       </a>
 
+      <a class="wx-qr__card" href="https://join.slack.com/share/enQtMTA5MjI1MTA5Mjk2NjgtNzk5ZDQ3ODQyZDFjOWJlMWExOTQxNGM2Y2VkYjJlZTBhODZjOWIzNTc2MDE1NGQ4ZmEzNDk5ZDlmY2E4YjU1OQ">
+        <span class="wx-qr__label">Slack</span>
+        <div class="wx-qr__title">Agentic AI channel</div>
+        <div class="wx-qr__img">
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=400x400&margin=0&data=https%3A%2F%2Fjoin.slack.com%2Fshare%2FenQtMTA5MjI1MTA5Mjk2NjgtNzk5ZDQ3ODQyZDFjOWJlMWExOTQxNGM2Y2VkYjJlZTBhODZjOWIzNTc2MDE1NGQ4ZmEzNDk5ZDlmY2E4YjU1OQ&color=0b0f1a&bgcolor=f6f5f1" alt="QR code to #lab-agentic-ai Slack channel">
+        </div>
+        <span class="wx-qr__link">#lab-agentic-ai</span>
+      </a>
+
       <a class="wx-qr__card" href="https://forms.cloud.microsoft/e/mF0jqv9Xr1">
         <span class="wx-qr__label">Form</span>
         <div class="wx-qr__title">AI strategy</div>
@@ -150,13 +150,13 @@ permalink: /workshops/agentic-ai-neuroscience-22-april-2026/
         <span class="wx-qr__link">forms.cloud.microsoft/e/mF0jqv9Xr1</span>
       </a>
 
-      <a class="wx-qr__card wx-qr__card--accent" href="{{ '/tutorials/10-second-brain-stretch' | relative_url }}">
-        <span class="wx-qr__label">Stretch</span>
-        <div class="wx-qr__title">Finished early?</div>
+      <a class="wx-qr__card wx-qr__card--accent" href="{{ '/tutorials/09-second-brain' | relative_url }}">
+        <span class="wx-qr__label">Today's tutorial</span>
+        <div class="wx-qr__title">Second Brain walkthrough</div>
         <div class="wx-qr__img">
-          <img src="https://api.qrserver.com/v1/create-qr-code/?size=400x400&margin=0&data=https%3A%2F%2Fneurogenomics.github.io%2Fagentic-life-sciences-tutorial%2Ftutorials%2F10-second-brain-stretch&color=0b0f1a&bgcolor=f6f5f1" alt="QR code to stretch goals">
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=400x400&margin=0&data=https%3A%2F%2Fneurogenomics.github.io%2Fagentic-life-sciences-tutorial%2Ftutorials%2F09-second-brain&color=0b0f1a&bgcolor=f6f5f1" alt="QR to second brain tutorial">
         </div>
-        <span class="wx-qr__link">tutorials/10-second-brain-stretch</span>
+        <span class="wx-qr__link">tutorials/09-second-brain</span>
       </a>
     </div>
   </div>
@@ -169,6 +169,8 @@ permalink: /workshops/agentic-ai-neuroscience-22-april-2026/
       Agent ingests raw PDFs, compiles a wiki of summaries and concepts with backlinks,
       then you query across it and render the answer as markdown or slides.
       Follows <a href="https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f" target="_blank" rel="noopener">Karpathy's LLM Knowledge Bases</a> pattern.
+      Process slides: <a href="{{ '/workshops/22-april-slides.html' | relative_url }}">22-april-slides.html</a>.
+      OpenRouter API key is posted in Slack.
     </p>
 
     <div class="wx-phases">
