@@ -56,11 +56,11 @@ GitHub Education gives verified students and faculty free access to GitHub Copil
 
 ### Step 5 — Use Copilot models in OpenCode
 
-With Copilot Pro active, you can now access Claude and other premium models through OpenCode:
+With Copilot Pro active, you can now access Claude and other premium models through OpenCode. Follow the dedicated walkthrough:
 
-1. Return to the [Setup tutorial](./01-setup.md)
-2. When configuring providers, select **GitHub Copilot**
-3. You can now choose Claude Opus 4.5 and other models available through your Copilot subscription
+- **[Get OpenCode — Download and Connect to Copilot](./get-opencode)** — step-by-step with screenshots and the full YouTube walkthrough.
+
+In short: install OpenCode, pick **GitHub Copilot** as the provider, sign in, then choose Claude Opus 4.5 (or any other model bundled with your Copilot subscription).
 
 ## Tips
 

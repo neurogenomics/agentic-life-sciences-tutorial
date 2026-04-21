@@ -7,6 +7,26 @@ time_estimate: "20 min"
 
 # 🚀 Getting Started with AI Coding Tools
 
+## Watch the full walkthrough
+
+The **YouTube series** is the most complete end-to-end guide — it covers everything on this page and takes you all the way to your first working agent. Follow along with the video; the written notes below are a reference.
+
+<div class="video-embed">
+  <iframe
+    width="100%"
+    height="420"
+    src="https://www.youtube.com/embed/videoseries?list=PL4pSvJm1oWAuleZiQf6DMJmhnjGI_mh-l"
+    title="Agentic AI in Life Science — full playlist"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen>
+  </iframe>
+</div>
+
+<p><a href="https://www.youtube.com/playlist?list=PL4pSvJm1oWAuleZiQf6DMJmhnjGI_mh-l" target="_blank" rel="noopener">▶ Open the <strong>Agentic AI in Life Science</strong> playlist on YouTube</a></p>
+
+> Prefer to read? Keep scrolling. If you get stuck on installation, jump to [Get OpenCode](./get-opencode) for the illustrated install walkthrough.
+
 ## Overview
 
 This repo is designed to aid the adoption of agentic work in the lab, along with shared lessons and optimisations.

@@ -162,6 +162,7 @@ layout: default
 ## Prerequisites
 
 - [GitHub Education — Free Copilot Access](./tutorials/github-education) — Apply for GitHub Education benefits and activate Copilot Pro with Claude
+- [Get OpenCode — Download and Connect to Copilot](./tutorials/get-opencode) — Install OpenCode, sign in with GitHub, and pick Claude Opus 4.5
 
 ## Extra Resources
 
