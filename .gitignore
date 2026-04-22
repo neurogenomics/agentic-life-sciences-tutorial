@@ -13,3 +13,4 @@ apm_modules/
 .github/skills/*-apm/
 # APM integrated skills
 .superpowers/
+.gstack/
