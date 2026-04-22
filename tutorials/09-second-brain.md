@@ -58,27 +58,23 @@ In Obsidian:
 
 1. Click **Create new vault**.
 2. Name it `second-brain`.
-3. Pick a location. For the workshop, put it inside your workshop folder. Longer term, keep your vault somewhere durable like `~/Documents/second-brain/` so it spans all your projects.
+3. Pick a location. For the workshop, put it inside your workshop folder. Longer term, keep your vault somewhere durable (e.g. in your `Documents` folder) so it spans all your projects.
 
-Inside the vault, create a `raw/` subfolder (Obsidian's file pane has a "new folder" button, or do it in Finder).
-
-```
-second-brain/
-└── raw/
-```
+That's all you need to do in Obsidian. The agent will handle the rest of the structure in Step 3.
 
 ---
 
 ## Step 3 — Point opencode at the same folder
 
-Open opencode in the vault folder:
+Launch opencode and open the `second-brain` vault as its working folder. Both tools are now looking at the same directory: Obsidian renders the files, the agent writes them.
 
-```bash
-cd ~/Documents/second-brain   # or wherever you put it
-opencode
+To get the folder scaffolded without touching the terminal, paste this into opencode:
+
 ```
-
-Both tools are now looking at the same directory. Obsidian renders the files. opencode writes them.
+I'm starting a Karpathy-style second-brain vault in this folder.
+Please create a `raw/` subfolder for source papers and confirm
+when the vault is ready.
+```
 
 > If you haven't used Obsidian before, don't worry about learning the UI. Trust the agent to do the filing and use Obsidian just to read the result and click links.
 
@@ -100,6 +96,11 @@ You can:
 ## Step 5 — Prompt the agent to build the wiki
 
 You don't need an elaborate instruction file to start. Give the agent a plain-English prompt and let it organise the vault.
+
+For the worked example we use two recent ancient-DNA papers from the Reich lab:
+
+- Paper 1: [Akbari et al 2026, Pervasive directional selection in West Eurasia](https://www.nature.com/articles/s41586-026-10358-1) (Nature)
+- Paper 2: [Barton et al 2026, Convergent natural selection in East Eurasia](https://www.biorxiv.org/content/10.64898/2026.04.03.716344v1) (bioRxiv)
 
 In **opencode**, paste something like:
 
@@ -139,7 +140,7 @@ You should see your papers, authors, institutions, and concepts as connected nod
 
 ![Obsidian graph view showing two ancient-DNA papers connected through shared authors, institutions, and concepts](../assets/images/second-brain-obsidian-graph.png)
 
-The example above is two ancient-DNA papers from the same lab. The agent picked up that they share authors (Ali Akbari, David Reich, Nadin Rohland), an institution (Harvard Medical School, Broad Institute, Max Planck Institute), and methods (directional selection, generalised linear mixed model, polygenic score). The two paper nodes end up linked through those shared ideas.
+The example above is [Akbari et al 2026](https://www.nature.com/articles/s41586-026-10358-1) and [Barton et al 2026](https://www.biorxiv.org/content/10.64898/2026.04.03.716344v1), two ancient-DNA papers from the same lab. The agent picked up that they share authors (Ali Akbari, David Reich, Nadin Rohland), an institution (Harvard Medical School, Broad Institute, Max Planck Institute), and methods (directional selection, generalised linear mixed model, polygenic score). The two paper nodes end up linked through those shared ideas.
 
 The bigger a node, the more things link to it. Hubs are usually your most load-bearing authors or concepts.
 
