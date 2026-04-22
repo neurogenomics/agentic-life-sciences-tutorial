@@ -26,131 +26,130 @@ This tutorial follows the pattern Andrej Karpathy describes in [LLM Knowledge Ba
 
 You end up with a personal research wiki that grows every time you read a paper or answer a question.
 
----
-
-## What you'll build
-
-```
-second-brain/
-├── raw/                      ← PDFs, clipped web articles, images
-├── wiki/
-│   ├── papers/               ← one .md summary per paper
-│   ├── concepts/             ← articles the agent writes by grouping raw/
-│   ├── questions/            ← rendered answers to your Q&A
-│   └── INDEX.md              ← auto-maintained table of contents
-└── AGENT.md                  ← the agent's working instructions
-```
-
-By the end you will have:
-
-- 3–5 papers in `raw/`
-- A compiled `wiki/` with summaries, a few concept articles, and backlinks
-- One cross-paper question answered as a markdown file or Marp slide deck
-- A vault that is ready to keep growing after the workshop
+This really suits research: we have lots of ideas, papers, meetings, and notes, and the aim is to connect them and find opportunities to get the most out of what's already sitting on your laptop.
 
 ---
 
 ## Prerequisites
 
-- [Obsidian](https://obsidian.md) installed (free)
 - [opencode](https://opencode.ai) installed — see [Get OpenCode](./get-opencode)
 - An API key (we hand out a shared [OpenRouter](https://openrouter.ai) key for the workshop)
 
+You already have the agent. Next you need a note-keeping method.
+
 ---
 
-## Step 1 — Create the vault folder
+## Step 1 — Download Obsidian
 
-Make an empty folder somewhere on your laptop. Call it `second-brain`.
+Options in this space include **Notion**, **Apple Notes**, and **Obsidian**. We prefer Obsidian: it's free, lightweight, stores everything as plain markdown files on your laptop, and works like most note-keeping apps.
+
+1. Go to [obsidian.md](https://obsidian.md) and download for your OS.
+2. Install and open it.
+
+That's it. Obsidian is your viewer. Your agent will be the writer.
+
+---
+
+## Step 2 — Create a vault
+
+A **vault** is just a folder of markdown files. Obsidian reads and renders whatever is inside.
+
+In Obsidian:
+
+1. Click **Create new vault**.
+2. Name it `second-brain`.
+3. Pick a location. For the workshop, put it inside your workshop folder. Longer term, keep your vault somewhere durable like `~/Documents/second-brain/` so it spans all your projects.
+
+Inside the vault, create a `raw/` subfolder (Obsidian's file pane has a "new folder" button, or do it in Finder).
+
+```
+second-brain/
+└── raw/
+```
+
+---
+
+## Step 3 — Point opencode at the same folder
+
+Open opencode in the vault folder:
 
 ```bash
-mkdir -p ~/Documents/second-brain/raw
-cd ~/Documents/second-brain
+cd ~/Documents/second-brain   # or wherever you put it
+opencode
 ```
 
-In **Obsidian**: `Open another vault → Open folder as vault → pick second-brain/`.
+Both tools are now looking at the same directory. Obsidian renders the files. opencode writes them.
 
-In **opencode**: open the same folder as your project.
-
-Both tools are now pointed at the same directory. Obsidian is your viewer, opencode is your editor.
+> If you haven't used Obsidian before, don't worry about learning the UI. Trust the agent to do the filing and use Obsidian just to read the result and click links.
 
 ---
 
-## Step 2 — Drop in your raw sources
+## Step 4 — Drop in your raw sources
 
-Copy 3–5 PDFs into `raw/`. Any papers you actually want to think about — review articles and primary research work best for first-time use.
+Put 3–5 papers into `raw/`. Any papers you actually want to think about, review articles and primary research work best for first-time use.
 
-Optional: install the [Obsidian Web Clipper](https://obsidian.md/clipper) browser extension and clip one web article directly into `raw/` as a `.md` file.
+You can:
 
-> **Tip.** Keep filenames readable. `2024-karpathy-llm-kb.pdf` is better than `s41588-024-01919-z.pdf`.
+- Drag PDFs directly into the `raw/` folder
+- Paste paper URLs (Nature, bioRxiv, etc.) into the opencode prompt and let the agent fetch them
 
----
-
-## Step 3 — Give the agent its instructions
-
-Create a file called `AGENT.md` at the top of the vault. The agent will read this first every session.
-
-```markdown
-# Agent instructions
-
-You are maintaining a personal research wiki in this folder.
-
-## Layout
-- `raw/` holds source PDFs, clipped articles, and images. I put things here. You read them.
-- `wiki/` is yours. You write and maintain it. I rarely edit it directly.
-  - `wiki/papers/` — one markdown file per source in raw/
-  - `wiki/concepts/` — articles you write by grouping themes across papers
-  - `wiki/questions/` — rendered answers to questions I ask
-  - `wiki/INDEX.md` — table of contents; keep updated after every change
-
-## Rules
-- Every wiki file must have a YAML frontmatter with `title`, `tags`, `sources`.
-- Use Obsidian wiki-links `[[like this]]` for backlinks between concepts and papers.
-- Cite the source filename for every claim. If unsure, say "unclear from source".
-- When I add a new paper, update concept articles that touch it.
-- Never invent citations or facts not in raw/.
-```
+> **Tip.** Keep filenames readable. `2026-barton-convergent-selection.pdf` is better than `s41586-026-10358-1.pdf`.
 
 ---
 
-## Step 4 — Compile the wiki
+## Step 5 — Prompt the agent to build the wiki
 
-In **opencode**, paste this prompt:
+You don't need an elaborate instruction file to start. Give the agent a plain-English prompt and let it organise the vault.
+
+In **opencode**, paste something like:
 
 ```
-Read AGENT.md. Then:
+Please organise my papers in a Karpathy wiki style.
 
-1. Scan raw/ and list every source you find.
-2. For each source, write wiki/papers/<filename>.md with:
-   - frontmatter (title, authors, year, tags, source: raw/<filename>)
-   - a 5-sentence summary
-   - 3-5 key findings as bullets
-   - a "Connections" section with [[wiki-links]] to concept articles
-3. Identify 3-5 themes that connect multiple papers. Write one
-   wiki/concepts/<theme>.md article per theme, linking back to
-   the papers/.
-4. Write wiki/INDEX.md listing every paper and concept, grouped by tag.
-
-Ask before running if anything is unclear. Otherwise, go.
+Paper 1: https://www.nature.com/articles/s41586-026-10358-1
+Paper 2: https://www.biorxiv.org/content/10.64898/2026.04.03.716344v1
 ```
 
-Watch the agent in opencode. It will:
+Or if you've already dropped PDFs into `raw/`:
 
-- Read each PDF in `raw/`
-- Write paper summaries one by one
-- Propose concept clusters, then write concept articles
-- Maintain `INDEX.md`
+```
+Please organise the papers in raw/ into a Karpathy wiki style.
+Use Obsidian [[wiki-links]] to connect authors, institutions,
+methods, and concepts across papers.
+```
 
-In Obsidian, switch to the vault and watch the files appear. Click any `[[wiki-link]]` to jump between papers and concepts.
+The agent will:
+
+- Read each source
+- Write a markdown summary per paper (authors, year, key findings)
+- Create notes for shared concepts, authors, institutions, and methods
+- Link them together with `[[wiki-links]]`
+
+Watch the files appear in Obsidian's file pane. Click any link to jump between notes.
 
 > **Takes too long?** Tell the agent to process 2 papers now and the rest in a second pass. Iterative is fine.
 
 ---
 
-## Step 5 — Ask a cross-paper question
+## Step 6 — Open the graph view
+
+Obsidian's graph view is where the second brain earns its name. Open it with `Cmd/Ctrl + G` or click the graph icon in the left sidebar.
+
+You should see your papers, authors, institutions, and concepts as connected nodes:
+
+![Obsidian graph view showing two ancient-DNA papers connected through shared authors, institutions, and concepts](../assets/images/second-brain-obsidian-graph.png)
+
+The example above is two ancient-DNA papers from the same lab. The agent picked up that they share authors (Ali Akbari, David Reich, Nadin Rohland), an institution (Harvard Medical School, Broad Institute, Max Planck Institute), and methods (directional selection, generalised linear mixed model, polygenic score). The two paper nodes end up linked through those shared ideas.
+
+The bigger a node, the more things link to it. Hubs are usually your most load-bearing authors or concepts.
+
+---
+
+## Step 7 — Ask a cross-paper question
 
 Now query across your wiki. Pick a question that no single paper answers on its own.
 
-Good questions for a neuroscience second brain:
+Good questions for a research second brain:
 
 - *"Which papers cite the same upstream method or dataset, and where do they disagree?"*
 - *"What are the three most-repeated limitations across my review articles?"*
@@ -159,14 +158,13 @@ Good questions for a neuroscience second brain:
 Paste into opencode:
 
 ```
-Using only the wiki/ and raw/ directories, answer this question:
+Using only the notes in this vault, answer this question:
 
 <YOUR QUESTION>
 
-Write the answer to wiki/questions/<short-slug>.md with:
-- frontmatter (question, date, sources)
+Write the answer as a new markdown note with:
 - a 2-3 paragraph answer
-- a "Supporting evidence" section with direct quotes and [[wiki-links]]
+- a "Supporting evidence" section with direct quotes and [[wiki-links]] to the papers
 - a "Further questions" section suggesting 3 follow-ups
 ```
 
@@ -174,7 +172,7 @@ Open the result in Obsidian and read it. Click the backlinks to verify the evide
 
 ---
 
-## Step 6 — Share what surprised you
+## Step 8 — Share what surprised you
 
 Post in Slack: one connection the agent found that you didn't expect. A shared citation, a hidden thematic overlap, a contradicting finding. The "why did you group these?" reveal is often the best part.
 
@@ -186,7 +184,7 @@ The agent does three things humans are bad at:
 
 1. **Reading every paper in the folder, every time.** You'd skim. It doesn't.
 2. **Maintaining a consistent structure.** Frontmatter, backlinks, index — boring but useful.
-3. **Re-compiling when new material arrives.** Drop a paper in `raw/`, re-run the compile prompt, and the concept articles update themselves.
+3. **Re-compiling when new material arrives.** Drop a paper in `raw/`, re-run the prompt, and the concept notes update themselves.
 
 You stay in the loop via **Obsidian as the viewer**. You read, critique, and ask follow-up questions. The agent does the filing.
 
@@ -199,7 +197,7 @@ Over weeks, the wiki becomes specific to your research. After ~100 articles, Kar
 After the workshop, the loop is:
 
 1. Drop a new paper in `raw/` → ask the agent to update the wiki.
-2. Have a new question → ask the agent to write the answer into `wiki/questions/`.
-3. Periodically ask the agent to **lint** the wiki — find inconsistencies, suggest new concept articles, propose merges.
+2. Have a new question → ask the agent to write the answer into a new note.
+3. Periodically ask the agent to **lint** the vault: find inconsistencies, suggest new concept notes, propose merges.
 
-The [stretch-goals tutorial](./10-second-brain-stretch) covers linting, the claude-obsidian plugin, and matplotlib-figure outputs.
+The [stretch-goals tutorial](./10-second-brain-stretch) covers linting, a formal `AGENT.md` instruction file, the claude-obsidian plugin, and matplotlib-figure outputs.
