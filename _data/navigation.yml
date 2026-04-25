@@ -23,6 +23,9 @@ sections:
       - title: Second Brain
         url: /tutorials/09-second-brain
         time: "70 min"
+      - title: Pharmacogenomics with ClawBio
+        url: /tutorials/11-pharmacogenomics
+        time: "30 min"
   - title: Advanced Workflows
     difficulty: advanced
     items:

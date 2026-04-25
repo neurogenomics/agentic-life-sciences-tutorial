@@ -65,29 +65,36 @@ layout: default
   }
 </style>
 
-<section class="workshop-banner">
-  <p class="workshop-banner__eyebrow">Agentic AI Workshop Series · Session 2</p>
-  <h2>Second Brain · 22 April 2026</h2>
-  <p>Build a personal research wiki with your agent. 30 min talk from Will Leeney, then a 90 min hands-on workshop: drop 3–5 of your own papers into a folder, watch the agent compile a linked wiki, then query across it.</p>
+<section class="workshop-banner" style="background: linear-gradient(135deg, #0a3a26 0%, #0f6b4a 45%, #1f9d6e 100%);">
+  <p class="workshop-banner__eyebrow">Agentic AI Workshop Series · Session 3 · with ClawBio</p>
+  <h2>The Future of Biology Is Agentic · 29 April 2026</h2>
+  <p>Co-hosted with <a href="https://clawbio.ai" target="_blank" rel="noopener" style="color: #cfe7da; text-decoration: underline;">ClawBio</a>. A 60 min hands-on session: install ClawBio, run a real pharmacogenomics report on demo (or your own) genetic data, and have your agent interpret CYP2D6 metabolizer status against CPIC drug guidelines — all locally, in under a second.</p>
 
   <div class="workshop-banner__cards">
-    <a class="workshop-banner__card" href="./workshops/agentic-ai-neuroscience-22-april-2026/">
-      <span class="workshop-banner__featured">Tomorrow's Workshop</span>
-      <strong>Workshop Landing Page · 22 April</strong>
-      <span>Plan, QR codes, slides, stretch goals.</span>
+    <a class="workshop-banner__card" href="./workshops/the-future-of-biology-is-agentic-29-april-2026/">
+      <span class="workshop-banner__featured" style="background: #4ec39a; color: #0a3a26;">Next Workshop</span>
+      <strong>Workshop Landing Page · 29 April</strong>
+      <span>Plan, QR codes, install routes, prerequisites.</span>
     </a>
-    <a class="workshop-banner__card" href="./tutorials/09-second-brain">
-      <strong>Second Brain walkthrough</strong>
-      <span>Karpathy's raw → wiki → Q&amp;A pattern in Obsidian + opencode.</span>
+    <a class="workshop-banner__card" href="./tutorials/11-pharmacogenomics">
+      <strong>Pharmacogenomics tutorial</strong>
+      <span>VCF / 23andMe in → CPIC dose-adjustment card out, via ClawBio.</span>
     </a>
-    <a class="workshop-banner__card" href="./workshops/22-april-slides.html">
-      <strong>Process slides</strong>
-      <span>HTML deck walking through the workshop plan.</span>
+    <a class="workshop-banner__card" href="https://clawbio.ai" target="_blank" rel="noopener">
+      <strong>ClawBio</strong>
+      <span>Bioinformatics-native AI agent skill library. Local-first, reproducible.</span>
     </a>
   </div>
 </section>
 
-<details style="margin: 1.5rem 0 2.5rem; padding: 0.75rem 1rem; background: rgba(11,15,26,0.03); border-radius: 8px;">
+<details style="margin: 1.5rem 0 1rem; padding: 0.75rem 1rem; background: rgba(11,15,26,0.03); border-radius: 8px;">
+  <summary style="cursor: pointer; font-weight: 600; color: #555;">Previous: 22 April 2026 · Second Brain</summary>
+  <div style="margin-top: 0.75rem; padding-left: 0.5rem;">
+    <p><a href="./workshops/agentic-ai-neuroscience-22-april-2026/">22 April landing page</a> · <a href="./tutorials/09-second-brain">Second Brain walkthrough</a> · <a href="./workshops/22-april-slides.html">Process slides</a></p>
+  </div>
+</details>
+
+<details style="margin: 0 0 2.5rem; padding: 0.75rem 1rem; background: rgba(11,15,26,0.03); border-radius: 8px;">
   <summary style="cursor: pointer; font-weight: 600; color: #555;">Previous: 15 April 2026 · Figure Legend Challenge</summary>
   <div style="margin-top: 0.75rem; padding-left: 0.5rem;">
     <p><a href="./workshops/agentic-ai-neuroscience-2026/">15 April landing page</a> · <a href="./tutorials/08-figure-legend-challenge">Figure Legend Generator challenge</a></p>
@@ -186,6 +193,16 @@ layout: default
     </div>
     <h3 class="tutorial-card__title">Second Brain — Stretch Goals</h3>
     <p class="tutorial-card__desc">Once your wiki works — run a linting pass, add the claude-obsidian plugin, render matplotlib figures from frontmatter, turn answers into Marp decks, vibe-code a search engine.</p>
+  </a>
+
+  <a class="tutorial-card" href="./tutorials/11-pharmacogenomics">
+    <div class="tutorial-card__header">
+      <span class="tutorial-card__number">11</span>
+      <span class="difficulty-badge difficulty-badge--intermediate badge-intermediate">Intermediate</span>
+      <span class="time-estimate">30 min</span>
+    </div>
+    <h3 class="tutorial-card__title">Pharmacogenomics with ClawBio</h3>
+    <p class="tutorial-card__desc">Install ClawBio, run a pharmacogenomics report on demo (or your own) genetic data, and have your agent translate CYP2D6 metabolizer status into CPIC dose-adjustment recommendations.</p>
   </a>
 
 </div>
