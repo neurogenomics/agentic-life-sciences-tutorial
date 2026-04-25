@@ -14,3 +14,7 @@ apm_modules/
 # APM integrated skills
 .superpowers/
 .gstack/
+
+# Jekyll local build
+_site/
+Gemfile.lock
