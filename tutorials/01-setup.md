@@ -9,7 +9,7 @@ time_estimate: "20 min"
 
 ## Watch the full walkthrough
 
-The **YouTube series** is the most complete end-to-end guide — it covers everything on this page and takes you all the way to your first working agent. Follow along with the video; the written notes below are a reference.
+The **YouTube series** is the complete guide: it covers this page and builds your first working agent. Follow the video. The notes below are reference.
 
 <div class="video-embed">
   <iframe
@@ -25,19 +25,19 @@ The **YouTube series** is the most complete end-to-end guide — it covers every
 
 <p><a href="https://www.youtube.com/playlist?list=PL4pSvJm1oWAuleZiQf6DMJmhnjGI_mh-l" target="_blank" rel="noopener">▶ Open the <strong>Agentic AI in Life Science</strong> playlist on YouTube</a></p>
 
-> Prefer to read? Keep scrolling. If you get stuck on installation, jump to [Get OpenCode](./get-opencode) for the illustrated install walkthrough.
+> Prefer to read? Keep scrolling. Stuck on installation? Jump to [Get OpenCode](./get-opencode) for the illustrated walkthrough.
 
 ## Overview
 
-This repo is designed to aid the adoption of agentic work in the lab, along with shared lessons and optimisations.
+This repo helps the lab adopt agentic work: it shares lessons and optimisations.
 
-Coding agents are distinct from chatbots because they can read and write files on your computer.
+Coding agents differ from chatbots: they read and write files on your computer.
 
 ---
 
 ## Tools
 
-A coding agent is a program on your computer that reads and writes files, runs commands, and operates on your project — not just a chatbot.
+A coding agent runs on your computer: it reads and writes files, runs commands, and works on your project.
 
 - **[GitHub Copilot](https://github.com/features/copilot)** (recommended) — GitHub; CLI or desktop. Follow the [GitHub Education signup guide](github-education) to get Copilot Pro free and install the CLI.
 - **[OpenAI Codex](https://github.com/openai/codex)** — OpenAI; CLI and cloud agent.
@@ -48,17 +48,17 @@ A coding agent is a program on your computer that reads and writes files, runs c
 
 ## How AI Coding Tools Work
 
-A coding agent is not a single thing — it is a stack of three layers:
+A coding agent is a stack of three layers:
 
 ![Agent → Provider → Model]({{ site.baseurl }}/assets/images/stack-of-agents.svg)
 
 - **Agent** — the program on your computer (or in the cloud) that reads your files, runs commands, and writes code. Examples: GitHub Copilot, Claude Code, OpenCode.
-- **Provider** — the service that hosts and serves the AI model. Examples: GitHub, Anthropic, OpenRouter.
-- **Model** — the large language model that actually generates the code. Examples: Claude Opus 4.5, GPT-4.1, Kimi K2.5.
+- **Provider** — the service that hosts the model. Examples: GitHub, Anthropic, OpenRouter.
+- **Model** — the large language model that generates the code. Examples: Claude Opus 4.5, GPT-4.1, Kimi K2.5, GLM 5.2.
 
-You choose an agent, connect it to a provider, and pick a model. Different combinations have different privacy and cost implications (see [OpenRouter's privacy and model safety settings](https://openrouter.ai/docs/guides/features/zdr)):
+You choose an agent, connect it to a provider, pick a model. Combinations differ in privacy and cost (see [OpenRouter's privacy and model safety settings](https://openrouter.ai/docs/guides/features/zdr)):
 
 ![Privacy comparison across providers]({{ site.baseurl }}/assets/images/table-of-privacy.svg)
 
-> **Note:** Free models on OpenRouter may train on your interactions. If data privacy is important, use a paid model or check the model's training policy on OpenRouter before use.
+> **Note:** Free models on OpenRouter may train on your data. To avoid this, use a paid model or check the model's training policy first.
 
