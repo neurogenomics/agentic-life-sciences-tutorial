@@ -54,7 +54,7 @@ A coding agent is a stack of three layers:
 
 - **Agent** — the program on your computer (or in the cloud) that reads your files, runs commands, and writes code. Examples: GitHub Copilot, Claude Code, OpenCode.
 - **Provider** — the service that hosts the model. Examples: GitHub, Anthropic, OpenRouter.
-- **Model** — the large language model that generates the code. Examples: Claude Opus 4.5, GPT-4.1, Kimi K2.5.
+- **Model** — the large language model that generates the code. Examples: Claude Opus 4.5, GPT-4.1, Kimi K2.5, GLM 5.2.
 
 You choose an agent, connect it to a provider, pick a model. Combinations differ in privacy and cost (see [OpenRouter's privacy and model safety settings](https://openrouter.ai/docs/guides/features/zdr)):
 
