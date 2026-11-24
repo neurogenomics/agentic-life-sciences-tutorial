@@ -5,6 +5,9 @@ sections:
       - title: Setup
         url: /tutorials/01-setup
         time: "20 min"
+      - title: Get OpenCode
+        url: /tutorials/get-opencode
+        time: "5 min"
       - title: GitHub Education
         url: /tutorials/github-education
         time: "10 min"

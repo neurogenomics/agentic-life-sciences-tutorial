@@ -13,7 +13,7 @@ Long sessions fill the context window, burying your instructions under noise. Th
 
 ## What is Context?
 
-Every message re-sends the **entire conversation** to the API — your rules, all previous messages, every tool output. This bundle is the **context window**, measured in tokens (~0.75 words each). All Claude models support 200,000 tokens (~1,500 pages).
+Every message re-sends the **entire conversation** to the API — your rules, all previous messages, every tool output. This bundle is the **context window**, measured in tokens (~0.75 words each). Current Claude models support up to 1,000,000 tokens (~7,500 pages); Haiku 4.5 is 200,000.
 
 **What fills it:**
 - System prompt / CLAUDE.md — fixed overhead every session
@@ -32,19 +32,26 @@ Every message re-sends the **entire conversation** to the API — your rules, al
 
 ![Cost per message vs context size](../assets/images/context-cost-per-message.png)
 
-| Model | $/MTok input | Context window | @ 50k | @ 150k | @ max |
+| Model | $/MTok input | Context window | @ 50k | @ 150k | @ 200k |
 |---|---|---|---|---|---|
-| GPT-4o mini | $0.15 | 128k | $0.01 | $0.02 | $0.02 |
-| **Kimi K2.5 ★** | **$0.60** | **256k** | **$0.03** | **$0.09** | **$0.15** |
+| DeepSeek V4 Flash | $0.14 | 1M | $0.01 | $0.02 | $0.03 |
+| Gemini 3 Flash | $0.50 | ~1M | $0.03 | $0.08 | $0.10 |
+| Kimi K2.5 | $0.60 | 262k | $0.03 | $0.09 | $0.12 |
 | Claude Haiku 4.5 | $1.00 | 200k | $0.05 | $0.15 | $0.20 |
-| Gemini 1.5 Pro | $1.25 | 2M | $0.06 | $0.19 | $2.50 |
-| GPT-4o | $2.50 | 128k | $0.13 | $0.38 | $0.32 |
-| Claude Sonnet 4.6 | $3.00 | 200k | $0.15 | $0.45 | $0.60 |
-| Claude Opus 4.6 | $5.00 | 200k | $0.25 | $0.75 | $1.00 |
+| GPT-5 | $1.25 | 400k | $0.06 | $0.19 | $0.25 |
+| **GLM 5.2 ★** | **$1.40** | **~1M** | **$0.07** | **$0.21** | **$0.28** |
+| Gemini 3 Pro | $2.00 | ~1M | $0.10 | $0.30 | $0.40 |
+| Claude Sonnet 5 | $3.00 | 1M | $0.15 | $0.45 | $0.60 |
+| Claude Opus 4.8 | $5.00 | 1M | $0.25 | $0.75 | $1.00 |
+| Claude Fable 5 | $10.00 | 1M | $0.50 | $1.50 | $2.00 |
 
-★ Kimi K2.5 is the model used in this course (via OpenRouter). Even so, 50 messages × 150k tokens = **$4.50**. Context management is a billing issue, not just a quality issue.
+★ GLM 5.2 is the model used in this course (via OpenRouter). Even so, 50 messages × 150k tokens = **$10.50**. The same session on Fable 5 would be **$75**; on DeepSeek V4 Flash, **$1.05**. Context management is a billing issue, not just a quality issue.
 
-For up-to-date pricing and context window specs across all models, see [models.dev](https://models.dev/).
+Prices are input-only base rates, current as of July 2026. For up-to-date pricing and context window specs across all models, see [models.dev](https://models.dev/).
+
+Think of the window as a fixed grid of cells — every cell you fill with system overhead, tools, or history is a cell the model can't use for your task:
+
+![Agent context window broken down by category: system, MCP tools, skills, and messages fill roughly a third; the rest is free, with a small reserved compact buffer](../assets/images/context-breakdown.png)
 
 **Check your context at any time** with `/context`. Here's real output from the session used to write this tutorial (reading files, running web searches, generating charts):
 

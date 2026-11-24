@@ -60,6 +60,8 @@ The presentation above works, but the output can be improved significantly by us
 
 Skills give the agent domain-specific knowledge so it doesn't have to figure everything out from scratch each time. The difference is significant:
 
+![The same task with and without a skill: half the tokens, zero failed API calls, fewer round-trips]({{ site.baseurl }}/assets/images/skills-comparison.png)
+
 | | With skill | Without skill |
 |---|---|---|
 | Workflow | Automatic execution | User provides instructions each time |
