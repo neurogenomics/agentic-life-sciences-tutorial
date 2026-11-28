@@ -1,184 +1,90 @@
 ---
 layout: docs
-title: Building Specialized AI Agents for Your Workflow
+title: "Writing Skills and Custom Agents"
+difficulty: intermediate
+time_estimate: "25 min"
 ---
 
-# 🤖 Building Specialized AI Agents for Your Workflow
+# Writing Skills and Custom Agents
 
-OpenCode allows you to create custom agents (called "skills") that specialize in specific tasks. This tutorial shows you how to build your own agents.
+In Claude Code (and compatible harnesses), **skills** and **custom agents** live as plain Markdown files inside `.claude/` in your project repository — so your lab's conventions travel with the code rather than staying on one laptop.
 
-## What Are Custom Agents?
+## Skills vs. agents
 
-Custom agents are specialized AI personas you can invoke for specific tasks. They have:
-- **Custom instructions** (how they should behave)
-- **Custom temperature** (creativity vs consistency)
-- **Custom tools** (what they can access)
+They solve different problems:
 
-## Where to Store Agents
+- **A skill (`.claude/skills/<name>/SKILL.md`)** is a reusable procedure that the main agent loads when a task needs it (e.g. `figure-standards`, `reproducible-analysis`, `literature-triage`). It changes *how* the agent uses its existing tools.
+- **A custom agent (`.claude/agents/<name>.md`)** is a separate remit with its **own context window** and a **narrow tool list**. Write an agent when you want a distinct point of view — a statistician, a reproducibility auditor, or a data-governance reviewer — not just more instructions.
 
-Create a `~/.opencode/skills/` directory:
-
-```
-~/.opencode/
+```text
+.claude/
 ├── skills/
-│   ├── code-reviewer/
-│   │   └── skill.yaml
-│   └── my-custom-agent/
-│       └── skill.yaml
+│   └── figure-standards/
+│       └── SKILL.md
+└── agents/
+    ├── adversarial-statistician.md
+    └── reproducibility-auditor.md
 ```
 
-## Agent Configuration File
+Swap `.claude/` for `~/.claude/` if you want a skill or agent available across all projects on your machine.
 
-Each agent needs a `skill.yaml` file:
+---
 
-```yaml
-name: code-reviewer
-description: Reviews code for quality, bugs, and best practices
-temperature: 0.1  # Low = focused, factual
-model: auto  # Use default model
+## Writing a skill (`SKILL.md`)
 
-system_prompt: |
-  You are an expert code reviewer specializing in Python and R for data science.
-  
-  When reviewing code:
-  1. Check for bugs and logical errors
-  2. Verify error handling is comprehensive
-  3. Ensure code follows PEP 8 (Python) or tidyverse (R) style
-  4. Check for security vulnerabilities
-  5. Verify tests exist and pass
-  6. Look for performance optimizations
-  
-  Format your review as:
-  - ✅ **Good**: What was done well
-  - ⚠️ **Warnings**: Issues that should be addressed
-  - 🚨 **Critical**: Bugs or security issues that must be fixed
-  
-  Be specific with line numbers and suggest concrete fixes.
+Frontmatter must be the first thing in the file. `name` matches the folder name, and `description` says **when** to trigger the skill (not just what it contains):
+
+```markdown
+---
+name: reproducible-analysis
+description: Use when writing or reviewing analysis scripts, notebooks, or pipelines that produce a number or figure.
+---
+
+# Reproducible analysis
+
+## Pin inputs and random seeds
+Record the exact input file path and set an explicit random seed at the top of the script.
+Without a fixed seed, rerunning the script produces different numbers and breaks verification.
+
+## Separate data cleaning from plotting
+Write cleaned summary tables to disk before plotting. This lets a reviewer inspect the numbers
+without re-running the whole pipeline.
+
+## Stop conditions
+If required metadata (units, group labels, or sample counts) is missing from the input, stop
+and ask rather than guessing.
 ```
 
-## Example 1: Code Reviewer Agent
+---
 
-Create `~/.opencode/skills/code-reviewer/skill.yaml`:
+## Writing an adversarial agent (`.claude/agents/*.md`)
 
-```yaml
-name: code-reviewer
-description: Expert code reviewer for Python and R data science code
-temperature: 0.1
-model: auto
+An agent that agrees with you is not doing the job. Give it a stated position and the narrowest `tools:` list it needs — a reviewer that only reads should not be given `Write` or `Bash`:
 
-system_prompt: |
-  You are a senior software engineer specializing in data science code review.
-  
-  Your task is to thoroughly review code and provide actionable feedback.
-  
-  ## Review Checklist
-  
-  ### Code Quality
-  - [ ] Functions are focused and do one thing
-  - [ ] Variable names are descriptive
-  - [ ] No magic numbers (use constants)
-  - [ ] Comments explain "why", not "what"
-  - [ ] Dead code is removed
-  
-  ### Error Handling
-  - [ ] Input validation at function entry points
-  - [ ] Graceful handling of edge cases (empty data, NAs)
-  - [ ] Meaningful error messages
-  - [ ] No silent failures
-  
-  ### Testing
-  - [ ] Unit tests for complex logic
-  - [ ] Edge cases are tested
-  - [ ] Tests are deterministic
-  
-  ### Performance
-  - [ ] Vectorized operations (no unnecessary loops)
-  - [ ] No memory leaks
-  - [ ] Efficient data structures
-  
-  ### Security
-  - [ ] No hardcoded secrets
-  - [ ] Input sanitization
-  - [ ] SQL injection prevention
-  
-  ## Output Format
-  
-  For each issue found, provide:
-  1. **Severity**: Critical / Warning / Suggestion
-  2. **Location**: File and line number
-  3. **Issue**: What's wrong
-  4. **Fix**: Suggested code fix
-  
-  Start with a summary: "Overall: ✅ Pass / ⚠️ Needs Work / 🚨 Critical Issues"
+```markdown
+---
+name: adversarial-statistician
+description: Reviews an analysis, figure, or claim for statistical soundness from the position that it is probably wrong. Use before sharing results or submitting a manuscript.
+tools: Read, Grep, Glob
+---
+
+You are a sceptical biostatistician. Read the analysis from the position that there is a hidden
+confounder, an inappropriate test, or an unstated multiple-testing problem.
+
+Work through, in order:
+
+1. **Sample size and independence.** Are technical replicates being treated as biological replicates?
+2. **Missing data and zeros.** How were `NA`/`null` values handled, and were genuine zeros preserved?
+3. **Multiple testing and effect sizes.** Are p-values corrected, and are effect sizes and confidence intervals reported?
+
+Report each finding with the file, line number, what is wrong, and what would fix it. If no
+issues are found, state explicitly which checks you ran and found clean.
 ```
 
-### Using the Code Reviewer
+---
 
-```bash
-# In OpenCode, type:
-@code-reviewer please review this file
-```
+## Testing and sharing
 
-## Temperature Guide
-
-- **0.0-0.3**: Precise, factual, consistent (good for code review, documentation)
-- **0.4-0.6**: Balanced (good for general coding tasks)
-- **0.7-0.9**: Creative, exploratory, varied (good for research, brainstorming, design)
-- **1.0+**: Very creative but potentially unfocused
-
-## Tips for Creating Agents
-
-1. **Be specific**: The more detailed your system prompt, the more consistent the behavior
-2. **Use examples**: Include example inputs/outputs in your prompt
-3. **Define the persona**: Give your agent a clear role and expertise area
-4. **Set boundaries**: What should the agent NOT do?
-5. **Iterate**: Test your agent and refine the prompt based on results
-
-## Advanced: Custom Tools
-
-You can give your agent access to specific tools:
-
-```yaml
-name: data-analysis-helper
-description: Specialized in pandas and numpy operations
-temperature: 0.2
-model: auto
-
-system_prompt: |
-  You are a data manipulation specialist.
-  
-  When working with data:
-  - Always check data types before operations
-  - Handle missing values explicitly
-  - Use vectorized operations (avoid loops)
-  - Document assumptions about data structure
-
-tools:
-  - read_file
-  - write_file
-  - bash
-  - python
-```
-
-## Testing Your Agent
-
-1. Create the skill.yaml file
-2. Restart OpenCode (or reload skills)
-3. Type `@your-agent-name` to invoke it
-4. Try different prompts to see how it behaves
-5. Adjust the system_prompt based on results
-
-## Sharing Agents
-
-To share with your team:
-1. Commit the skill folder to your repo
-2. Team members copy to their `~/.opencode/skills/`
-3. Or store in a shared location and symlink
-
-## Next Steps
-
-Try creating:
-- A **documentation writer** agent (low temperature, focuses on clarity)
-- A **test writer** agent (generates comprehensive test cases)
-- A **data validator** agent (checks data quality and integrity)
-- A **refactoring specialist** (improves code structure)
+1. Save the file in `.claude/skills/<name>/SKILL.md` or `.claude/agents/<name>.md`.
+2. Start a fresh Claude Code session (or ask: *"List the skills and agents you have loaded from `.claude/`."*).
+3. Commit `.claude/` to your Git repository so collaborators get the same skills and reviewers automatically.

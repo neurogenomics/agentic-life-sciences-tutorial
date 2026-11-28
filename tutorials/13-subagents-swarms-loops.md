@@ -26,6 +26,8 @@ Every loop needs two things:
 
 Without the limit, a loop that cannot succeed keeps spending tokens.
 
+> **In Claude Code:** a `Stop` hook puts the loop *inside* the harness. For example, a figure-review gate can run cheap checks first (does `figure.png` exist, is it newer than `plot.py`?), then spawn a fresh reviewer agent to inspect the rendered PNG against your figure standards. If it finds clipped text or overlapping labels, the hook blocks the agent's exit and hands the faults back as the next instruction — up to a fixed attempt budget (e.g. 4 rounds).
+
 ---
 
 ## Subagents
@@ -41,6 +43,8 @@ A subagent is a second agent that the main agent starts for one task. It has its
 | Cost | Each subagent re-reads its own instructions and files, so tokens add up |
 
 Use a subagent for work that is independent and whose answer is short: search these files, check this reference, summarise this paper. Keep work that depends on the whole conversation in the main agent.
+
+Subagents are also the right pattern for **adversarial review**: give a reviewer its own context window, read-only tools (`Read, Grep, Glob`), and a stated sceptical remit — an `adversarial-statistician`, `reproducibility-auditor`, or `data-governance-reviewer`. An agent that agrees with you is not doing the job.
 
 Claude Code and OpenCode both support subagents. Ask your agent "what subagents can you start?" to see what your tool offers.
 

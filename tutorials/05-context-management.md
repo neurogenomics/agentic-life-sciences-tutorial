@@ -39,13 +39,13 @@ Every message re-sends the **entire conversation** to the API — your rules, al
 | Gemini 3.5 Flash-Lite | $0.30 | ~1M | $0.02 | $0.05 | $0.06 |
 | Gemini 3.8 Flash | $0.75 | ~1M | $0.04 | $0.11 | $0.15 |
 | GPT-6.1 Terra | $1.00 | 400k | $0.05 | $0.15 | $0.20 |
-| **GLM 5.2 ★** | **$1.40** | **~1M** | **$0.07** | **$0.21** | **$0.28** |
-| Claude Sonnet 5.5 | $2.00 | 1M | $0.10 | $0.30 | $0.40 |
+| GLM 5.2 | $1.40 | ~1M | $0.07 | $0.21 | $0.28 |
+| **Claude Sonnet 5.5 ★** | **$2.00** | **1M** | **$0.10** | **$0.30** | **$0.40** |
 | Gemini 4 Neon | $3.00 | ~1M | $0.15 | $0.45 | $0.60 |
 | Claude Opus 5.5 | $4.00 | 1M | $0.20 | $0.60 | $0.80 |
 | Claude Fable 5.2 | $8.00 | 1M | $0.40 | $1.20 | $1.60 |
 
-★ GLM 5.2 is the model used in this course (via OpenRouter). Even so, 50 messages × 150k tokens = **$10.50**. The same session on Fable 5.2 would be **$60**; on DeepSeek V4.1 Flash, **$0.38**. Context management is a billing issue, not just a quality issue.
+★ Claude Sonnet 5.5 is the default model used in this course (via Claude Code). 50 messages × 150k tokens = **$15.00**. The same session on Fable 5.2 would be **$60**; on DeepSeek V4.1 Flash, **$0.38**. Context management is a billing issue, not just a quality issue.
 
 Prices are input-only base rates, current as of November 2026. For up-to-date pricing and context window specs across all models, see [models.dev](https://models.dev/).
 

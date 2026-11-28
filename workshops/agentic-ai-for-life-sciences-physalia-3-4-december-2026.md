@@ -58,7 +58,7 @@ Each day runs as three 50-minute blocks with 10-minute breaks, led by lectures a
 |---|---|---|
 | 3:00–3:50 | 1. Introduction to agentic AI | **Lecture & discussion:** opening poll · the agent–provider–model stack · chat assistants vs agents · failure modes and data privacy · the fabricated-citations audit (Topaz et al.) · Harness-Bench reading |
 | 3:50–4:00 | *Break* | |
-| 4:00–4:50 | 2. Context engineering, cost and skills | **Lecture & live demo:** prompt structure · plan mode · the context window and context rot · model pricing and token economics ([Managing Context]({{ site.baseurl }}/tutorials/05-context-management)) · skills ([Journal Club Slides]({{ site.baseurl }}/tutorials/03-journal-club-slides) demo) |
+| 4:00–4:50 | 2. Context engineering, cost and skills | **Lecture & live demo:** prompt structure · plan mode · the context window and context rot · model pricing and token economics ([Managing Context]({{ site.baseurl }}/tutorials/05-context-management)) · skills and Corpas et al. 2026 ([Journal Club Slides]({{ site.baseurl }}/tutorials/03-journal-club-slides) demo) |
 | 4:50–5:00 | *Break* | |
 | 5:00–6:00 | 3. Acting, failing and verifying | **Live demo:** [Penguins Analysis]({{ site.baseurl }}/tutorials/02-penguins-analysis) (`Plan` → `Build`) · **Hands-on exercise (20 min):** [Sandbox: Act, Fail, Check]({{ site.baseurl }}/tutorials/12-sandbox-check) · **Debrief (15 min):** what failed and what verification caught |
 
@@ -68,7 +68,7 @@ Each day runs as three 50-minute blocks with 10-minute breaks, led by lectures a
 |---|---|---|
 | 3:00–3:50 | 4. Tools, MCP and interactive data portals | **Lecture & live demo:** RAG and MCP · PubMed connection · agent-built research tools and data privacy with human/clinical datasets · live demo of [Single Cell Portal]({{ site.baseurl }}/tutorials/04-single-cell-portal) and publishing to GitHub |
 | 3:50–4:00 | *Break* | |
-| 4:00–4:50 | 5. Loops, subagents and swarms | **Lecture (15 min):** loops, subagents and swarms — when to use each, failure modes, token cost · **Hands-on exercise (25 min):** [Loops, Subagents and Swarms]({{ site.baseurl }}/tutorials/13-subagents-swarms-loops) (checking references against PubMed) · **Debrief (10 min)** |
+| 4:00–4:50 | 5. Loops, subagents and swarms | **Lecture (15 min):** loops (`Stop` hooks / figure-review gate), adversarial subagents and swarms — when to use each, failure modes, token cost · **Hands-on exercise (25 min):** [Loops, Subagents and Swarms]({{ site.baseurl }}/tutorials/13-subagents-swarms-loops) (checking references against PubMed) · **Debrief (10 min)** |
 | 4:50–5:00 | *Break* | |
 | 5:00–6:00 | 6. Research workflows, governance and second brain | **Lecture, demo & discussion:** rule files (`AGENTS.md`, `CLAUDE.md`) · end-to-end research workflows · live demo of [Second Brain]({{ site.baseurl }}/tutorials/09-second-brain) · designing a lab AI use policy · closing poll and Q&A |
 
