@@ -20,7 +20,7 @@ Finish setup before Thursday, so that course time goes on the material.
 2. Follow [Setup]({{ site.baseurl }}/tutorials/01-setup). If the install fails, use the illustrated [Get OpenCode]({{ site.baseurl }}/tutorials/get-opencode) guide.
 3. Send the agent one prompt and confirm that it replies.
 4. Install Python 3.
-5. Download the five [sandbox files]({{ site.baseurl }}/tutorials/12-sandbox-check#files) into an empty folder.
+5. Download the three [sandbox files]({{ site.baseurl }}/tutorials/12-sandbox-check#files) into an empty folder for the Day 1 exercise.
 
 Optional reading, both short:
 
@@ -50,21 +50,27 @@ Optional reading, both short:
 
 ---
 
-## Day 1 — Foundations (Thursday 3 December)
+## Day 1 — How one agent works (and how it fails) · Thursday 3 December
+
+Each day runs as three 50-minute blocks with 10-minute breaks, led by lectures and live demos, with **one focused hands-on exercise** per day followed by a group debrief.
 
 | Time (CET) | Part | Material |
 |---|---|---|
-| 3:00–4:00 | 1. Introduction to agentic AI | Opening poll · the agent–provider–model stack · chat assistants and agents · failure modes and data privacy · the fabricated-citations audit · harness reading · [Sandbox: Act, Fail, Check]({{ site.baseurl }}/tutorials/12-sandbox-check) |
-| 4:00–5:00 | 2. Context engineering | Prompt structure · plan mode · the context window · model pricing · [Managing Context]({{ site.baseurl }}/tutorials/05-context-management) |
-| 5:00–6:00 | 3. Data analysis, presentations and skills | [Penguins Analysis]({{ site.baseurl }}/tutorials/02-penguins-analysis) · [Journal Club Slides]({{ site.baseurl }}/tutorials/03-journal-club-slides) · output with and without a skill |
+| 3:00–3:50 | 1. Introduction to agentic AI | **Lecture & discussion:** opening poll · the agent–provider–model stack · chat assistants vs agents · failure modes and data privacy · the fabricated-citations audit (Topaz et al.) · Harness-Bench reading |
+| 3:50–4:00 | *Break* | |
+| 4:00–4:50 | 2. Context engineering, cost and skills | **Lecture & live demo:** prompt structure · plan mode · the context window and context rot · model pricing and token economics ([Managing Context]({{ site.baseurl }}/tutorials/05-context-management)) · skills ([Journal Club Slides]({{ site.baseurl }}/tutorials/03-journal-club-slides) demo) |
+| 4:50–5:00 | *Break* | |
+| 5:00–6:00 | 3. Acting, failing and verifying | **Live demo:** [Penguins Analysis]({{ site.baseurl }}/tutorials/02-penguins-analysis) (`Plan` → `Build`) · **Hands-on exercise (20 min):** [Sandbox: Act, Fail, Check]({{ site.baseurl }}/tutorials/12-sandbox-check) · **Debrief (15 min):** what failed and what verification caught |
 
-## Day 2 — Building workflows (Friday 4 December)
+## Day 2 — From one agent to a research system · Friday 4 December
 
 | Time (CET) | Part | Material |
 |---|---|---|
-| 3:00–4:00 | 4. Interactive data portals | [Single Cell Portal]({{ site.baseurl }}/tutorials/04-single-cell-portal) · publishing to GitHub |
-| 4:00–5:00 | 5. MCP, tools and multi-agent workflows | RAG and MCP · PubMed connection · [Loops, Subagents and Swarms]({{ site.baseurl }}/tutorials/13-subagents-swarms-loops) |
-| 5:00–6:00 | 6. Research workflows and second brain | Rule files (`AGENTS.md`, `CLAUDE.md`) · [Second Brain]({{ site.baseurl }}/tutorials/09-second-brain) · a lab AI use policy · closing poll |
+| 3:00–3:50 | 4. Tools, MCP and interactive data portals | **Lecture & live demo:** RAG and MCP · PubMed connection · agent-built research tools and data privacy with human/clinical datasets · live demo of [Single Cell Portal]({{ site.baseurl }}/tutorials/04-single-cell-portal) and publishing to GitHub |
+| 3:50–4:00 | *Break* | |
+| 4:00–4:50 | 5. Loops, subagents and swarms | **Lecture (15 min):** loops, subagents and swarms — when to use each, failure modes, token cost · **Hands-on exercise (25 min):** [Loops, Subagents and Swarms]({{ site.baseurl }}/tutorials/13-subagents-swarms-loops) (checking references against PubMed) · **Debrief (10 min)** |
+| 4:50–5:00 | *Break* | |
+| 5:00–6:00 | 6. Research workflows, governance and second brain | **Lecture, demo & discussion:** rule files (`AGENTS.md`, `CLAUDE.md`) · end-to-end research workflows · live demo of [Second Brain]({{ site.baseurl }}/tutorials/09-second-brain) · designing a lab AI use policy · closing poll and Q&A |
 
 ---
 
@@ -115,7 +121,12 @@ The two answers are kept separate. There is no preferred answer.
 
 ## After the course
 
+Self-paced tutorials for the demos and stretch topics:
+
+- [Penguins Analysis]({{ site.baseurl }}/tutorials/02-penguins-analysis)
+- [Journal Club Slides]({{ site.baseurl }}/tutorials/03-journal-club-slides)
+- [Single Cell Portal]({{ site.baseurl }}/tutorials/04-single-cell-portal)
+- [Second Brain]({{ site.baseurl }}/tutorials/09-second-brain) and [Stretch Goals]({{ site.baseurl }}/tutorials/10-second-brain-stretch)
 - [Making Custom Agents]({{ site.baseurl }}/tutorials/making-agents)
 - [Agent Package Manager]({{ site.baseurl }}/tutorials/07-apm)
-- [Second Brain — Stretch Goals]({{ site.baseurl }}/tutorials/10-second-brain-stretch)
 - [Pharmacogenomics with ClawBio]({{ site.baseurl }}/tutorials/11-pharmacogenomics)

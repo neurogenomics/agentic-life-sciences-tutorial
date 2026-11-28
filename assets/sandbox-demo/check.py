@@ -4,7 +4,7 @@ import sys
 from pathlib import Path
 
 expected = {"control": {"mean": 12.0, "n": 2},
-            "treated": {"mean": 21.0, "n": 3}}
+            "treated": {"mean": 14.0, "n": 3}}
 try:
     actual = json.loads((Path(__file__).resolve().parent / "summary.json").read_text())
 except (OSError, ValueError) as error:
