@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: docs
 title: Building Specialized AI Agents for Your Workflow
 ---
 

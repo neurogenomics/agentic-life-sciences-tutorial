@@ -5,9 +5,15 @@ sections:
       - title: Setup
         url: /tutorials/01-setup
         time: "20 min"
+      - title: Get OpenCode
+        url: /tutorials/get-opencode
+        time: "5 min"
       - title: GitHub Education
         url: /tutorials/github-education
         time: "10 min"
+      - title: "Sandbox: Act, Fail, Check"
+        url: /tutorials/12-sandbox-check
+        time: "25 min"
   - title: Core Tutorials
     difficulty: intermediate
     items:
@@ -32,6 +38,9 @@ sections:
       - title: Managing Context
         url: /tutorials/05-context-management
         time: "20 min"
+      - title: "Loops, Subagents and Swarms"
+        url: /tutorials/13-subagents-swarms-loops
+        time: "30 min"
       - title: Agent Package Manager
         url: /tutorials/07-apm
         time: "30 min"
