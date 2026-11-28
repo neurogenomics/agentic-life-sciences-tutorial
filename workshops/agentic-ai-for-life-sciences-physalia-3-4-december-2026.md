@@ -16,8 +16,8 @@ Instructor: Jay Moore, Imperial College London / UK Dementia Research Institute.
 
 Finish setup before Thursday, so that course time goes on the material.
 
-1. Install **one** coding agent. OpenCode is the course default. If you already use Claude Code or GitHub Copilot, keep it and skip OpenCode.
-2. Follow [Setup]({{ site.baseurl }}/tutorials/01-setup). If the install fails, use the illustrated [Get OpenCode]({{ site.baseurl }}/tutorials/get-opencode) guide.
+1. Install **Claude Code** (the course default). If you already use OpenCode or GitHub Copilot, you can keep it.
+2. Follow [Setup]({{ site.baseurl }}/tutorials/01-setup) (or the [Claude Code docs](https://docs.anthropic.com/en/docs/claude-code)).
 3. Send the agent one prompt and confirm that it replies.
 4. Install Python 3.
 5. Download the three [sandbox files]({{ site.baseurl }}/tutorials/12-sandbox-check#files) into an empty folder for the Day 1 exercise.
