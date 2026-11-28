@@ -7,6 +7,8 @@ layout: default
   <p class="hero__subtitle">Lab guide for adopting agentic work and coding assistants.</p>
 </section>
 
+> **Next course:** [Agentic AI for Life Sciences — Physalia, 3–4 December 2026](./workshops/agentic-ai-for-life-sciences-physalia-3-4-december-2026/). Setup steps and timetable.
+
 ## Tutorials
 
 <div class="tutorial-cards">

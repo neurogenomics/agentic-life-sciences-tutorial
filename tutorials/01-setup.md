@@ -33,6 +33,8 @@ This repo helps the lab adopt agentic work: it shares lessons and optimisations.
 
 Coding agents differ from chatbots: they read and write files on your computer.
 
+![Chatbots answer; agents act — reading and writing files, running commands, and calling APIs]({{ site.baseurl }}/assets/images/chatbot-vs-agent.png)
+
 ---
 
 ## Tools
@@ -50,11 +52,11 @@ A coding agent runs on your computer: it reads and writes files, runs commands, 
 
 A coding agent is a stack of three layers:
 
-![Agent → Provider → Model]({{ site.baseurl }}/assets/images/stack-of-agents.svg)
+![Agent → Provider → Model]({{ site.baseurl }}/assets/images/agent-provider-model.png)
 
 - **Agent** — the program on your computer (or in the cloud) that reads your files, runs commands, and writes code. Examples: GitHub Copilot, Claude Code, OpenCode.
 - **Provider** — the service that hosts the model. Examples: GitHub, Anthropic, OpenRouter.
-- **Model** — the large language model that generates the code. Examples: Claude Opus 4.5, GPT-4.1, Kimi K2.5, GLM 5.2.
+- **Model** — the large language model that generates the code. Examples: Claude Opus 5.5, GPT-6.2 Sol, GLM 5.2.
 
 You choose an agent, connect it to a provider, pick a model. Combinations differ in privacy and cost (see [OpenRouter's privacy and model safety settings](https://openrouter.ai/docs/guides/features/zdr)):
 

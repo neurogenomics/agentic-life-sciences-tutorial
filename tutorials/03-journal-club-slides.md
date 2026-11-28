@@ -58,7 +58,9 @@ The presentation above works, but the output can be improved significantly by us
 
 ### Why skills matter
 
-Skills give the agent domain-specific knowledge so it doesn't have to figure everything out from scratch each time. The difference is significant:
+Skills give the agent domain-specific knowledge so it doesn't have to figure everything out from scratch each time. The effect is measured, not just anecdotal: in **Corpas et al. (2026)**, nine models answered 44,550 pharmacogenomic questions — free-prompted, the weakest model scored **62.8%** and the strongest **90.7%**. Give the weakest model a `SKILL.md` and it reached **91.0%**, beating every free-prompted model in the study, while the spread between models shrank from 28.0 points to 8.5.
+
+![The same task with and without a skill: half the tokens, zero failed API calls, fewer round-trips]({{ site.baseurl }}/assets/images/skills-comparison.png)
 
 | | With skill | Without skill |
 |---|---|---|
