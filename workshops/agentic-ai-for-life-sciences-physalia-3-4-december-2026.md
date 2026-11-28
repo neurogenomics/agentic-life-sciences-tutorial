@@ -8,7 +8,7 @@ permalink: /workshops/agentic-ai-for-life-sciences-physalia-3-4-december-2026/
 
 **Physalia Courses · online · 3–4 December 2026 · 3:00–6:00 PM CET both days**
 
-Instructor: Jay Moore, Imperial College London / UK Dementia Research Institute. Course listing: [physalia-courses.org](https://www.physalia-courses.org/courses-workshops/agentic-ai/).
+Instructor: Jay Moore, Imperial College London / UK Dementia Research Institute. Course listing: [physalia-courses.org](https://www.physalia-courses.org/courses-workshops/agentic-ai/). Course slides: [Open presentation]({{ site.baseurl }}/workshops/physalia-dec-2026-slides.html).
 
 ---
 
